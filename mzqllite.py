@@ -174,7 +174,7 @@ class cDb(object):
     def dbchk2table(self):
 
         class ArtistChk:
-            def __init__(self, mname, mlink, freq, mstr, mstrfield, ishere,  needproxy, lastdate="", lasttime="", lastval=""):
+            def __init__(self, mname, mlink, freq, mstr, mstrfield, ishere,  needproxy, lastdate="", lasttime="", lastval="", alwaysshow=""):
                 self.mname = mname
                 self.mlink = mlink
                 self.freq = freq
@@ -185,6 +185,7 @@ class cDb(object):
                 self.lastdate = lastdate
                 self.lasttime = lasttime
                 self.lastval = lastval
+                self.alwaysshow = alwaysshow
         #
         # arr=[]
 
@@ -194,7 +195,7 @@ class cDb(object):
 
         for row in self.cursor.fetchall():
             # arr.append(row)
-            self.arr.append(ArtistChk(row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8],row[9]))
+            self.arr.append(ArtistChk(row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8],row[9],row[10]))
             # print(row)
 
     def update_dbchk_row(self,arr):

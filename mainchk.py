@@ -57,9 +57,12 @@ def main():
                         t1=str(mres).splitlines(keepends=True)
                         t2=str(i.lastval).splitlines(keepends=True)
                         mres2tst = ''.join(difflib.context_diff(t1, t2))
-                        if mres != i.lastval:
-                            mstr = mstr+ "CHANGE STATUS " + i.mname + " NewStatus:" + str(mres2tst) + " Link:" + i.mlink +"\n"
-                            i.lastval = res
+                    if res==True and i.alwaysshow>0:
+                        mstr = mstr + "GOOD STATUS " + i.mname + " Status:" + str(
+                            mres2tst) + " Link:" + i.mlink + "\n"
+                    if mres != i.lastval:
+                        mstr = mstr+ "CHANGE STATUS " + i.mname + " NewStatus:" + str(mres2tst) + " Link:" + i.mlink +"\n"
+                        i.lastval = res
                     db.update_dbchk_row(i)
             except Exception as e:
                 printsend(" CHK " + i.mname + "  Message" + e.msg, MTITLE + ERRORSTR)
