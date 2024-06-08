@@ -21,16 +21,12 @@ def main():
         db.graph_services("'RAYVAN'")
         db.graph_services("'Алексир'")
 
-<<<<<<< HEAD
-        db.graph_tracks("'Такая простая'", "'RAYVAN'")
-        db.graph_tracks("'Улетай'", "'RAYVAN'")
-
         # db.graph_tracks("'С другой'", "'Алексир'")
         # db.graph_tracks("'Верни'", "'Алексир'")
-=======
+
         db.graph_tracks("'С другой'", "'Алексир'")
         db.graph_tracks("'Верни'", "'Алексир'")
->>>>>>> 6627ee699a39b87892d5aa4ac6acf70ce8210d40
+
 
         # db.graph_services("'RAYVAN'")
         # db.graph_services("'Алексир'")

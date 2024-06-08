@@ -3224,3 +3224,77 @@ CHANGE STATUS cSpbTheatrLetov NewStatus:False Link:https://puppets.ru/spec/15
 08-Jun-2024: 00:08:32 (Saturday) MUZCHEK End
 08-Jun-2024: 00:08:32 (Saturday) MUZCOMPARE Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
 08-Jun-2024: 00:08:33 (Saturday) MUZCOMPARE End
+08-Jun-2024: 18:43:16 (Saturday) MUZGRAPH Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+08-Jun-2024: 18:43:17 (Saturday) MUZGRAPH End
+09-Jun-2024: 00:38:48 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 00:38:56 (Sunday) MUZCHEK: ERR CHK chkYndRayvan  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=125.0.6422.142)
+09-Jun-2024: 00:38:57 (Sunday) MUZCHEK: ERR CHK chkYndMyso  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=125.0.6422.142)
+09-Jun-2024: 00:38:58 (Sunday) MUZCHEK: ERR CHK chkYndАлексир  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=125.0.6422.142)
+09-Jun-2024: 00:38:59 (Sunday) MUZCHEK: ERR CHK chkYndMILZ  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=125.0.6422.142)
+09-Jun-2024: 00:39:00 (Sunday) MUZCHEK: ERR CHK chkYndVigi  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=125.0.6422.142)
+09-Jun-2024: 00:39:01 (Sunday) MUZCHEK: ERR CHK chkYndЭмирова  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=125.0.6422.142)
+09-Jun-2024: 00:39:02 (Sunday) MUZCHEK: ERR CHK chkYndПавленко  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=125.0.6422.142)
+09-Jun-2024: 00:39:03 (Sunday) MUZCHEK: ERR CHK chkYndНонна   Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=125.0.6422.142)
+09-Jun-2024: 00:39:04 (Sunday) MUZCHEK: ERR CHK chkYndМосейчук  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=125.0.6422.142)
+09-Jun-2024: 00:39:05 (Sunday) MUZCHEK: ERR CHK chkYndFahrtdinov  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=125.0.6422.142)
+09-Jun-2024: 00:39:06 (Sunday) MUZCHEK: ERR CHK chkYndKaluga  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=125.0.6422.142)
+09-Jun-2024: 00:39:07 (Sunday) MUZCHEK: ERR CHK chkYndMakaronnoe  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=125.0.6422.142)
+09-Jun-2024: 00:39:08 (Sunday) MUZCHEK: ERR CHK chkVkFahrtdinov  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=125.0.6422.142)
+09-Jun-2024: 00:39:09 (Sunday) MUZCHEK: ERR CHK chkVkRayvan  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=125.0.6422.142)
+09-Jun-2024: 00:39:10 (Sunday) MUZCHEK: ERR CHK chkVkKaluga  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=125.0.6422.142)
+09-Jun-2024: 00:39:11 (Sunday) MUZCHEK: ERR CHK chkVkMILZ  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=125.0.6422.142)
+09-Jun-2024: 00:39:37 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 00:41:04 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 00:42:12 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 00:49:04 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 00:49:25 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 00:52:37 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 01:01:49 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 01:01:52 (Sunday) MUZCHEK: ERRsession not created: Chrome failed to start: exited normally.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+09-Jun-2024: 01:03:25 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 01:03:28 (Sunday) MUZCHEK: ERRsession not created: Chrome failed to start: exited normally.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+09-Jun-2024: 01:03:43 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 01:04:36 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 01:04:43 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 01:05:06 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 01:05:44 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 01:05:59 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 01:07:08 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 01:09:34 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 01:10:05 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
