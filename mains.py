@@ -15,6 +15,8 @@ def main():
 
     status_prod= True  if param1 == TXTPRODUCTIVE else False
 
+    dontwrite2base = True if param1 == TXTDONTWRITE2BASE else False
+
     try:
 
         write_file(MTITLE + " Start " + VER)
@@ -113,10 +115,18 @@ def main():
                 printsend("  " + i.name + ":TIKTOK : " + i.tiktok, MTITLE + ERRORSTR)
                 pass
 
+            try:
+                if i.tlg != "":
+                    mlink = "https://t.me/" + i.tlg
+                    db.columns["sub_tlg"] = web.gettlgday(mlink)
+            except:
+                printsend("  " + i.name + ":TIKTOK : " + i.tiktok, MTITLE + ERRORSTR)
+                pass
             # # mlink = "https://open.spotify.com/artist/" + i.spot
             # # SpotifyGetDaylyStatArtist(mdriver, mconnection, mlink, i.name)
 
-            db.day2db()
+            if dontwrite2base==False:
+                db.day2db()
 
             write_file(MTITLE + " " + i.name + "  DONE")
 

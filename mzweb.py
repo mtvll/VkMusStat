@@ -64,9 +64,11 @@ class cWebm(object):
         self.driver.get(link)
         time.sleep(MPAUSE)
 
-    def checkisnumber(self, instr):
+    def checkisnumber(self, instr, mfrom =""):
         instr = instr.replace(' ', '')
         try:
+            if (mfrom=="youtube") and (instr[-1]=="M"):
+                instr=float(instr[:-1])*1000000
             c = int(instr)
             return c
         except Exception as ex:
@@ -121,7 +123,7 @@ class cWebm(object):
                                        # v0="RAYVAN\n@rayvan\n\n\ 929 subsribesrs"
         v = v1.text.split()[0]
 
-        return self.checkisnumber(v)
+        return self.checkisnumber(v,"youtube")
 
 
     def getspotifyday(self, link):
@@ -144,6 +146,14 @@ class cWebm(object):
         vl0 = self.driver.find_elements(By.CLASS_NAME, "css-ntsum2-DivNumber,e1457k4r1")[0]
         vl = vl0.text.split()[0]
         return self.checkisnumber(vs), self.checkisnumber(vl)
+
+    def gettlgday(self, link):
+        # document.getElementsByClassName("tgme_page_extra")[0]
+        # <div class=​"css-mgke3u-DivNumber e1457k4r1">​…​</div>​flex
+        self.golinkpause(link)
+        vs0 = self.driver.find_elements(By.CLASS_NAME, "tgme_page_extra")[0]
+        vs = vs0.text.replace(" subscribers", "").replace(" ", "")
+        return self.checkisnumber(vs)
 
     def getvkday(self, link):
         self.golinkpause(link)
