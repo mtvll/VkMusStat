@@ -36,7 +36,7 @@ class cDb(object):
 
 
         class Artist:
-            def __init__(self, name, vkstudio="", spot="", yandex="", sber="", youtube="", vk="", tiktok="",l1="",l2="",l3="",l4="",l5="",minhears=20):
+            def __init__(self, name, vkstudio="", spot="", yandex="", sber="", youtube="", vk="", tiktok="",tlg="",l2="",l3="",l4="",l5="",minhears=20):
                 self.name = name
                 self.vkstudio = vkstudio
                 self.spot = spot
@@ -45,7 +45,7 @@ class cDb(object):
                 self.youtube = youtube
                 self.vk = vk
                 self.tiktok = tiktok
-                self.l1 = l1
+                self.tlg = tlg
                 self.l2 = l2
                 self.l3 = l3
                 self.l4 = l4

@@ -3298,3 +3298,8 @@ from unknown error: web view not found
 09-Jun-2024: 01:07:08 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
 09-Jun-2024: 01:09:34 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
 09-Jun-2024: 01:10:05 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 03:57:27 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 03:57:31 (Sunday) MUZCHEK: ERRsession not created: Chrome failed to start: exited normally.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+09-Jun-2024: 03:57:59 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
