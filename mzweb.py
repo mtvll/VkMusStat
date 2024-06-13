@@ -69,6 +69,8 @@ class cWebm(object):
         try:
             if (mfrom=="youtube") and (instr[-1]=="M"):
                 instr=float(instr[:-1])*1000000
+            if (mfrom=="youtube") and (instr[-1]=="K"):
+                instr=float(instr[:-1])*1000
             c = int(instr)
             return c
         except Exception as ex:
@@ -106,22 +108,31 @@ class cWebm(object):
         return self.checkisnumber(yhearsmonth), self.checkisnumber(ylikesmonth), self.checkisnumber(ylikesall)
 
     def getyoutubeday(self, link):
+
+        # ВАРИАНТ ИЗ ГЛАВНОЙ СТРАНИЦЫ
+        # document.getElementsByClassName("meta-item style-scope ytd-c4-tabbed-header-renderer")[
+        #     3].getElementsByClassName("style-scope ytd-c4-tabbed-header-renderer")[0].text
+
+
+        self.golinkpause(link)
+
+        v00 = self.driver.find_elements(By.CLASS_NAME, "meta-item,style-scope,ytd-c4-tabbed-header-renderer")[4]
+
+        v = v00.text.split()[0]
+
+        # ВАРИАНТ2 ИЗ  СТРАНИЦЫ ABOUT
         # document.getElementsByClassName("description-item style-scope ytd-about-channel-renderer")[
         #     3].getElementsByClassName("style-scope ytd-about-channel-renderer")[2]
-        # Странно что вместо
-        # v0 = self.driver.find_elements(By.CLASS_NAME,
-        #                                "description-item,style-scope,ytd-about-channel-renderer")[3].find_elements(By.CLASS_NAME,"style-scope,ytd-about-channel-renderer")[2]
-        # сработало
-        # v0 = self.driver.find_elements(By.CLASS_NAME,
+
+        # self.golinkpause(link+"/about")
+        #
+        #
+        # v1 = self.driver.find_elements(By.CLASS_NAME,
         #                                 "description-item,style-scope,ytd-about-channel-renderer")[4]
-
-        self.golinkpause(link+"/about")
-        v1 = self.driver.find_elements(By.CLASS_NAME,
-                                        "description-item,style-scope,ytd-about-channel-renderer")[4]
-        v2 = v1.find_elements(By.CLASS_NAME,"style-scope,ytd-about-channel-renderer")[2]
-
-                                       # v0="RAYVAN\n@rayvan\n\n\ 929 subsribesrs"
-        v = v1.text.split()[0]
+        # v2 = v1.find_elements(By.CLASS_NAME,"style-scope,ytd-about-channel-renderer")[2]
+        #
+        #                                # v0="RAYVAN\n@rayvan\n\n\ 929 subsribesrs"
+        # v = v1.text.split()[0]
 
         return self.checkisnumber(v,"youtube")
 

@@ -3303,3 +3303,142 @@ from unknown error: web view not found
   (session not created: DevToolsActivePort file doesn't exist)
   (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
 09-Jun-2024: 03:57:59 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 00:02:40 (Thursday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 00:02:44 (Thursday) MUZCHEK: ERRsession not created: Chrome failed to start: exited normally.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+13-Jun-2024: 00:02:54 (Thursday) MUZGRAPH Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 00:02:56 (Thursday) MUZGRAPH End
+13-Jun-2024: 00:25:38 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 00:26:27 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCKxaCaipSkU6MgQwv2y-lkw
+13-Jun-2024: 00:26:32 (Thursday) MUZSTAT: ERR  RAYVAN:TIKTOK : 
+13-Jun-2024: 00:27:04 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 00:27:43 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 00:28:45 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 00:42:32 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 00:44:00 (Thursday) MUZSTAT: ERR  RAYVAN:TIKTOK : 
+13-Jun-2024: 00:45:22 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 00:48:13 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 00:50:23 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 00:52:22 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 00:53:46 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 00:57:36 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 00:57:48 (Thursday) MUZSTAT RAYVAN  DONE
+13-Jun-2024: 00:57:48 (Thursday) MUZSTAT End
+13-Jun-2024: 01:03:00 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 01:03:11 (Thursday) MUZSTAT RAYVAN  DONE
+13-Jun-2024: 01:03:11 (Thursday) MUZSTAT End
+13-Jun-2024: 01:04:23 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 01:04:48 (Thursday) MUZSTAT RAYVAN  DONE
+13-Jun-2024: 01:04:50 (Thursday) MUZSTAT End
+13-Jun-2024: 01:13:32 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 01:13:35 (Thursday) MUZSTAT: ERRsession not created: Chrome failed to start: exited normally.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+13-Jun-2024: 01:13:41 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 01:13:44 (Thursday) MUZSTAT: ERRsession not created: Chrome failed to start: exited normally.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+13-Jun-2024: 01:14:51 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 01:15:42 (Thursday) MUZSTAT RAYVAN  DONE
+13-Jun-2024: 01:15:46 (Thursday) MUZSTAT RemoteRussia  DONE
+13-Jun-2024: 01:15:46 (Thursday) MUZSTAT End
+13-Jun-2024: 01:17:23 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 01:22:00 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 01:22:07 (Thursday) MUZSTAT RemoteRussia  DONE
+13-Jun-2024: 01:22:55 (Thursday) MUZSTAT RAYVAN  DONE
+13-Jun-2024: 01:22:55 (Thursday) MUZSTAT End
+13-Jun-2024: 01:34:40 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 01:35:33 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+13-Jun-2024: 01:35:45 (Thursday) MUZSTAT RAYVAN  DONE
+13-Jun-2024: 01:36:28 (Thursday) MUZSTAT: ERR  MILZ:YOUTUBE : UC27Z5ZvYSt95UtjFeGJ0wGA
+13-Jun-2024: 01:36:30 (Thursday) MUZSTAT MILZ  DONE
+13-Jun-2024: 01:37:12 (Thursday) MUZSTAT Алексир  DONE
+13-Jun-2024: 01:37:35 (Thursday) MUZSTAT София Мосейчук  DONE
+13-Jun-2024: 01:38:17 (Thursday) MUZSTAT: ERR  Rustam Fahrtdinov:YOUTUBE : UCyw22JexbXGNh3_wqaOkq2g
+13-Jun-2024: 01:38:24 (Thursday) MUZSTAT Rustam Fahrtdinov  DONE
+13-Jun-2024: 01:39:07 (Thursday) MUZSTAT: ERR  KALUGIN:YOUTUBE : UCxovuUXDDlOAIo1fY98vtyw
+13-Jun-2024: 01:39:14 (Thursday) MUZSTAT KALUGIN  DONE
+13-Jun-2024: 01:39:55 (Thursday) MUZSTAT Makaronnoe bludo  DONE
+13-Jun-2024: 01:40:36 (Thursday) MUZSTAT Vigi  DONE
+13-Jun-2024: 01:41:23 (Thursday) MUZSTAT: ERR  Вячеслав Мясников:YOUTUBE : UCKxaCaipSkU6MgQwv2y-lkw
+13-Jun-2024: 01:41:29 (Thursday) MUZSTAT: ERR  Вячеслав Мясников:TIKTOK : @miasnikov.s
+13-Jun-2024: 01:41:33 (Thursday) MUZSTAT Вячеслав Мясников  DONE
+13-Jun-2024: 01:42:15 (Thursday) MUZSTAT Ирина Эмирова  DONE
+13-Jun-2024: 01:43:58 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 01:44:01 (Thursday) MUZSTAT: ERRsession not created: Chrome failed to start: exited normally.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+13-Jun-2024: 01:44:09 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 01:44:28 (Thursday) MUZSTAT: ERR  RAYVAN:VKSTUDIO : 679765629422687778
+13-Jun-2024: 01:47:57 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 01:50:16 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 01:50:42 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 01:52:57 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 01:55:48 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 01:57:04 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 01:59:41 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 01:59:56 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 02:01:33 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 02:07:02 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 02:07:49 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+13-Jun-2024: 02:10:38 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 02:11:32 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+13-Jun-2024: 02:13:09 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 02:13:12 (Thursday) MUZSTAT: ERRsession not created: Chrome failed to start: exited normally.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+13-Jun-2024: 02:13:20 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 02:13:30 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+13-Jun-2024: 02:13:31 (Thursday) MUZSTAT RAYVAN  DONE
+13-Jun-2024: 02:13:59 (Thursday) MUZSTAT: ERR  MILZ:YOUTUBE : UC27Z5ZvYSt95UtjFeGJ0wGA
+13-Jun-2024: 02:14:00 (Thursday) MUZSTAT MILZ  DONE
+13-Jun-2024: 02:14:30 (Thursday) MUZSTAT: ERR  RAYVAN:SBER : 210105583
+13-Jun-2024: 02:14:31 (Thursday) MUZSTAT: ERR  RAYVAN:VK : rayvan.official
+13-Jun-2024: 02:14:41 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 02:15:42 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+13-Jun-2024: 02:15:49 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 02:23:00 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 02:23:10 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+13-Jun-2024: 02:23:12 (Thursday) MUZSTAT RAYVAN  DONE
+13-Jun-2024: 02:23:17 (Thursday) MUZSTAT: ERR  MILZ:YOUTUBE : UC27Z5ZvYSt95UtjFeGJ0wGA
+13-Jun-2024: 02:23:19 (Thursday) MUZSTAT MILZ  DONE
+13-Jun-2024: 02:23:33 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 02:30:16 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 02:30:26 (Thursday) MUZSTAT RAYVAN  DONE
+13-Jun-2024: 02:30:31 (Thursday) MUZSTAT MILZ  DONE
+13-Jun-2024: 02:31:13 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+13-Jun-2024: 02:31:22 (Thursday) MUZSTAT RAYVAN  DONE
+13-Jun-2024: 02:32:40 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 02:33:04 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+13-Jun-2024: 02:33:05 (Thursday) MUZSTAT RAYVAN  DONE
+13-Jun-2024: 02:33:12 (Thursday) MUZSTAT: ERR  MILZ:YOUTUBE : UC27Z5ZvYSt95UtjFeGJ0wGA
+13-Jun-2024: 02:33:13 (Thursday) MUZSTAT MILZ  DONE
+13-Jun-2024: 02:45:55 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 02:45:57 (Thursday) MUZSTAT: ERRsession not created: Chrome failed to start: exited normally.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+13-Jun-2024: 02:46:16 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 02:52:53 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 02:53:27 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 02:54:14 (Thursday) MUZSTAT RAYVAN  DONE
+13-Jun-2024: 02:54:18 (Thursday) MUZSTAT: ERR  MILZ:YOUTUBE : UC27Z5ZvYSt95UtjFeGJ0wGA
+13-Jun-2024: 02:54:20 (Thursday) MUZSTAT MILZ  DONE
+13-Jun-2024: 02:54:37 (Thursday) MUZSTAT Start 240612 Добавлен Телеграм и проверен youtube Мясникова
+13-Jun-2024: 02:55:24 (Thursday) MUZSTAT RAYVAN  DONE
+13-Jun-2024: 02:55:29 (Thursday) MUZSTAT MILZ  DONE
+13-Jun-2024: 02:56:22 (Thursday) MUZSTAT RAYVAN  DONE
+13-Jun-2024: 02:57:03 (Thursday) MUZSTAT MILZ  DONE
+13-Jun-2024: 02:57:46 (Thursday) MUZSTAT Алексир  DONE
+13-Jun-2024: 02:58:09 (Thursday) MUZSTAT София Мосейчук  DONE
+13-Jun-2024: 02:58:56 (Thursday) MUZSTAT Rustam Fahrtdinov  DONE
+13-Jun-2024: 02:59:44 (Thursday) MUZSTAT KALUGIN  DONE
+13-Jun-2024: 03:00:24 (Thursday) MUZSTAT Makaronnoe bludo  DONE
+13-Jun-2024: 03:01:02 (Thursday) MUZSTAT Vigi  DONE
+13-Jun-2024: 03:01:55 (Thursday) MUZSTAT Вячеслав Мясников  DONE
+13-Jun-2024: 03:02:34 (Thursday) MUZSTAT Ирина Эмирова  DONE
+13-Jun-2024: 03:03:03 (Thursday) MUZSTAT Хор Ирины Павленко  DONE
+13-Jun-2024: 03:03:42 (Thursday) MUZSTAT Нонна  DONE
+13-Jun-2024: 03:03:45 (Thursday) MUZSTAT RemoteRussia  DONE
+13-Jun-2024: 03:04:05 (Thursday) MUZSTAT Анастасия Ларцева  DONE
+13-Jun-2024: 03:04:05 (Thursday) MUZSTAT End

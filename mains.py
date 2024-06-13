@@ -50,6 +50,7 @@ def main():
         # mdriver = chromeinitilize()
 
         for i in db.art:
+
             try:
                 if (i.vkstudio != ""):
                     mlink = "https://vk.com/studio#/artist/" + i.vkstudio + "/music/tracks"
@@ -103,7 +104,7 @@ def main():
                 if i.youtube != "":
                     mlink = "https://www.youtube.com/channel/" + i.youtube
                     db.columns["sub_youtube"] = web.getyoutubeday(mlink)
-            except:
+            except Exception as e:
                 printsend("  " + i.name + ":YOUTUBE : " + i.youtube, MTITLE + ERRORSTR)
                 pass
 
