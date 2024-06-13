@@ -3298,3 +3298,112 @@ from unknown error: web view not found
 09-Jun-2024: 01:07:08 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
 09-Jun-2024: 01:09:34 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
 09-Jun-2024: 01:10:05 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 03:52:00 (Sunday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 03:55:16 (Sunday) MUZCHEKGOOD STATUS chkYndRayvan Status:1 Link:https://band.link/scanner?search=Rayvan
+
+09-Jun-2024: 03:55:18 (Sunday) MUZCHEK End
+09-Jun-2024: 03:55:18 (Sunday) MUZCOMPARE Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 03:55:19 (Sunday) MUZCOMPARE End
+09-Jun-2024: 23:20:02 (Sunday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+09-Jun-2024: 23:21:03 (Sunday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+09-Jun-2024: 23:21:18 (Sunday) MUZSTAT RAYVAN  DONE
+09-Jun-2024: 23:22:06 (Sunday) MUZSTAT MILZ  DONE
+09-Jun-2024: 23:22:57 (Sunday) MUZSTAT Алексир  DONE
+09-Jun-2024: 23:23:26 (Sunday) MUZSTAT София Мосейчук  DONE
+09-Jun-2024: 23:24:22 (Sunday) MUZSTAT Rustam Fahrtdinov  DONE
+09-Jun-2024: 23:26:03 (Sunday) MUZSTAT KALUGIN  DONE
+09-Jun-2024: 23:26:46 (Sunday) MUZSTAT Makaronnoe bludo  DONE
+09-Jun-2024: 23:27:28 (Sunday) MUZSTAT Vigi  DONE
+09-Jun-2024: 23:28:19 (Sunday) MUZSTAT: ERR  Вячеслав Мясников:YOUTUBE : UCKxaCaipSkU6MgQwv2y-lkw
+09-Jun-2024: 23:28:28 (Sunday) MUZSTAT Вячеслав Мясников  DONE
+09-Jun-2024: 23:29:16 (Sunday) MUZSTAT Ирина Эмирова  DONE
+09-Jun-2024: 23:29:48 (Sunday) MUZSTAT Хор Ирины Павленко  DONE
+09-Jun-2024: 23:30:33 (Sunday) MUZSTAT Нонна  DONE
+09-Jun-2024: 23:30:33 (Sunday) MUZSTAT End
+10-Jun-2024: 00:05:13 (Monday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+10-Jun-2024: 00:08:17 (Monday) MUZCHEKGOOD STATUS chkYndRayvan Status:1 Link:https://band.link/scanner?search=Rayvan
+
+10-Jun-2024: 00:08:18 (Monday) MUZCHEK End
+10-Jun-2024: 00:08:18 (Monday) MUZCOMPARE Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+10-Jun-2024: 00:08:20 (Monday) MUZCOMPARE End
+10-Jun-2024: 16:01:25 (Monday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+10-Jun-2024: 16:04:39 (Monday) MUZCHEKGOOD STATUS chkYndRayvan Status:1 Link:https://band.link/scanner?search=Rayvan
+
+10-Jun-2024: 16:04:40 (Monday) MUZCHEK End
+10-Jun-2024: 16:04:40 (Monday) MUZCOMPARE Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+10-Jun-2024: 16:04:41 (Monday) MUZCOMPARE End
+10-Jun-2024: 16:20:59 (Monday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+10-Jun-2024: 16:21:26 (Monday) MUZSTAT Анастасия Ларцева  DONE
+10-Jun-2024: 16:21:26 (Monday) MUZSTAT End
+10-Jun-2024: 23:20:10 (Monday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+10-Jun-2024: 23:22:19 (Monday) MUZSTAT RAYVAN  DONE
+10-Jun-2024: 23:23:08 (Monday) MUZSTAT: ERR  MILZ:YOUTUBE : UC27Z5ZvYSt95UtjFeGJ0wGA
+10-Jun-2024: 23:23:10 (Monday) MUZSTAT MILZ  DONE
+10-Jun-2024: 23:24:08 (Monday) MUZSTAT Алексир  DONE
+10-Jun-2024: 23:24:45 (Monday) MUZSTAT София Мосейчук  DONE
+10-Jun-2024: 23:25:40 (Monday) MUZSTAT Rustam Fahrtdinov  DONE
+10-Jun-2024: 23:26:38 (Monday) MUZSTAT KALUGIN  DONE
+10-Jun-2024: 23:27:23 (Monday) MUZSTAT Makaronnoe bludo  DONE
+10-Jun-2024: 23:28:09 (Monday) MUZSTAT Vigi  DONE
+10-Jun-2024: 23:29:04 (Monday) MUZSTAT: ERR  Вячеслав Мясников:YOUTUBE : UCKxaCaipSkU6MgQwv2y-lkw
+10-Jun-2024: 23:29:12 (Monday) MUZSTAT Вячеслав Мясников  DONE
+10-Jun-2024: 23:30:04 (Monday) MUZSTAT Ирина Эмирова  DONE
+10-Jun-2024: 23:30:37 (Monday) MUZSTAT Хор Ирины Павленко  DONE
+10-Jun-2024: 23:31:22 (Monday) MUZSTAT Нонна  DONE
+10-Jun-2024: 23:31:43 (Monday) MUZSTAT Анастасия Ларцева  DONE
+10-Jun-2024: 23:31:43 (Monday) MUZSTAT End
+11-Jun-2024: 00:05:14 (Tuesday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+11-Jun-2024: 00:08:51 (Tuesday) MUZCHEKGOOD STATUS chkYndRayvan Status:1 Link:https://band.link/scanner?search=Rayvan
+
+11-Jun-2024: 00:08:53 (Tuesday) MUZCHEK End
+11-Jun-2024: 00:08:53 (Tuesday) MUZCOMPARE Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+11-Jun-2024: 00:08:56 (Tuesday) MUZCOMPARE End
+11-Jun-2024: 23:20:04 (Tuesday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+11-Jun-2024: 23:21:06 (Tuesday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+11-Jun-2024: 23:21:18 (Tuesday) MUZSTAT RAYVAN  DONE
+11-Jun-2024: 23:22:06 (Tuesday) MUZSTAT MILZ  DONE
+11-Jun-2024: 23:22:58 (Tuesday) MUZSTAT Алексир  DONE
+11-Jun-2024: 23:23:28 (Tuesday) MUZSTAT София Мосейчук  DONE
+11-Jun-2024: 23:25:05 (Tuesday) MUZSTAT Rustam Fahrtdinov  DONE
+11-Jun-2024: 23:26:03 (Tuesday) MUZSTAT KALUGIN  DONE
+11-Jun-2024: 23:26:47 (Tuesday) MUZSTAT Makaronnoe bludo  DONE
+11-Jun-2024: 23:27:29 (Tuesday) MUZSTAT Vigi  DONE
+11-Jun-2024: 23:28:20 (Tuesday) MUZSTAT: ERR  Вячеслав Мясников:YOUTUBE : UCKxaCaipSkU6MgQwv2y-lkw
+11-Jun-2024: 23:28:29 (Tuesday) MUZSTAT Вячеслав Мясников  DONE
+11-Jun-2024: 23:29:15 (Tuesday) MUZSTAT Ирина Эмирова  DONE
+11-Jun-2024: 23:29:46 (Tuesday) MUZSTAT Хор Ирины Павленко  DONE
+11-Jun-2024: 23:30:31 (Tuesday) MUZSTAT Нонна  DONE
+11-Jun-2024: 23:30:52 (Tuesday) MUZSTAT Анастасия Ларцева  DONE
+11-Jun-2024: 23:30:52 (Tuesday) MUZSTAT End
+12-Jun-2024: 00:05:14 (Wednesday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+12-Jun-2024: 00:08:48 (Wednesday) MUZCHEKGOOD STATUS chkYndRayvan Status:1 Link:https://band.link/scanner?search=Rayvan
+CHANGE STATUS cSpbTheatrBashlacev NewStatus:1 Link:https://puppets.ru/spec/4
+
+12-Jun-2024: 00:08:49 (Wednesday) MUZCHEK End
+12-Jun-2024: 00:08:49 (Wednesday) MUZCOMPARE Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+12-Jun-2024: 00:08:52 (Wednesday) MUZCOMPARE End
+12-Jun-2024: 23:20:02 (Wednesday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+12-Jun-2024: 23:22:26 (Wednesday) MUZSTAT RAYVAN  DONE
+12-Jun-2024: 23:23:17 (Wednesday) MUZSTAT: ERR  MILZ:YOUTUBE : UC27Z5ZvYSt95UtjFeGJ0wGA
+12-Jun-2024: 23:23:18 (Wednesday) MUZSTAT MILZ  DONE
+12-Jun-2024: 23:24:54 (Wednesday) MUZSTAT Алексир  DONE
+12-Jun-2024: 23:25:24 (Wednesday) MUZSTAT София Мосейчук  DONE
+12-Jun-2024: 23:27:01 (Wednesday) MUZSTAT Rustam Fahrtdinov  DONE
+12-Jun-2024: 23:27:58 (Wednesday) MUZSTAT KALUGIN  DONE
+12-Jun-2024: 23:28:43 (Wednesday) MUZSTAT Makaronnoe bludo  DONE
+12-Jun-2024: 23:29:26 (Wednesday) MUZSTAT Vigi  DONE
+12-Jun-2024: 23:30:18 (Wednesday) MUZSTAT: ERR  Вячеслав Мясников:YOUTUBE : UCKxaCaipSkU6MgQwv2y-lkw
+12-Jun-2024: 23:30:28 (Wednesday) MUZSTAT Вячеслав Мясников  DONE
+12-Jun-2024: 23:31:15 (Wednesday) MUZSTAT Ирина Эмирова  DONE
+12-Jun-2024: 23:31:46 (Wednesday) MUZSTAT Хор Ирины Павленко  DONE
+12-Jun-2024: 23:32:31 (Wednesday) MUZSTAT Нонна  DONE
+12-Jun-2024: 23:32:52 (Wednesday) MUZSTAT Анастасия Ларцева  DONE
+12-Jun-2024: 23:32:52 (Wednesday) MUZSTAT End
+13-Jun-2024: 00:05:15 (Thursday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 00:05:15 (Thursday) Close Chrome.exe
+13-Jun-2024: 00:09:22 (Thursday) MUZCHEKGOOD STATUS chkYndRayvan Status:1 Link:https://band.link/scanner?search=Rayvan
+CHANGE STATUS cSpbTheatrBashlacev NewStatus:0 Link:https://puppets.ru/spec/4
+
+13-Jun-2024: 00:09:23 (Thursday) MUZCHEK End
+13-Jun-2024: 00:09:23 (Thursday) MUZCOMPARE Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 00:09:25 (Thursday) MUZCOMPARE End
