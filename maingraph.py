@@ -10,7 +10,7 @@ MTITLE = "MUZGRAPH"
 def main():
     try:
 
-        write_file(MTITLE + " Start " + VER)
+        write_file(MTITLE + " Start " + MVERSION)
 
         #    kill_chrome(STATUS_PRODUCTIVE)
 

@@ -1,8 +1,6 @@
-import smtplib
+from mconst import *
 
-ML_SERVER = 'smtp.mail.ru'
-ML_LOG = 'mtvll@inbox.ru'
-ML_P = 'cq59tWzL1yYG5gJ6b3cD'
+import smtplib
 
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText

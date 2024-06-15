@@ -31,7 +31,7 @@ def main():
     try:
 
 
-        write_file(MTITLE + " Start " + VER)
+        write_file(MTITLE + " Start " + MVERSION)
 
         cp = cCompare()
 

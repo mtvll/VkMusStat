@@ -1,3 +1,5 @@
+from tb_keys import *
+
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
@@ -7,8 +9,9 @@ import difflib
 # при работа mainchk проверять заглавные или строчные буквы прямо на странице!!!
 # при работа mainchk проверять яззык чтобы был нужный!!!
 
-VER = "240609 Проверка Rayvan и другие "
-VER = "2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)"
+MVERSION="240614 Новый мейл в отдельном файле"
+# MVERSION = "240609 Проверка Rayvan и другие "
+# MVERSION = "2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)"
 
 
 TXTPRODUCTIVE  = "PRODUCTIVE"

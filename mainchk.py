@@ -15,7 +15,7 @@ def main():
     status_prod = True if param1 == TXTPRODUCTIVE else False
 
     try:
-        write_file(MTITLE + " Start " + VER)
+        write_file(MTITLE + " Start " + MVERSION)
 
         kill_chrome(status_prod)
 

@@ -17,7 +17,7 @@ def main():
 
     try:
 
-        write_file(MTITLE + " Start " + VER)
+        write_file(MTITLE + " Start " + MVERSION)
 
         kill_chrome(status_prod)
 
@@ -97,13 +97,13 @@ def main():
                 printsend("  " + i.name + ":VK : " + i.vk, MTITLE + ERRORSTR)
                 pass
 
-            try:
-                if i.youtube != "":
-                    mlink = "https://www.youtube.com/channel/" + i.youtube
-                    db.columns["sub_youtube"] = web.getyoutubeday(mlink)
-            except:
-                printsend("  " + i.name + ":YOUTUBE : " + i.youtube, MTITLE + ERRORSTR)
-                pass
+            # try:
+            #     if i.youtube != "":
+            #         mlink = "https://www.youtube.com/channel/" + i.youtube
+            #         db.columns["sub_youtube"] = web.getyoutubeday(mlink)
+            # except:
+            #     printsend("  " + i.name + ":YOUTUBE : " + i.youtube, MTITLE + ERRORSTR)
+            #     pass
 
             try:
                 if i.tiktok != "":
