@@ -36,7 +36,7 @@ class cDb(object):
 
 
         class Artist:
-            def __init__(self, name, vkstudio="", spot="", yandex="", sber="", youtube="", vk="", tiktok="",l1="",l2="",l3="",l4="",l5="",minhears=20):
+            def __init__(self, name, vkstudio="", spot="", yandex="", sber="", youtube="", vk="", tiktok="",tlg="",l2="",l3="",l4="",l5="",minhears=20):
                 self.name = name
                 self.vkstudio = vkstudio
                 self.spot = spot
@@ -45,7 +45,7 @@ class cDb(object):
                 self.youtube = youtube
                 self.vk = vk
                 self.tiktok = tiktok
-                self.l1 = l1
+                self.tlg = tlg
                 self.l2 = l2
                 self.l3 = l3
                 self.l4 = l4
@@ -56,8 +56,14 @@ class cDb(object):
         # Артист (Имя, vkstudio, spotify, yandex, sber, youtube, vk, Tiktok):
 
         self.art = [
+            Artist('RAYVAN', "", "", "", "",
+                   "UCvtme_nmuo4NdcYniouDh2Q",
+                   "", "", ""),
+            Artist('MILZ', "", "", "", "",
+                   "UC27Z5ZvYSt95UtjFeGJ0wGA", ""),
+
             Artist('RAYVAN', "679765629422687778", "6MUpnjFA4zQu3s0t2Nzlfk", "8141812", "210105583","UCvtme_nmuo4NdcYniouDh2Q",
-                   "rayvan.official","@rayvan.official"),
+                   "rayvan.official","@rayvan.official","rayvanmusic"),
             Artist('MILZ', "3968096882825495134", "181Jnv1B77SIvC7JW5cmop", "19171403", "212513613", "UC27Z5ZvYSt95UtjFeGJ0wGA", "milz.singer"),
             Artist('Алексир', "3377722344143542502", "7aPj4tatJiiVIImj1uYdpV", "18574196", "212326111",
                    "UC5CM0orwcf0e81U8818LNVg", "aleksirme"),
@@ -73,9 +79,10 @@ class cDb(object):
             Artist('Вячеслав Мясников', "2373197429746032417", "6rSChDc4zteS5rIH728wxA", "3118319", "1479802",
                    "UCKxaCaipSkU6MgQwv2y-lkw", "slava_myasnikov", "@miasnikov.s","","","","","",600),
             Artist('Ирина Эмирова', "5595344415242300490", "0XRzVBeXMuAoyLiKt611n2", "3987540", "167840734", "",
-                   "irina_emirova","","","","","","",50),
+                   "irina_emirova","","","","","",""),
             Artist('Хор Ирины Павленко', "2495875715565516380", "0sFrPGC1ewZMBmGrt8UmcM", "21014484", "212760210"),
             Artist('Нонна', "730034513534917869", "6beQNGwlwrvrT01TDwMBcl", "8590484", "209798494", "", "singer_nonna"),
+            Artist('RemoteRussia', "", "", "", "", "", "", "", "remote_russia"),
             Artist('Анастасия Ларцева', "8539475736460412680", "", "", "", "", "", "")
         ]
 
@@ -158,13 +165,13 @@ class cDb(object):
     def day2db(self):
 
         self.cursor.execute(
-            'INSERT INTO MuzStat (mcurdate,mcurtime,martist,mtrack,hears_vk,adds_vk,eff_vk,hears_vk_c,adds_vk_c,eff_vk_c,ServiceOrTrack,hears_month_ynd,likes_month_ynd,likes_all_ynd, sub_sber, sub_youtube, hears_month_spot, sub_vk, sub_tiktok, likes_tiktok,hears_best_song, hears_best_n, eff_best_song, eff_best_n)'
-            ' VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?)',
+            'INSERT INTO MuzStat (mcurdate,mcurtime,martist,mtrack,hears_vk,adds_vk,eff_vk,hears_vk_c,adds_vk_c,eff_vk_c,ServiceOrTrack,hears_month_ynd,likes_month_ynd,likes_all_ynd, sub_sber, sub_youtube, hears_month_spot, sub_vk, sub_tiktok, likes_tiktok, sub_tlg, hears_best_song, hears_best_n, eff_best_song, eff_best_n)'
+            ' VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?,?)',
             (self.columns["mcurdate"], self.columns["mcurtime"], self.columns["martist"], "", self._dayhearsvk,
              self._dayaddsvk, self._dayeffvk, "", "", "",
              IsSERVICE, self.columns["hears_month_ynd"], self.columns["likes_month_ynd"], self.columns["likes_all_ynd"],
              self.columns["sub_sber"], self.columns["sub_youtube"], self.columns["hears_month_spot"],
-             self.columns["sub_vk"], self.columns["sub_tiktok"], self.columns["likes_tiktok"],
+             self.columns["sub_vk"], self.columns["sub_tiktok"], self.columns["likes_tiktok"], self.columns["sub_tlg"],
              self._hears_best_song, self._hears_best_n,self._eff_best_song,self._eff_best_n))
 
         self.connection.commit()
