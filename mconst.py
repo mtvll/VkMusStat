@@ -9,12 +9,15 @@ import difflib
 # при работа mainchk проверять заглавные или строчные буквы прямо на странице!!!
 # при работа mainchk проверять яззык чтобы был нужный!!!
 
-MVERSION="240614 Новый мейл в отдельном файле"
+MVERSION="240619 Сбер и Youtube в коммандной строке>"
+# MVERSION="240614 Новый мейл в отдельном файле"
 # MVERSION = "240609 Проверка Rayvan и другие "
 # MVERSION = "2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)"
 
 
 TXTPRODUCTIVE  = "PRODUCTIVE"
+
+TXTDONTWRITE2BASE  = "DONTWRITE2BASE"
 
 MIN_HEARS_FOR_EFFECTIVETY = 20
 MIN_VAL_FOR_COMPARE = 10

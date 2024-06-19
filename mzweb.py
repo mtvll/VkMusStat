@@ -16,7 +16,7 @@ class cWebm(object):
     def __init__(self):
         # create chromeoptions instance
         options = webdriver.ChromeOptions()
-
+        self.cmd_param=""
         # provide location where chrome stores profiles
         if (socket.gethostname()) == MPC1:
             mdir = MDIR1

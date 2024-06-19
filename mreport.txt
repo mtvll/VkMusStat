@@ -3407,3 +3407,400 @@ CHANGE STATUS cSpbTheatrBashlacev NewStatus:0 Link:https://puppets.ru/spec/4
 13-Jun-2024: 00:09:23 (Thursday) MUZCHEK End
 13-Jun-2024: 00:09:23 (Thursday) MUZCOMPARE Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
 13-Jun-2024: 00:09:25 (Thursday) MUZCOMPARE End
+13-Jun-2024: 04:09:38 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 04:12:44 (Thursday) MUZSTAT RAYVAN  DONE
+13-Jun-2024: 04:13:35 (Thursday) MUZSTAT: ERR  MILZ:YOUTUBE : UC27Z5ZvYSt95UtjFeGJ0wGA
+13-Jun-2024: 04:13:36 (Thursday) MUZSTAT MILZ  DONE
+13-Jun-2024: 04:14:31 (Thursday) MUZSTAT Алексир  DONE
+13-Jun-2024: 04:16:04 (Thursday) MUZSTAT София Мосейчук  DONE
+13-Jun-2024: 04:18:46 (Thursday) MUZSTAT: ERR  Rustam Fahrtdinov:YOUTUBE : UCyw22JexbXGNh3_wqaOkq2g
+13-Jun-2024: 04:19:08 (Thursday) MUZSTAT Rustam Fahrtdinov  DONE
+13-Jun-2024: 04:20:16 (Thursday) MUZSTAT: ERR  KALUGIN:YOUTUBE : UCxovuUXDDlOAIo1fY98vtyw
+13-Jun-2024: 04:20:26 (Thursday) MUZSTAT KALUGIN  DONE
+13-Jun-2024: 04:21:11 (Thursday) MUZSTAT Makaronnoe bludo  DONE
+13-Jun-2024: 04:21:56 (Thursday) MUZSTAT Vigi  DONE
+13-Jun-2024: 04:22:47 (Thursday) MUZSTAT: ERR  Вячеслав Мясников:YOUTUBE : UCKxaCaipSkU6MgQwv2y-lkw
+13-Jun-2024: 04:22:56 (Thursday) MUZSTAT Вячеслав Мясников  DONE
+13-Jun-2024: 04:23:43 (Thursday) MUZSTAT Ирина Эмирова  DONE
+13-Jun-2024: 04:24:15 (Thursday) MUZSTAT Хор Ирины Павленко  DONE
+13-Jun-2024: 04:25:00 (Thursday) MUZSTAT Нонна  DONE
+13-Jun-2024: 04:25:21 (Thursday) MUZSTAT Анастасия Ларцева  DONE
+13-Jun-2024: 04:25:21 (Thursday) MUZSTAT End
+13-Jun-2024: 14:55:41 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 15:02:25 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 15:02:59 (Thursday) MUZSTAT: ERRUnable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+13-Jun-2024: 15:03:08 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 15:03:10 (Thursday) MUZSTAT: ERRUnable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+13-Jun-2024: 15:03:58 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 15:04:02 (Thursday) MUZSTAT: ERRUnable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+13-Jun-2024: 16:05:04 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 16:06:33 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+13-Jun-2024: 16:29:59 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 16:31:48 (Thursday) MUZSTAT RAYVAN  DONE
+13-Jun-2024: 16:32:38 (Thursday) MUZSTAT: ERR  MILZ:YOUTUBE : UC27Z5ZvYSt95UtjFeGJ0wGA
+13-Jun-2024: 16:35:42 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 16:37:26 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+13-Jun-2024: 16:43:05 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 16:44:03 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+13-Jun-2024: 16:45:53 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 16:46:51 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+13-Jun-2024: 16:50:53 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 16:51:53 (Thursday) MUZSTAT RAYVAN  DONE
+13-Jun-2024: 16:52:37 (Thursday) MUZSTAT MILZ  DONE
+13-Jun-2024: 16:53:24 (Thursday) MUZSTAT Алексир  DONE
+13-Jun-2024: 16:53:55 (Thursday) MUZSTAT София Мосейчук  DONE
+13-Jun-2024: 16:54:47 (Thursday) MUZSTAT Rustam Fahrtdinov  DONE
+13-Jun-2024: 16:55:38 (Thursday) MUZSTAT KALUGIN  DONE
+13-Jun-2024: 16:56:23 (Thursday) MUZSTAT Makaronnoe bludo  DONE
+13-Jun-2024: 16:57:07 (Thursday) MUZSTAT Vigi  DONE
+13-Jun-2024: 16:58:01 (Thursday) MUZSTAT Вячеслав Мясников  DONE
+13-Jun-2024: 16:58:49 (Thursday) MUZSTAT Ирина Эмирова  DONE
+13-Jun-2024: 16:59:21 (Thursday) MUZSTAT Хор Ирины Павленко  DONE
+13-Jun-2024: 17:00:07 (Thursday) MUZSTAT Нонна  DONE
+13-Jun-2024: 17:00:28 (Thursday) MUZSTAT Анастасия Ларцева  DONE
+13-Jun-2024: 17:00:28 (Thursday) MUZSTAT End
+13-Jun-2024: 23:20:02 (Thursday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+13-Jun-2024: 23:21:06 (Thursday) MUZSTAT RAYVAN  DONE
+13-Jun-2024: 23:21:48 (Thursday) MUZSTAT MILZ  DONE
+13-Jun-2024: 23:22:33 (Thursday) MUZSTAT Алексир  DONE
+13-Jun-2024: 23:23:05 (Thursday) MUZSTAT София Мосейчук  DONE
+13-Jun-2024: 23:23:54 (Thursday) MUZSTAT Rustam Fahrtdinov  DONE
+13-Jun-2024: 23:24:44 (Thursday) MUZSTAT KALUGIN  DONE
+13-Jun-2024: 23:25:31 (Thursday) MUZSTAT Makaronnoe bludo  DONE
+13-Jun-2024: 23:26:13 (Thursday) MUZSTAT Vigi  DONE
+13-Jun-2024: 23:27:06 (Thursday) MUZSTAT Вячеслав Мясников  DONE
+13-Jun-2024: 23:27:52 (Thursday) MUZSTAT Ирина Эмирова  DONE
+13-Jun-2024: 23:28:23 (Thursday) MUZSTAT Хор Ирины Павленко  DONE
+13-Jun-2024: 23:29:07 (Thursday) MUZSTAT Нонна  DONE
+13-Jun-2024: 23:29:28 (Thursday) MUZSTAT Анастасия Ларцева  DONE
+13-Jun-2024: 23:29:28 (Thursday) MUZSTAT End
+14-Jun-2024: 00:01:54 (Friday) MUZGRAPH Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+14-Jun-2024: 00:02:02 (Friday) MUZGRAPH End
+14-Jun-2024: 00:05:14 (Friday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+14-Jun-2024: 00:05:14 (Friday) Close Chrome.exe
+14-Jun-2024: 00:08:31 (Friday) MUZCHEKGOOD STATUS chkYndRayvan Status:1 Link:https://band.link/scanner?search=Rayvan
+
+14-Jun-2024: 02:11:15 (Friday) MUZGRAPH Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+14-Jun-2024: 02:11:40 (Friday) MUZGRAPH End
+14-Jun-2024: 23:20:08 (Friday) MUZSTAT Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+14-Jun-2024: 23:20:08 (Friday) Close Chrome.exe
+14-Jun-2024: 23:21:31 (Friday) MUZSTAT RAYVAN  DONE
+14-Jun-2024: 23:22:22 (Friday) MUZSTAT MILZ  DONE
+14-Jun-2024: 23:23:15 (Friday) MUZSTAT Алексир  DONE
+14-Jun-2024: 23:23:54 (Friday) MUZSTAT София Мосейчук  DONE
+14-Jun-2024: 23:24:54 (Friday) MUZSTAT Rustam Fahrtdinov  DONE
+14-Jun-2024: 23:25:55 (Friday) MUZSTAT KALUGIN  DONE
+14-Jun-2024: 23:26:46 (Friday) MUZSTAT Makaronnoe bludo  DONE
+14-Jun-2024: 23:27:35 (Friday) MUZSTAT Vigi  DONE
+14-Jun-2024: 23:28:35 (Friday) MUZSTAT Вячеслав Мясников  DONE
+14-Jun-2024: 23:29:29 (Friday) MUZSTAT Ирина Эмирова  DONE
+14-Jun-2024: 23:30:03 (Friday) MUZSTAT Хор Ирины Павленко  DONE
+14-Jun-2024: 23:30:54 (Friday) MUZSTAT Нонна  DONE
+14-Jun-2024: 23:31:16 (Friday) MUZSTAT Анастасия Ларцева  DONE
+14-Jun-2024: 23:31:16 (Friday) MUZSTAT End
+15-Jun-2024: 00:05:14 (Saturday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+15-Jun-2024: 00:09:04 (Saturday) MUZCHEKGOOD STATUS chkYndRayvan Status:1 Link:https://band.link/scanner?search=Rayvan
+GOOD STATUS chkYndАлексир Status:1 Link:https://band.link/scanner?search=Алексир
+CHANGE STATUS chkYndАлексир NewStatus:1 Link:https://band.link/scanner?search=Алексир
+CHANGE STATUS chkYndMILZ NewStatus:1 Link:https://band.link/scanner?search=MILZ
+CHANGE STATUS chkYndЭмирова NewStatus:1 Link:https://band.link/scanner?search=Эмирова
+CHANGE STATUS chkYndПавленко NewStatus:1 Link:https://band.link/scanner?search=Павленко
+CHANGE STATUS chkYndFahrtdinov NewStatus:1 Link:https://band.link/scanner?search=Fahrtdinov
+CHANGE STATUS chkYndKaluga NewStatus:1 Link:https://band.link/scanner?search=KALUGIN
+CHANGE STATUS chkYndMakaronnoe NewStatus:1 Link:https://band.link/scanner?search=Makaronnoe
+CHANGE STATUS cSpbTheatrBashlacev NewStatus:1 Link:https://puppets.ru/spec/4
+
+15-Jun-2024: 02:06:54 (Saturday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+15-Jun-2024: 02:12:00 (Saturday) MUZCHEKGOOD STATUS chkYndRayvan Status:1 Link:https://band.link/scanner?search=Rayvan
+GOOD STATUS chkYndАлексир Status:1 Link:https://band.link/scanner?search=Алексир
+
+15-Jun-2024: 16:03:24 (Saturday) MUZCHEK Start 2.6 от 03.06 Добавлена возможность проверки больших полей (Эрмитаж, Русский музей)
+15-Jun-2024: 16:05:22 (Saturday) MUZCHEK Start 240614 Новый мейл в отдельном файле
+15-Jun-2024: 16:10:21 (Saturday) MUZCHEKGOOD STATUS chkYndRayvan Status:1 Link:https://band.link/scanner?search=Rayvan
+GOOD STATUS chkYndАлексир Status:1 Link:https://band.link/scanner?search=Алексир
+
+15-Jun-2024: 16:12:34 (Saturday) MUZCHEK Start 240614 Новый мейл в отдельном файле
+15-Jun-2024: 16:17:13 (Saturday) MUZCHEKGOOD STATUS chkYndRayvan Status:1 Link:https://band.link/scanner?search=Rayvan
+GOOD STATUS chkYndАлексир Status:1 Link:https://band.link/scanner?search=Алексир
+CHANGE STATUS cMusmMskPush NewStatus:*** 
+--- 
+***************
+*** 1,12 ****
+  Прием на обучение
+! КОНТАКТЫ
+! +7 (495) 697-74-96
+! museyon@arts-museum.ru
+!   ПРИЕМ НА ОБУЧЕНИЕ
+! Программы без собеседования
+! Программы с собеседованием
+! Стоимость программ
+!   ПРОГРАММЫ БЕЗ СОБЕСЕДОВАНИЯ
+  Кружок «Семейная группа». Дошкольники 5–6 лет. 1 класс
+  Циклы занятий «Встречи в музее». 1-3 классы 
+  Кружок «Беседы об искусстве». 2–4 классы
+--- 1,6 ----
+  Прием на обучение
+! 
+! ПРОГРАММЫ БЕЗ СОБЕСЕДОВАНИЯ
+  Кружок «Семейная группа». Дошкольники 5–6 лет. 1 класс
+  Циклы занятий «Встречи в музее». 1-3 классы 
+  Кружок «Беседы об искусстве». 2–4 классы
+ Link:https://pushkinmuseum.art/education/museyon/clubs/admission/index.php
+
+15-Jun-2024: 16:17:14 (Saturday) MUZCHEK End
+15-Jun-2024: 16:17:14 (Saturday) MUZCOMPARE Start 240614 Новый мейл в отдельном файле
+15-Jun-2024: 16:17:14 (Saturday) MUZCOMPARE End
+15-Jun-2024: 23:20:01 (Saturday) MUZSTAT Start 240614 Новый мейл в отдельном файле
+15-Jun-2024: 23:20:35 (Saturday) MUZSTAT: ERR  RAYVAN:VKSTUDIO : 679765629422687778
+15-Jun-2024: 23:20:37 (Saturday) MUZSTAT: ERR  MILZ:VKSTUDIO : 3968096882825495134
+15-Jun-2024: 23:20:38 (Saturday) MUZSTAT: ERR  Алексир:VKSTUDIO : 3377722344143542502
+15-Jun-2024: 23:20:40 (Saturday) MUZSTAT: ERR  София Мосейчук:YANDEX : 15710563
+15-Jun-2024: 23:20:42 (Saturday) MUZSTAT: ERR  София Мосейчук:SBER : 211630315
+15-Jun-2024: 23:20:43 (Saturday) MUZSTAT: ERR  София Мосейчук:VK : moseichuksofiia
+15-Jun-2024: 23:20:45 (Saturday) MUZSTAT: ERR  София Мосейчук:TIKTOK : @krasotka.sofi
+15-Jun-2024: 23:20:47 (Saturday) MUZSTAT София Мосейчук  DONE
+15-Jun-2024: 23:20:47 (Saturday) MUZSTAT: ERR  Rustam Fahrtdinov:VKSTUDIO : 6775914816193346218
+15-Jun-2024: 23:20:49 (Saturday) MUZSTAT: ERR  KALUGIN:VKSTUDIO : 1263271834263162561
+15-Jun-2024: 23:20:51 (Saturday) MUZSTAT: ERR  Makaronnoe bludo:VKSTUDIO : 1203962139520298198
+15-Jun-2024: 23:20:53 (Saturday) MUZSTAT: ERR  Vigi:VKSTUDIO : 160757614473898073
+15-Jun-2024: 23:20:54 (Saturday) MUZSTAT: ERR  Вячеслав Мясников:VKSTUDIO : 2373197429746032417
+15-Jun-2024: 23:20:56 (Saturday) MUZSTAT: ERR  Ирина Эмирова:VKSTUDIO : 5595344415242300490
+15-Jun-2024: 23:20:58 (Saturday) MUZSTAT: ERR  Хор Ирины Павленко:VKSTUDIO : 2495875715565516380
+15-Jun-2024: 23:21:00 (Saturday) MUZSTAT: ERR  Нонна:VKSTUDIO : 730034513534917869
+15-Jun-2024: 23:21:01 (Saturday) MUZSTAT: ERR  Анастасия Ларцева:VKSTUDIO : 8539475736460412680
+15-Jun-2024: 23:21:03 (Saturday) MUZSTAT End
+16-Jun-2024: 00:05:13 (Sunday) MUZCHEK Start 240614 Новый мейл в отдельном файле
+16-Jun-2024: 00:09:31 (Sunday) MUZCHEKGOOD STATUS chkYndRayvan Status:1 Link:https://band.link/scanner?search=Rayvan
+CHANGE STATUS chkYndАлексир NewStatus:0 Link:https://band.link/scanner?search=Алексир
+CHANGE STATUS chkYndMILZ NewStatus:0 Link:https://band.link/scanner?search=MILZ
+CHANGE STATUS chkYndЭмирова NewStatus:0 Link:https://band.link/scanner?search=Эмирова
+CHANGE STATUS chkYndПавленко NewStatus:0 Link:https://band.link/scanner?search=Павленко
+CHANGE STATUS chkYndFahrtdinov NewStatus:0 Link:https://band.link/scanner?search=Fahrtdinov
+CHANGE STATUS chkYndKaluga NewStatus:0 Link:https://band.link/scanner?search=KALUGIN
+CHANGE STATUS chkYndMakaronnoe NewStatus:0 Link:https://band.link/scanner?search=Makaronnoe
+
+16-Jun-2024: 00:09:32 (Sunday) MUZCHEK End
+16-Jun-2024: 00:09:32 (Sunday) MUZCOMPARE Start 240614 Новый мейл в отдельном файле
+16-Jun-2024: 00:09:32 (Sunday) MUZCOMPARE End
+16-Jun-2024: 22:59:44 (Sunday) MUZSTAT Start 240614 Новый мейл в отдельном файле
+16-Jun-2024: 23:00:01 (Sunday) MUZSTAT: ERR  RAYVAN:VKSTUDIO : 679765629422687778
+16-Jun-2024: 23:00:13 (Sunday) MUZSTAT: ERR  MILZ:VKSTUDIO : 3968096882825495134
+16-Jun-2024: 23:00:22 (Sunday) MUZSTAT: ERR  Алексир:VKSTUDIO : 3377722344143542502
+16-Jun-2024: 23:00:23 (Sunday) MUZSTAT: ERR  София Мосейчук:YANDEX : 15710563
+16-Jun-2024: 23:02:41 (Sunday) MUZSTAT Start 240614 Новый мейл в отдельном файле
+16-Jun-2024: 23:03:49 (Sunday) MUZSTAT RAYVAN  DONE
+16-Jun-2024: 23:04:36 (Sunday) MUZSTAT MILZ  DONE
+16-Jun-2024: 23:05:26 (Sunday) MUZSTAT Алексир  DONE
+16-Jun-2024: 23:06:06 (Sunday) MUZSTAT София Мосейчук  DONE
+16-Jun-2024: 23:20:00 (Sunday) MUZSTAT Start 240614 Новый мейл в отдельном файле
+16-Jun-2024: 23:21:29 (Sunday) MUZSTAT RAYVAN  DONE
+16-Jun-2024: 23:22:09 (Sunday) MUZSTAT: ERR  MILZ:SBER : 212513613
+16-Jun-2024: 23:22:25 (Sunday) MUZSTAT MILZ  DONE
+16-Jun-2024: 23:23:03 (Sunday) MUZSTAT: ERR  Алексир:SBER : 212326111
+16-Jun-2024: 23:23:20 (Sunday) MUZSTAT Алексир  DONE
+16-Jun-2024: 23:23:34 (Sunday) MUZSTAT: ERR  София Мосейчук:SBER : 211630315
+16-Jun-2024: 23:24:05 (Sunday) MUZSTAT София Мосейчук  DONE
+16-Jun-2024: 23:24:38 (Sunday) MUZSTAT: ERR  Rustam Fahrtdinov:SBER : 31876918
+16-Jun-2024: 23:25:05 (Sunday) MUZSTAT Rustam Fahrtdinov  DONE
+16-Jun-2024: 23:25:39 (Sunday) MUZSTAT: ERR  KALUGIN:SBER : 211923181
+16-Jun-2024: 23:26:02 (Sunday) MUZSTAT KALUGIN  DONE
+16-Jun-2024: 23:26:34 (Sunday) MUZSTAT: ERR  Makaronnoe bludo:SBER : 211979258
+16-Jun-2024: 23:26:51 (Sunday) MUZSTAT Makaronnoe bludo  DONE
+16-Jun-2024: 23:27:24 (Sunday) MUZSTAT: ERR  Vigi:SBER : 212086549
+16-Jun-2024: 23:27:39 (Sunday) MUZSTAT Vigi  DONE
+16-Jun-2024: 23:28:12 (Sunday) MUZSTAT: ERR  Вячеслав Мясников:SBER : 1479802
+16-Jun-2024: 23:28:41 (Sunday) MUZSTAT Вячеслав Мясников  DONE
+16-Jun-2024: 23:29:13 (Sunday) MUZSTAT: ERR  Ирина Эмирова:SBER : 167840734
+16-Jun-2024: 23:29:30 (Sunday) MUZSTAT Ирина Эмирова  DONE
+16-Jun-2024: 23:30:03 (Sunday) MUZSTAT: ERR  Хор Ирины Павленко:SBER : 212760210
+16-Jun-2024: 23:30:04 (Sunday) MUZSTAT Хор Ирины Павленко  DONE
+16-Jun-2024: 23:30:36 (Sunday) MUZSTAT: ERR  Нонна:SBER : 209798494
+16-Jun-2024: 23:30:52 (Sunday) MUZSTAT Нонна  DONE
+16-Jun-2024: 23:31:13 (Sunday) MUZSTAT Анастасия Ларцева  DONE
+16-Jun-2024: 23:31:13 (Sunday) MUZSTAT End
+17-Jun-2024: 00:05:14 (Monday) MUZCHEK Start 240614 Новый мейл в отдельном файле
+17-Jun-2024: 00:08:47 (Monday) MUZCHEKGOOD STATUS chkYndRayvan Status:1 Link:https://band.link/scanner?search=Rayvan
+
+17-Jun-2024: 00:08:48 (Monday) MUZCHEK End
+17-Jun-2024: 00:08:48 (Monday) MUZCOMPARE Start 240614 Новый мейл в отдельном файле
+17-Jun-2024: 00:08:48 (Monday) MUZCOMPARE End
+17-Jun-2024: 00:10:59 (Monday) MUZSTAT Start 240614 Новый мейл в отдельном файле
+17-Jun-2024: 00:11:40 (Monday) MUZSTAT: ERR  RAYVAN:SBER : 210105583
+17-Jun-2024: 00:12:04 (Monday) MUZSTAT RAYVAN  DONE
+17-Jun-2024: 00:13:32 (Monday) MUZSTAT Start 240614 Новый мейл в отдельном файле
+17-Jun-2024: 03:13:05 (Monday) MUZCHEK Start 240614 Новый мейл в отдельном файле
+17-Jun-2024: 03:15:17 (Monday) MUZCHEK: ERR CHK chkVkVigi  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=109.0.5414.120)
+17-Jun-2024: 03:15:19 (Monday) MUZCHEK: ERR CHK chkVkМосейчук  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=109.0.5414.120)
+17-Jun-2024: 03:15:20 (Monday) MUZCHEK: ERR CHK chkVkНонна  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=109.0.5414.120)
+17-Jun-2024: 03:15:20 (Monday) MUZCHEK: ERR CHK chkVkПавленко  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=109.0.5414.120)
+17-Jun-2024: 03:15:22 (Monday) MUZCHEK: ERR CHK chkVkЭмирова  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=109.0.5414.120)
+17-Jun-2024: 03:15:23 (Monday) MUZCHEK: ERR CHK chkMusicAlligat  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=109.0.5414.120)
+17-Jun-2024: 03:15:24 (Monday) MUZCHEK: ERR CHK cSpbTheatrBashlacev  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=109.0.5414.120)
+17-Jun-2024: 03:15:25 (Monday) MUZCHEK: ERR CHK cSpbTheatrLetov  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=109.0.5414.120)
+17-Jun-2024: 03:15:27 (Monday) MUZCHEK: ERR CHK cSale34Play50  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=109.0.5414.120)
+17-Jun-2024: 03:15:28 (Monday) MUZCHEK: ERR CHK cMusmMskPush  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=109.0.5414.120)
+17-Jun-2024: 03:15:29 (Monday) MUZCHEK: ERR CHK cMusmSpbAkHudozh  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=109.0.5414.120)
+17-Jun-2024: 03:15:30 (Monday) MUZCHEK: ERR CHK cMusmSpbHermitage  Messageno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=109.0.5414.120)
+17-Jun-2024: 03:15:31 (Monday) MUZCHEKGOOD STATUS chkYndRayvan Status:1 Link:https://band.link/scanner?search=Rayvan
+
+17-Jun-2024: 03:15:32 (Monday) MUZCHEK End
+17-Jun-2024: 03:15:32 (Monday) MUZCOMPARE Start 240614 Новый мейл в отдельном файле
+17-Jun-2024: 03:15:32 (Monday) MUZCOMPARE End
+17-Jun-2024: 03:15:46 (Monday) MUZCHEK Start 240614 Новый мейл в отдельном файле
+17-Jun-2024: 03:19:42 (Monday) MUZCHEKGOOD STATUS chkYndRayvan Status:1 Link:https://band.link/scanner?search=Rayvan
+CHANGE STATUS cMusmMskPush NewStatus:*** 
+--- 
+***************
+*** 1,6 ****
+  Прием на обучение
+! 
+! ПРОГРАММЫ БЕЗ СОБЕСЕДОВАНИЯ
+  Кружок «Семейная группа». Дошкольники 5–6 лет. 1 класс
+  Циклы занятий «Встречи в музее». 1-3 классы 
+  Кружок «Беседы об искусстве». 2–4 классы
+--- 1,12 ----
+  Прием на обучение
+! КОНТАКТЫ
+! +7 (495) 697-74-96
+! museyon@arts-museum.ru
+!   ПРИЕМ НА ОБУЧЕНИЕ
+! Программы без собеседования
+! Программы с собеседованием
+! Стоимость программ
+!   ПРОГРАММЫ БЕЗ СОБЕСЕДОВАНИЯ
+  Кружок «Семейная группа». Дошкольники 5–6 лет. 1 класс
+  Циклы занятий «Встречи в музее». 1-3 классы 
+  Кружок «Беседы об искусстве». 2–4 классы
+ Link:https://pushkinmuseum.art/education/museyon/clubs/admission/index.php
+CHANGE STATUS cTorrHolovolomka2 NewStatus:1 Link:https://www.citywalls.ru/search-street283.html
+
+17-Jun-2024: 03:19:43 (Monday) MUZCHEK End
+17-Jun-2024: 03:19:43 (Monday) MUZCOMPARE Start 240614 Новый мейл в отдельном файле
+17-Jun-2024: 03:19:43 (Monday) MUZCOMPARE End
+17-Jun-2024: 23:20:00 (Monday) MUZSTAT Start 240614 Новый мейл в отдельном файле
+17-Jun-2024: 23:20:39 (Monday) MUZSTAT: ERR  RAYVAN:SBER : 210105583
+17-Jun-2024: 23:21:04 (Monday) MUZSTAT RAYVAN  DONE
+17-Jun-2024: 23:21:35 (Monday) MUZSTAT: ERR  MILZ:SBER : 212513613
+17-Jun-2024: 23:21:49 (Monday) MUZSTAT MILZ  DONE
+17-Jun-2024: 23:22:20 (Monday) MUZSTAT: ERR  Алексир:SBER : 212326111
+17-Jun-2024: 23:22:34 (Monday) MUZSTAT Алексир  DONE
+17-Jun-2024: 23:22:44 (Monday) MUZSTAT: ERR  София Мосейчук:SBER : 211630315
+17-Jun-2024: 23:23:03 (Monday) MUZSTAT София Мосейчук  DONE
+17-Jun-2024: 23:23:35 (Monday) MUZSTAT: ERR  Rustam Fahrtdinov:SBER : 31876918
+17-Jun-2024: 23:23:55 (Monday) MUZSTAT Rustam Fahrtdinov  DONE
+17-Jun-2024: 23:24:26 (Monday) MUZSTAT: ERR  KALUGIN:SBER : 211923181
+17-Jun-2024: 23:24:49 (Monday) MUZSTAT KALUGIN  DONE
+17-Jun-2024: 23:25:20 (Monday) MUZSTAT: ERR  Makaronnoe bludo:SBER : 211979258
+17-Jun-2024: 23:25:35 (Monday) MUZSTAT Makaronnoe bludo  DONE
+17-Jun-2024: 23:26:05 (Monday) MUZSTAT: ERR  Vigi:SBER : 212086549
+17-Jun-2024: 23:26:18 (Monday) MUZSTAT Vigi  DONE
+17-Jun-2024: 23:26:50 (Monday) MUZSTAT: ERR  Вячеслав Мясников:SBER : 1479802
+17-Jun-2024: 23:27:12 (Monday) MUZSTAT Вячеслав Мясников  DONE
+17-Jun-2024: 23:27:45 (Monday) MUZSTAT: ERR  Ирина Эмирова:SBER : 167840734
+17-Jun-2024: 23:27:59 (Monday) MUZSTAT Ирина Эмирова  DONE
+17-Jun-2024: 23:28:29 (Monday) MUZSTAT: ERR  Хор Ирины Павленко:SBER : 212760210
+17-Jun-2024: 23:28:30 (Monday) MUZSTAT Хор Ирины Павленко  DONE
+17-Jun-2024: 23:29:01 (Monday) MUZSTAT: ERR  Нонна:SBER : 209798494
+17-Jun-2024: 23:29:15 (Monday) MUZSTAT Нонна  DONE
+17-Jun-2024: 23:29:36 (Monday) MUZSTAT Анастасия Ларцева  DONE
+17-Jun-2024: 23:29:36 (Monday) MUZSTAT End
+18-Jun-2024: 00:05:14 (Tuesday) MUZCHEK Start 240614 Новый мейл в отдельном файле
+18-Jun-2024: 00:08:27 (Tuesday) MUZCHEKGOOD STATUS chkYndRayvan Status:1 Link:https://band.link/scanner?search=Rayvan
+CHANGE STATUS cMusmSpbAkHudozh NewStatus:*** 
+--- 
+***************
+*** 12,17 ****
+--- 12,18 ----
+  ПЛЕНЭРНЫЕ НАБРОСКИ
+  АРХИТЕКТУРНЫЙ СКЕТЧИНГ
+  ПЛЕНЭРНЫЙ НАТЮРМОРТ
++ ПАПИН ПОРТРЕТ
+  КОПИРУЙ КАК ХУДОЖНИК
+  АКАДЕМИЧЕСКИЙ ПЛЕНЭР
+  МУЗЕЙНЫЕ ЗАНЯТИЯ
+ Link:https://kids.artsacademymuseum.org/
+
+18-Jun-2024: 00:08:29 (Tuesday) MUZCHEK End
+18-Jun-2024: 00:08:29 (Tuesday) MUZCOMPARE Start 240614 Новый мейл в отдельном файле
+18-Jun-2024: 00:08:30 (Tuesday) MUZCOMPARE End
+18-Jun-2024: 23:20:01 (Tuesday) MUZSTAT Start 240614 Новый мейл в отдельном файле
+18-Jun-2024: 23:20:01 (Tuesday) Close Chrome.exe
+18-Jun-2024: 23:20:40 (Tuesday) MUZSTAT: ERR  RAYVAN:SBER : 210105583
+18-Jun-2024: 23:21:03 (Tuesday) MUZSTAT RAYVAN  DONE
+18-Jun-2024: 23:21:34 (Tuesday) MUZSTAT: ERR  MILZ:SBER : 212513613
+18-Jun-2024: 23:21:48 (Tuesday) MUZSTAT MILZ  DONE
+18-Jun-2024: 23:22:19 (Tuesday) MUZSTAT: ERR  Алексир:SBER : 212326111
+18-Jun-2024: 23:22:35 (Tuesday) MUZSTAT Алексир  DONE
+18-Jun-2024: 23:22:45 (Tuesday) MUZSTAT: ERR  София Мосейчук:SBER : 211630315
+18-Jun-2024: 23:23:05 (Tuesday) MUZSTAT София Мосейчук  DONE
+18-Jun-2024: 23:23:36 (Tuesday) MUZSTAT: ERR  Rustam Fahrtdinov:SBER : 31876918
+18-Jun-2024: 23:23:58 (Tuesday) MUZSTAT Rustam Fahrtdinov  DONE
+18-Jun-2024: 23:24:29 (Tuesday) MUZSTAT: ERR  KALUGIN:SBER : 211923181
+18-Jun-2024: 23:24:52 (Tuesday) MUZSTAT KALUGIN  DONE
+18-Jun-2024: 23:25:22 (Tuesday) MUZSTAT: ERR  Makaronnoe bludo:SBER : 211979258
+18-Jun-2024: 23:25:37 (Tuesday) MUZSTAT Makaronnoe bludo  DONE
+18-Jun-2024: 23:26:10 (Tuesday) MUZSTAT: ERR  Vigi:SBER : 212086549
+18-Jun-2024: 23:26:23 (Tuesday) MUZSTAT Vigi  DONE
+18-Jun-2024: 23:26:55 (Tuesday) MUZSTAT: ERR  Вячеслав Мясников:SBER : 1479802
+18-Jun-2024: 23:27:17 (Tuesday) MUZSTAT Вячеслав Мясников  DONE
+18-Jun-2024: 23:27:48 (Tuesday) MUZSTAT: ERR  Ирина Эмирова:SBER : 167840734
+18-Jun-2024: 23:28:03 (Tuesday) MUZSTAT Ирина Эмирова  DONE
+18-Jun-2024: 23:28:34 (Tuesday) MUZSTAT: ERR  Хор Ирины Павленко:SBER : 212760210
+18-Jun-2024: 23:28:35 (Tuesday) MUZSTAT Хор Ирины Павленко  DONE
+18-Jun-2024: 23:29:06 (Tuesday) MUZSTAT: ERR  Нонна:SBER : 209798494
+18-Jun-2024: 23:29:19 (Tuesday) MUZSTAT Нонна  DONE
+18-Jun-2024: 23:29:40 (Tuesday) MUZSTAT Анастасия Ларцева  DONE
+18-Jun-2024: 23:29:40 (Tuesday) MUZSTAT End
+19-Jun-2024: 00:05:13 (Wednesday) MUZCHEK Start 240614 Новый мейл в отдельном файле
+19-Jun-2024: 00:08:27 (Wednesday) MUZCHEKGOOD STATUS chkYndRayvan Status:1 Link:https://band.link/scanner?search=Rayvan
+
+19-Jun-2024: 00:08:28 (Wednesday) MUZCHEK End
+19-Jun-2024: 00:08:28 (Wednesday) MUZCOMPARE Start 240614 Новый мейл в отдельном файле
+19-Jun-2024: 00:08:29 (Wednesday) MUZCOMPARE End
+19-Jun-2024: 03:12:02 (Wednesday) MUZSTAT Start 240614 Новый мейл в отдельном файле
+19-Jun-2024: 03:12:06 (Wednesday) MUZSTAT: ERRunknown error: Chrome failed to start: exited normally.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+19-Jun-2024: 03:12:30 (Wednesday) MUZSTAT Start 240614 Новый мейл в отдельном файле
+19-Jun-2024: 03:13:10 (Wednesday) MUZSTAT: ERR  RAYVAN:SBER : 210105583
+19-Jun-2024: 03:13:25 (Wednesday) MUZSTAT: ERR  RAYVAN:VK : rayvan.official
+19-Jun-2024: 03:19:46 (Wednesday) MUZSTAT Start 240614 Новый мейл в отдельном файле
+19-Jun-2024: 03:29:02 (Wednesday) MUZSTAT Start 240614 Новый мейл в отдельном файле
+19-Jun-2024: 03:29:58 (Wednesday) MUZSTAT RAYVAN  DONE
+19-Jun-2024: 03:30:38 (Wednesday) MUZSTAT MILZ  DONE
+19-Jun-2024: 03:31:20 (Wednesday) MUZSTAT Алексир  DONE
+19-Jun-2024: 03:31:44 (Wednesday) MUZSTAT София Мосейчук  DONE
+19-Jun-2024: 03:32:32 (Wednesday) MUZSTAT Rustam Fahrtdinov  DONE
+19-Jun-2024: 03:33:21 (Wednesday) MUZSTAT KALUGIN  DONE
+19-Jun-2024: 03:34:02 (Wednesday) MUZSTAT Makaronnoe bludo  DONE
+19-Jun-2024: 03:34:40 (Wednesday) MUZSTAT Vigi  DONE
+19-Jun-2024: 03:35:29 (Wednesday) MUZSTAT Вячеслав Мясников  DONE
+19-Jun-2024: 03:36:10 (Wednesday) MUZSTAT Ирина Эмирова  DONE
+19-Jun-2024: 03:36:36 (Wednesday) MUZSTAT Хор Ирины Павленко  DONE
+19-Jun-2024: 03:37:15 (Wednesday) MUZSTAT Нонна  DONE
+19-Jun-2024: 03:37:36 (Wednesday) MUZSTAT Анастасия Ларцева  DONE
+19-Jun-2024: 03:37:36 (Wednesday) MUZSTAT End
