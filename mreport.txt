@@ -3804,3 +3804,99 @@ CHANGE STATUS cMusmSpbAkHudozh NewStatus:***
 19-Jun-2024: 03:37:15 (Wednesday) MUZSTAT Нонна  DONE
 19-Jun-2024: 03:37:36 (Wednesday) MUZSTAT Анастасия Ларцева  DONE
 19-Jun-2024: 03:37:36 (Wednesday) MUZSTAT End
+19-Jun-2024: 23:20:01 (Wednesday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+19-Jun-2024: 23:20:31 (Wednesday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+19-Jun-2024: 23:41:31 (Wednesday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+19-Jun-2024: 23:50:35 (Wednesday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+19-Jun-2024: 23:51:23 (Wednesday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+19-Jun-2024: 23:51:40 (Wednesday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+19-Jun-2024: 23:51:56 (Wednesday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+19-Jun-2024: 23:51:57 (Wednesday) MUZSTAT RAYVAN  DONE
+19-Jun-2024: 23:51:57 (Wednesday) MUZSTAT: ERR  MILZ:YOUTUBE : UC27Z5ZvYSt95UtjFeGJ0wGA
+19-Jun-2024: 23:51:59 (Wednesday) MUZSTAT MILZ  DONE
+19-Jun-2024: 23:51:59 (Wednesday) MUZSTAT: ERR  RAYVAN:VKSTUDIO : 679765629422687778
+19-Jun-2024: 23:52:00 (Wednesday) MUZSTAT: ERR  MILZ:VKSTUDIO : 3968096882825495134
+19-Jun-2024: 23:52:02 (Wednesday) MUZSTAT: ERR  Алексир:VKSTUDIO : 3377722344143542502
+19-Jun-2024: 23:52:06 (Wednesday) MUZSTAT: ERR  София Мосейчук:YANDEX : 15710563
+19-Jun-2024: 23:52:08 (Wednesday) MUZSTAT: ERR  София Мосейчук:SBER : 211630315
+19-Jun-2024: 23:52:31 (Wednesday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 00:05:14 (Thursday) MUZCHEK Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 00:05:14 (Thursday) Close Chrome.exe
+20-Jun-2024: 00:08:50 (Thursday) MUZCHEKGOOD STATUS chkYndRayvan Status:1 Link:https://band.link/scanner?search=Rayvan
+CHANGE STATUS chkYndПавленко NewStatus:1 Link:https://band.link/scanner?search=Павленко
+CHANGE STATUS cMusmMskPush NewStatus:*** 
+--- 
+***************
+*** 1,12 ****
+  Прием на обучение
+! КОНТАКТЫ
+! +7 (495) 697-74-96
+! museyon@arts-museum.ru
+!   ПРИЕМ НА ОБУЧЕНИЕ
+! Программы без собеседования
+! Программы с собеседованием
+! Стоимость программ
+!   ПРОГРАММЫ БЕЗ СОБЕСЕДОВАНИЯ
+  Кружок «Семейная группа». Дошкольники 5–6 лет. 1 класс
+  Циклы занятий «Встречи в музее». 1-3 классы 
+  Кружок «Беседы об искусстве». 2–4 классы
+--- 1,6 ----
+  Прием на обучение
+! 
+! ПРОГРАММЫ БЕЗ СОБЕСЕДОВАНИЯ
+  Кружок «Семейная группа». Дошкольники 5–6 лет. 1 класс
+  Циклы занятий «Встречи в музее». 1-3 классы 
+  Кружок «Беседы об искусстве». 2–4 классы
+ Link:https://pushkinmuseum.art/education/museyon/clubs/admission/index.php
+
+20-Jun-2024: 00:08:51 (Thursday) MUZCHEK End
+20-Jun-2024: 00:08:51 (Thursday) MUZCOMPARE Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 00:08:51 (Thursday) MUZCOMPARE End
+20-Jun-2024: 01:54:29 (Thursday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 01:54:55 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+20-Jun-2024: 01:55:50 (Thursday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 02:10:30 (Thursday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 02:10:55 (Thursday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 02:11:36 (Thursday) MUZSTAT RAYVAN  DONE
+20-Jun-2024: 02:11:58 (Thursday) MUZSTAT MILZ  DONE
+20-Jun-2024: 02:12:21 (Thursday) MUZSTAT Алексир  DONE
+20-Jun-2024: 02:12:49 (Thursday) MUZSTAT София Мосейчук  DONE
+20-Jun-2024: 02:13:20 (Thursday) MUZSTAT Rustam Fahrtdinov  DONE
+20-Jun-2024: 02:13:49 (Thursday) MUZSTAT KALUGIN  DONE
+20-Jun-2024: 02:14:10 (Thursday) MUZSTAT Makaronnoe bludo  DONE
+20-Jun-2024: 02:14:31 (Thursday) MUZSTAT Vigi  DONE
+20-Jun-2024: 02:15:01 (Thursday) MUZSTAT Вячеслав Мясников  DONE
+20-Jun-2024: 02:15:24 (Thursday) MUZSTAT Ирина Эмирова  DONE
+20-Jun-2024: 02:15:32 (Thursday) MUZSTAT Хор Ирины Павленко  DONE
+20-Jun-2024: 02:15:53 (Thursday) MUZSTAT Нонна  DONE
+20-Jun-2024: 02:15:53 (Thursday) MUZSTAT RemoteRussia  DONE
+20-Jun-2024: 02:15:53 (Thursday) MUZSTAT Анастасия Ларцева  DONE
+20-Jun-2024: 02:15:53 (Thursday) MUZSTAT End
+20-Jun-2024: 02:27:01 (Thursday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 02:27:48 (Thursday) MUZSTAT RAYVAN  DONE
+20-Jun-2024: 02:28:09 (Thursday) MUZSTAT MILZ  DONE
+20-Jun-2024: 02:28:31 (Thursday) MUZSTAT Алексир  DONE
+20-Jun-2024: 02:28:58 (Thursday) MUZSTAT София Мосейчук  DONE
+20-Jun-2024: 02:29:28 (Thursday) MUZSTAT Rustam Fahrtdinov  DONE
+20-Jun-2024: 02:29:57 (Thursday) MUZSTAT KALUGIN  DONE
+20-Jun-2024: 02:30:18 (Thursday) MUZSTAT Makaronnoe bludo  DONE
+20-Jun-2024: 02:30:39 (Thursday) MUZSTAT Vigi  DONE
+20-Jun-2024: 02:31:08 (Thursday) MUZSTAT Вячеслав Мясников  DONE
+20-Jun-2024: 02:31:30 (Thursday) MUZSTAT Ирина Эмирова  DONE
+20-Jun-2024: 02:31:37 (Thursday) MUZSTAT Хор Ирины Павленко  DONE
+20-Jun-2024: 02:32:03 (Thursday) MUZSTAT Нонна  DONE
+20-Jun-2024: 02:32:08 (Thursday) MUZSTAT RemoteRussia  DONE
+20-Jun-2024: 02:32:08 (Thursday) MUZSTAT Анастасия Ларцева  DONE
+20-Jun-2024: 02:32:08 (Thursday) MUZSTAT End
+20-Jun-2024: 02:40:45 (Thursday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 02:41:32 (Thursday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 02:42:07 (Thursday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 02:42:36 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+20-Jun-2024: 02:42:50 (Thursday) MUZSTAT RAYVAN  DONE
+20-Jun-2024: 02:43:09 (Thursday) MUZSTAT: ERR  MILZ:YOUTUBE : UC27Z5ZvYSt95UtjFeGJ0wGA
+20-Jun-2024: 02:43:11 (Thursday) MUZSTAT MILZ  DONE
+20-Jun-2024: 02:43:33 (Thursday) MUZSTAT: ERR  Алексир:YOUTUBE : UC5CM0orwcf0e81U8818LNVg
+20-Jun-2024: 02:43:34 (Thursday) MUZSTAT Алексир  DONE
+20-Jun-2024: 02:43:53 (Thursday) MUZSTAT София Мосейчук  DONE
+20-Jun-2024: 02:44:14 (Thursday) MUZSTAT: ERR  Rustam Fahrtdinov:YOUTUBE : UCyw22JexbXGNh3_wqaOkq2g
+20-Jun-2024: 02:44:23 (Thursday) MUZSTAT Rustam Fahrtdinov  DONE

@@ -56,12 +56,6 @@ class cDb(object):
         # Артист (Имя, vkstudio, spotify, yandex, sber, youtube, vk, Tiktok):
 
         self.art = [
-            Artist('RAYVAN', "", "", "", "",
-                   "UCvtme_nmuo4NdcYniouDh2Q",
-                   "", "", ""),
-            Artist('MILZ', "", "", "", "",
-                   "UC27Z5ZvYSt95UtjFeGJ0wGA", ""),
-
             Artist('RAYVAN', "679765629422687778", "6MUpnjFA4zQu3s0t2Nzlfk", "8141812", "210105583","UCvtme_nmuo4NdcYniouDh2Q",
                    "rayvan.official","@rayvan.official","rayvanmusic"),
             Artist('MILZ', "3968096882825495134", "181Jnv1B77SIvC7JW5cmop", "19171403", "212513613", "UC27Z5ZvYSt95UtjFeGJ0wGA", "milz.singer"),

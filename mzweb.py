@@ -134,6 +134,14 @@ class cWebm(object):
         v = v0[0].text.split()[0]
         return self.checkisnumber(v)
 
+    def gettlgday(self, link):
+        # document.getElementsByClassName("tgme_page_extra")[0]
+        # <div class=​"css-mgke3u-DivNumber e1457k4r1">​…​</div>​flex
+        self.golinkpause(link)
+        vs0 = self.driver.find_elements(By.CLASS_NAME, "tgme_page_extra")[0]
+        vs = vs0.text.replace(" subscribers", "").replace(" ", "")
+        return self.checkisnumber(vs)
+
     def gettiktokday(self, link):
         # document.getElementsByClassName("css-mgke3u-DivNumber e1457k4r1")[1]
         # <div class=​"css-mgke3u-DivNumber e1457k4r1">​…​</div>​flex
