@@ -1,6 +1,6 @@
 import os
 import sqlite3
-import openpyxl
+# import openpyxl
 from mzweb import *
 
 base_name = 'mus2024spb.db'
@@ -136,5 +136,8 @@ def spbsql2table():
 
 # Запуск функции
 # export_to_sqlite()
+
+web = cWebm()
+web.getcitywalls2("ee")
 
 spbsql2table()

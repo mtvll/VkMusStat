@@ -230,3 +230,37 @@ class cWebm(object):
         myear = self.driver.find_elements(By.CLASS_NAME, "value")[1].text
         mstyle=self.driver.find_elements(By.CLASS_NAME, "value")[2].text
         return march, myear, mstyle
+
+
+
+
+
+    def getcitywalls2(self, link):
+        link = "https://www.citywalls.ru/house9440.html"
+        self.golinkpause(link)
+        march = self.driver.find_elements(By.CLASS_NAME, "value")[0].text
+        myear = self.driver.find_elements(By.CLASS_NAME, "value")[1].text
+        mstyle = self.driver.find_elements(By.CLASS_NAME, "value")[2].text
+
+        # city
+        # name
+        year = self.driver.find_elements(By.CLASS_NAME, "value")[1].text
+        style = self.driver.find_elements(By.CLASS_NAME, "value")[2].text
+        # status
+        # mainphoto
+        # arch1
+        # arch2
+        # arch3
+        # arch4
+        # addr1n
+        # addr1h
+        # addr1l
+        # addr2n
+        # addr2h
+        # addr2l
+        # addr3n
+        # addr3h
+        # addr3l
+        # addr4n
+        # addr4h
+        # addr4l
