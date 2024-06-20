@@ -97,7 +97,7 @@ def main():
                 pass
 
             try:
-                if i.vk != ""and not ("VKSUB"  in web.cmd_param):
+                if i.vk != ""and not ("NOVKSUB"  in web.cmd_param):
                     mlink = "https://vk.com/" + i.vk
                     db.columns["sub_vk"] = web.getvkday(mlink)
             except:

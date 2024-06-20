@@ -3900,3 +3900,120 @@ CHANGE STATUS cMusmMskPush NewStatus:***
 20-Jun-2024: 02:43:53 (Thursday) MUZSTAT София Мосейчук  DONE
 20-Jun-2024: 02:44:14 (Thursday) MUZSTAT: ERR  Rustam Fahrtdinov:YOUTUBE : UCyw22JexbXGNh3_wqaOkq2g
 20-Jun-2024: 02:44:23 (Thursday) MUZSTAT Rustam Fahrtdinov  DONE
+20-Jun-2024: 03:11:13 (Thursday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 03:11:45 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+20-Jun-2024: 03:12:02 (Thursday) MUZSTAT RAYVAN  DONE
+20-Jun-2024: 03:12:21 (Thursday) MUZSTAT: ERR  MILZ:YOUTUBE : UC27Z5ZvYSt95UtjFeGJ0wGA
+20-Jun-2024: 03:12:23 (Thursday) MUZSTAT MILZ  DONE
+20-Jun-2024: 03:12:45 (Thursday) MUZSTAT Алексир  DONE
+20-Jun-2024: 03:13:05 (Thursday) MUZSTAT София Мосейчук  DONE
+20-Jun-2024: 03:13:33 (Thursday) MUZSTAT Rustam Fahrtdinov  DONE
+20-Jun-2024: 03:14:05 (Thursday) MUZSTAT KALUGIN  DONE
+20-Jun-2024: 03:14:24 (Thursday) MUZSTAT Makaronnoe bludo  DONE
+20-Jun-2024: 03:14:37 (Thursday) MUZSTAT Vigi  DONE
+20-Jun-2024: 03:14:55 (Thursday) MUZSTAT: ERR  Вячеслав Мясников:YOUTUBE : UCKxaCaipSkU6MgQwv2y-lkw
+20-Jun-2024: 03:15:04 (Thursday) MUZSTAT Вячеслав Мясников  DONE
+20-Jun-2024: 03:15:20 (Thursday) MUZSTAT Ирина Эмирова  DONE
+20-Jun-2024: 03:15:20 (Thursday) MUZSTAT Хор Ирины Павленко  DONE
+20-Jun-2024: 03:15:33 (Thursday) MUZSTAT Нонна  DONE
+20-Jun-2024: 03:15:37 (Thursday) MUZSTAT RemoteRussia  DONE
+20-Jun-2024: 03:15:37 (Thursday) MUZSTAT Анастасия Ларцева  DONE
+20-Jun-2024: 03:15:37 (Thursday) MUZSTAT End
+20-Jun-2024: 03:27:45 (Thursday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 03:28:16 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+20-Jun-2024: 03:28:30 (Thursday) MUZSTAT RAYVAN  DONE
+20-Jun-2024: 03:28:49 (Thursday) MUZSTAT: ERR  MILZ:YOUTUBE : UC27Z5ZvYSt95UtjFeGJ0wGA
+20-Jun-2024: 03:28:50 (Thursday) MUZSTAT MILZ  DONE
+20-Jun-2024: 03:29:32 (Thursday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 03:30:05 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+20-Jun-2024: 03:30:20 (Thursday) MUZSTAT RAYVAN  DONE
+20-Jun-2024: 03:30:42 (Thursday) MUZSTAT: ERR  MILZ:YOUTUBE : UC27Z5ZvYSt95UtjFeGJ0wGA
+20-Jun-2024: 03:30:43 (Thursday) MUZSTAT MILZ  DONE
+20-Jun-2024: 03:34:00 (Thursday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 03:40:18 (Thursday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 03:46:10 (Thursday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 03:53:12 (Thursday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 03:53:41 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+20-Jun-2024: 03:53:56 (Thursday) MUZSTAT RAYVAN  DONE
+20-Jun-2024: 03:54:15 (Thursday) MUZSTAT: ERR  MILZ:YOUTUBE : UC27Z5ZvYSt95UtjFeGJ0wGA
+20-Jun-2024: 03:54:17 (Thursday) MUZSTAT MILZ  DONE
+20-Jun-2024: 03:54:40 (Thursday) MUZSTAT: ERR  Алексир:YOUTUBE : UC5CM0orwcf0e81U8818LNVg
+20-Jun-2024: 03:54:41 (Thursday) MUZSTAT Алексир  DONE
+20-Jun-2024: 03:55:01 (Thursday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 03:56:11 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+20-Jun-2024: 03:56:55 (Thursday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 03:57:08 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+20-Jun-2024: 03:57:14 (Thursday) MUZSTAT RAYVAN  DONE
+20-Jun-2024: 03:57:20 (Thursday) MUZSTAT: ERR  MILZ:YOUTUBE : UC27Z5ZvYSt95UtjFeGJ0wGA
+20-Jun-2024: 03:57:21 (Thursday) MUZSTAT MILZ  DONE
+20-Jun-2024: 03:57:27 (Thursday) MUZSTAT: ERR  Алексир:YOUTUBE : UC5CM0orwcf0e81U8818LNVg
+20-Jun-2024: 03:57:28 (Thursday) MUZSTAT Алексир  DONE
+20-Jun-2024: 03:57:28 (Thursday) MUZSTAT София Мосейчук  DONE
+20-Jun-2024: 03:57:34 (Thursday) MUZSTAT: ERR  Rustam Fahrtdinov:YOUTUBE : UCyw22JexbXGNh3_wqaOkq2g
+20-Jun-2024: 03:57:35 (Thursday) MUZSTAT Rustam Fahrtdinov  DONE
+20-Jun-2024: 03:57:35 (Thursday) MUZSTAT: ERR  KALUGIN:YOUTUBE : UCxovuUXDDlOAIo1fY98vtyw
+20-Jun-2024: 03:58:54 (Thursday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 03:59:11 (Thursday) MUZSTAT: ERR  RAYVAN:YOUTUBE : UCvtme_nmuo4NdcYniouDh2Q
+20-Jun-2024: 03:59:16 (Thursday) MUZSTAT RAYVAN  DONE
+20-Jun-2024: 03:59:26 (Thursday) MUZSTAT: ERR  MILZ:YOUTUBE : UC27Z5ZvYSt95UtjFeGJ0wGA
+20-Jun-2024: 03:59:27 (Thursday) MUZSTAT MILZ  DONE
+20-Jun-2024: 03:59:35 (Thursday) MUZSTAT: ERR  Алексир:YOUTUBE : UC5CM0orwcf0e81U8818LNVg
+20-Jun-2024: 03:59:36 (Thursday) MUZSTAT Алексир  DONE
+20-Jun-2024: 03:59:36 (Thursday) MUZSTAT София Мосейчук  DONE
+20-Jun-2024: 03:59:45 (Thursday) MUZSTAT: ERR  Rustam Fahrtdinov:YOUTUBE : UCyw22JexbXGNh3_wqaOkq2g
+20-Jun-2024: 03:59:47 (Thursday) MUZSTAT Rustam Fahrtdinov  DONE
+20-Jun-2024: 03:59:55 (Thursday) MUZSTAT: ERR  KALUGIN:YOUTUBE : UCxovuUXDDlOAIo1fY98vtyw
+20-Jun-2024: 04:00:00 (Thursday) MUZSTAT KALUGIN  DONE
+20-Jun-2024: 04:00:03 (Thursday) MUZSTAT Makaronnoe bludo  DONE
+20-Jun-2024: 04:00:03 (Thursday) MUZSTAT Vigi  DONE
+20-Jun-2024: 04:00:12 (Thursday) MUZSTAT: ERR  Вячеслав Мясников:YOUTUBE : UCKxaCaipSkU6MgQwv2y-lkw
+20-Jun-2024: 04:00:13 (Thursday) MUZSTAT Вячеслав Мясников  DONE
+20-Jun-2024: 04:00:13 (Thursday) MUZSTAT Ирина Эмирова  DONE
+20-Jun-2024: 04:00:13 (Thursday) MUZSTAT Хор Ирины Павленко  DONE
+20-Jun-2024: 04:00:13 (Thursday) MUZSTAT Нонна  DONE
+20-Jun-2024: 04:00:17 (Thursday) MUZSTAT RemoteRussia  DONE
+20-Jun-2024: 04:00:17 (Thursday) MUZSTAT Анастасия Ларцева  DONE
+20-Jun-2024: 04:00:17 (Thursday) MUZSTAT End
+20-Jun-2024: 23:20:00 (Thursday) MUZSTAT Start 240619 Сбер и Youtube в коммандной строке> 
+20-Jun-2024: 23:21:11 (Thursday) MUZSTAT RAYVAN  DONE
+20-Jun-2024: 23:21:59 (Thursday) MUZSTAT MILZ  DONE
+20-Jun-2024: 23:22:49 (Thursday) MUZSTAT Алексир  DONE
+20-Jun-2024: 23:23:14 (Thursday) MUZSTAT София Мосейчук  DONE
+20-Jun-2024: 23:24:12 (Thursday) MUZSTAT Rustam Fahrtdinov  DONE
+20-Jun-2024: 23:25:10 (Thursday) MUZSTAT KALUGIN  DONE
+20-Jun-2024: 23:25:54 (Thursday) MUZSTAT Makaronnoe bludo  DONE
+20-Jun-2024: 23:26:33 (Thursday) MUZSTAT Vigi  DONE
+20-Jun-2024: 23:27:29 (Thursday) MUZSTAT Вячеслав Мясников  DONE
+20-Jun-2024: 23:28:09 (Thursday) MUZSTAT Ирина Эмирова  DONE
+20-Jun-2024: 23:28:35 (Thursday) MUZSTAT Хор Ирины Павленко  DONE
+20-Jun-2024: 23:29:15 (Thursday) MUZSTAT Нонна  DONE
+20-Jun-2024: 23:29:19 (Thursday) MUZSTAT RemoteRussia  DONE
+20-Jun-2024: 23:29:40 (Thursday) MUZSTAT Анастасия Ларцева  DONE
+20-Jun-2024: 23:29:40 (Thursday) MUZSTAT End
+21-Jun-2024: 00:05:14 (Friday) MUZCHEK Start 240619 Сбер и Youtube в коммандной строке> 
+21-Jun-2024: 00:08:35 (Friday) MUZCHEKGOOD STATUS chkYndRayvan Status:1 Link:https://band.link/scanner?search=Rayvan
+CHANGE STATUS chkYndПавленко NewStatus:0 Link:https://band.link/scanner?search=Павленко
+CHANGE STATUS cMusmSpbAkHudozh NewStatus:*** 
+--- 
+***************
+*** 15,21 ****
+  КОПИРУЙ КАК ХУДОЖНИК
+  АКАДЕМИЧЕСКИЙ ПЛЕНЭР
+  МУЗЕЙНЫЕ ЗАНЯТИЯ
+! КВЕСТ «ТАЙНЫ СТАРОЙ УСАДЬБЫ»
+  Я — СКУЛЬПТОР
+  Я — ХУДОЖНИК
+  ИНТЕРАКТИВНАЯ ДЕТСКАЯ ПРОГРАММА «Я — СОБИРАТЕЛЬ?»
+--- 15,21 ----
+  КОПИРУЙ КАК ХУДОЖНИК
+  АКАДЕМИЧЕСКИЙ ПЛЕНЭР
+  МУЗЕЙНЫЕ ЗАНЯТИЯ
+! КВЕСТ «В ГОСТЯХ У РЕПИНА»
+  Я — СКУЛЬПТОР
+  Я — ХУДОЖНИК
+  ИНТЕРАКТИВНАЯ ДЕТСКАЯ ПРОГРАММА «Я — СОБИРАТЕЛЬ?»
+ Link:https://kids.artsacademymuseum.org/
+
+21-Jun-2024: 00:08:37 (Friday) MUZCHEK End
+21-Jun-2024: 00:08:37 (Friday) MUZCOMPARE Start 240619 Сбер и Youtube в коммандной строке> 
+21-Jun-2024: 00:08:38 (Friday) MUZCOMPARE End

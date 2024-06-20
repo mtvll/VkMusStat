@@ -36,7 +36,7 @@ class cDb(object):
 
 
         class Artist:
-            def __init__(self, name, vkstudio="", spot="", yandex="", sber="", youtube="", vk="", tiktok="",tlg="",l2="",l3="",l4="",l5="",minhears=20):
+            def __init__(self, name, vkstudio="", spot="", yandex="", sber="", youtube="", vk="", tiktok="",tlg="",instagram="",l3="",l4="",l5="",minhears=20):
                 self.name = name
                 self.vkstudio = vkstudio
                 self.spot = spot
@@ -46,40 +46,53 @@ class cDb(object):
                 self.vk = vk
                 self.tiktok = tiktok
                 self.tlg = tlg
-                self.l2 = l2
+                self.instagram = instagram
                 self.l3 = l3
                 self.l4 = l4
                 self.l5 = l5
                 self.minhears = minhears
 
 
-        # Артист (Имя, vkstudio, spotify, yandex, sber, youtube, vk, Tiktok):
+        # Артист (Имя, vkstudio, spotify, yandex, sber,
+        #           youtube, vk, Tiktok,
+        #           Tlg, Instagram):
 
         self.art = [
-            Artist('RAYVAN', "679765629422687778", "6MUpnjFA4zQu3s0t2Nzlfk", "8141812", "210105583","UCvtme_nmuo4NdcYniouDh2Q",
-                   "rayvan.official","@rayvan.official","rayvanmusic"),
-            Artist('MILZ', "3968096882825495134", "181Jnv1B77SIvC7JW5cmop", "19171403", "212513613", "UC27Z5ZvYSt95UtjFeGJ0wGA", "milz.singer"),
+            Artist('RAYVAN', "679765629422687778", "6MUpnjFA4zQu3s0t2Nzlfk", "8141812", "210105583",
+                   "UCvtme_nmuo4NdcYniouDh2Q","rayvan.official","@rayvan.official",
+                   "rayvanmusic", "rayvan.official"),
+            Artist('MILZ', "3968096882825495134", "181Jnv1B77SIvC7JW5cmop", "19171403", "212513613",
+                   "UC27Z5ZvYSt95UtjFeGJ0wGA", "milz.singer"),
             Artist('Алексир', "3377722344143542502", "7aPj4tatJiiVIImj1uYdpV", "18574196", "212326111",
-                   "UC5CM0orwcf0e81U8818LNVg", "aleksirme"),
+                   "UC5CM0orwcf0e81U8818LNVg", "aleksirme", "",
+                   "","aleksir.me"),
             Artist('София Мосейчук', "", "4QiguGhNyTgHtELFp9KJDp", "15710563", "211630315", "",
-                   "moseichuksofiia", "@krasotka.sofi"),
+                   "moseichuksofiia", "@krasotka.sofi","",
+                   "krasotka_sofi", "krasotka_sofi"),
             Artist('Rustam Fahrtdinov', "6775914816193346218", "7g63TUNYZqiS3GbIEIbDdG", "3192939", "31876918",
-                   "UCyw22JexbXGNh3_wqaOkq2g", "rustamfahrtdinov", "@rustamfahrtdinov"),
+                   "UCyw22JexbXGNh3_wqaOkq2g", "rustamfahrtdinov", "@rustamfahrtdinov",
+                   "","rustam_fahrtdinov"),
             Artist('KALUGIN', "1263271834263162561", "6CKpzSn0XsUadRH95LzdJp", "16539792", "211923181",
-                   "UCxovuUXDDlOAIo1fY98vtyw", "kalugin_sergey_music", "@_kalugin___"),
-            Artist('Makaronnoe bludo', "1203962139520298198", "4QlySbg8i1tMfj0QPe2BUB", "16928046", "211979258", "",
-                   "makaronnoebludo"),
+                   "UCxovuUXDDlOAIo1fY98vtyw", "kalugin_sergey_music", "@_kalugin___",
+                   "kaluginsergei", "kalugin_s"),
+            Artist('Makaronnoe bludo', "1203962139520298198", "4QlySbg8i1tMfj0QPe2BUB", "16928046", "211979258",
+                   "","makaronnoebludo","",
+                   "makaronnoe_bludo", "makaronnoe_bludo"),
             Artist('Vigi', "160757614473898073", "", "17288582", "212086549", "", "vigisinger"),
             Artist('Вячеслав Мясников', "2373197429746032417", "6rSChDc4zteS5rIH728wxA", "3118319", "1479802",
-                   "UCKxaCaipSkU6MgQwv2y-lkw", "slava_myasnikov", "@miasnikov.s","","","","","",600),
+                   "UCKxaCaipSkU6MgQwv2y-lkw", "slava_myasnikov", "@miasnikov.s",
+                   "","miasnikov.s"),
             Artist('Ирина Эмирова', "5595344415242300490", "0XRzVBeXMuAoyLiKt611n2", "3987540", "167840734", "",
                    "irina_emirova","","","","","",""),
-            Artist('Хор Ирины Павленко', "2495875715565516380", "0sFrPGC1ewZMBmGrt8UmcM", "21014484", "212760210"),
-            Artist('Нонна', "730034513534917869", "6beQNGwlwrvrT01TDwMBcl", "8590484", "209798494", "", "singer_nonna"),
+            Artist('Хор Ирины Павленко', "2495875715565516380", "0sFrPGC1ewZMBmGrt8UmcM", "21014484", "212760210",
+                   "","","",
+                   "","irina_pavlenkovokaltomsk"),
+            Artist('Нонна', "730034513534917869", "6beQNGwlwrvrT01TDwMBcl", "8590484", "209798494",
+                   "", "singer_nonna","",
+                   "", "nonna_official_"),
             Artist('RemoteRussia', "", "", "", "", "", "", "", "remote_russia"),
             Artist('Анастасия Ларцева', "8539475736460412680", "", "", "", "", "", "")
         ]
-
 
 
     def initstring(self, artist):
