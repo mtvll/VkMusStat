@@ -64,13 +64,26 @@ class cWebm(object):
         self.driver.get(link)
         time.sleep(MPAUSE)
 
-    def checkisnumber(self, instr):
+    # def checkisnumber(self, instr):
+    #     instr = instr.replace(' ', '')
+    #     try:
+    #         c = int(instr)
+    #         return c
+    #     except Exception as ex:
+    #         return MYNOTNUMBER
+
+    def checkisnumber(self, instr, mfrom =""):
         instr = instr.replace(' ', '')
         try:
+            if (mfrom=="youtube") and (instr[-1]=="M"):
+                instr=float(instr[:-1])*1000000
+            if (mfrom=="youtube") and (instr[-1]=="K"):
+                instr=float(instr[:-1])*1000
             c = int(instr)
             return c
         except Exception as ex:
             return MYNOTNUMBER
+
 
     # def findonpage(self, link, str):
     #     self.golinkpause(link)
@@ -114,15 +127,20 @@ class cWebm(object):
         #                                 "description-item,style-scope,ytd-about-channel-renderer")[4]
 
         self.golinkpause(link+"/about")
+        time.sleep(MPAUSE)
         v1 = self.driver.find_elements(By.CLASS_NAME,
                                         "description-item,style-scope,ytd-about-channel-renderer")[4]
-        v2 = v1.find_elements(By.CLASS_NAME,"style-scope,ytd-about-channel-renderer")[2]
+        # v2 = v1.find_elements(By.CLASS_NAME,"style-scope,ytd-about-channel-renderer")[2].text
+        v3 = v1.find_elements(By.CLASS_NAME, "style-scope,ytd-about-channel-renderer")[3].text
 
-                                       # v0="RAYVAN\n@rayvan\n\n\ 929 subsribesrs"
-        v = v1.text.split()[0]
+        # print("v2  " + v2)
+        # print("v3  " + v3)
+
+        # v0="RAYVAN\n@rayvan\n\n\ 929 subsribesrs"
+        v = v3.split()[0]
 
 
-        return self.checkisnumber(v)
+        return self.checkisnumber(v,"youtube")
 
 
     def getspotifyday(self, link):
@@ -133,6 +151,14 @@ class cWebm(object):
         # v0="RAYVAN\n@rayvan\n\n\ 929 subsribesrs"
         v = v0[0].text.split()[0]
         return self.checkisnumber(v)
+
+    def gettlgday(self, link):
+        # document.getElementsByClassName("tgme_page_extra")[0]
+        # <div class=​"css-mgke3u-DivNumber e1457k4r1">​…​</div>​flex
+        self.golinkpause(link)
+        vs0 = self.driver.find_elements(By.CLASS_NAME, "tgme_page_extra")[0]
+        vs = vs0.text.replace(" subscribers", "").replace(" ", "")
+        return self.checkisnumber(vs)
 
     def gettiktokday(self, link):
         # document.getElementsByClassName("css-mgke3u-DivNumber e1457k4r1")[1]

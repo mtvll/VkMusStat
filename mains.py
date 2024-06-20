@@ -11,7 +11,10 @@ MTITLE = "MUZSTAT"
 
 def main():
 
-    param1 = sys.argv[1] if (len(sys.argv) > 1) else False
+    param1=""
+
+    if (len(sys.argv) > 1):
+        param1 = sys.argv[1]
 
     status_prod= True  if TXTPRODUCTIVE in param1 else False
 
@@ -53,7 +56,7 @@ def main():
 
         for i in db.art:
             try:
-                if (i.vkstudio != ""):
+                if (i.vkstudio != "" and not ("NOVKSTUDIO"  in web.cmd_param)):
                     mlink = "https://vk.com/studio#/artist/" + i.vkstudio + "/music/tracks"
                     tracks = web.getvkstudio(mlink)
                     db.vktracks2db(tracks, i.name)
@@ -94,7 +97,7 @@ def main():
                 pass
 
             try:
-                if i.vk != "":
+                if i.vk != ""and not ("NOVKSUB"  in web.cmd_param):
                     mlink = "https://vk.com/" + i.vk
                     db.columns["sub_vk"] = web.getvkday(mlink)
             except:
@@ -110,12 +113,21 @@ def main():
                 pass
 
             try:
-                if i.tiktok != "":
+                if i.tiktok != ""and not ("NOTIKTOK"  in web.cmd_param):
                     mlink = "https://www.tiktok.com/" + i.tiktok
                     db.columns["sub_tiktok"], db.columns["likes_tiktok"] = web.gettiktokday(mlink)
             except:
                 printsend("  " + i.name + ":TIKTOK : " + i.tiktok, MTITLE + ERRORSTR)
                 pass
+
+            try:
+                if i.tlg != "" and not ("NOTLG"  in web.cmd_param):
+                    mlink = "https://t.me/" + i.tlg
+                    db.columns["sub_tlg"] = web.gettlgday(mlink)
+            except:
+                printsend("  " + i.name + ":TIKTOK : " + i.tiktok, MTITLE + ERRORSTR)
+                pass
+
 
             # # mlink = "https://open.spotify.com/artist/" + i.spot
             # # SpotifyGetDaylyStatArtist(mdriver, mconnection, mlink, i.name)
