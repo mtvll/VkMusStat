@@ -186,7 +186,7 @@ class cDb(object):
     arr=[]
 
 
-    def dbchk2table(self):
+    def dbchk2table(self, mselect=""):
 
         class ArtistChk:
             def __init__(self, mname, mlink, freq, mstr, mstrfield, ishere,  needproxy, lastdate="", lasttime="", lastval="", alwaysshow=""):
@@ -204,7 +204,9 @@ class cDb(object):
         #
         # arr=[]
 
-        self.cursor.execute('SELECT * FROM MuzChk')
+        msql='SELECT * FROM MuzChk' if mselect=="" else 'SELECT * FROM MuzChk Where mname Like "'+ mselect +'%"'
+
+        self.cursor.execute(msql)
         # self.cursor.execute("SELECT * FROM MuzChk WHERE mname LIKE '%chkVK%'")
 
 

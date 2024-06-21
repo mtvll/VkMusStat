@@ -247,46 +247,116 @@ class cWebm(object):
             except Exception as e:
                 printsend(" ERR. Проверить контейнер " +iclass + "  в строке " + link, ERRORSTR)
                 res = ""
+
+        elif ishere == '-2':
+            try:
+                res = self.driver.find_elements(By.CLASS_NAME, iclass)
+                for i in range(len(res)):
+                    if res[i].text!="" and "запись закреплена" not  in res[i].text:
+                        mstr=self.driver.find_elements(By.CLASS_NAME, "wall_posts,own,mark_top")[i].text.split("\n")[:4]
+                        cc=self.driver.find_elements(By.CLASS_NAME,iclass)
+                        ccc=cc[0].find_elements(By.CLASS_NAME,"PostBottomAction,PostBottomAction--withBg,PostButtonReactions,PostButtonReactions--post")
+                        # document.getElementsByClassName(
+                        #     "_post post page_block all own post--withPostBottomAction  post_with_ads_button post--with-likes deep_active Post--redesign")[
+                        #     0].getElementsByClassName(
+                        #     "PostBottomAction PostBottomAction--withBg PostButtonReactions PostButtonReactions--post")[
+                        #     0].click()
+
+
+                        res = ' '.join(mstr)
+                        break
+            except Exception as e:
+                printsend(" ERR. Проверить контейнер " + iclass + "  в строке " + link, ERRORSTR)
+                res = ""
+
         return res
+
+
+    def findonpageandClick(self, link, str, ishere, iclass,ilast):
+
+        if ishere == "":
+            ishere = False
+
+        self.golinkpause(link)
+
+        try:
+            res = self.driver.find_elements(By.CLASS_NAME, iclass)
+            for i in range(len(res)):
+                if res[i].text!="" and "запись закреплена" not  in res[i].text:
+                    mstr=self.driver.find_elements(By.CLASS_NAME, "wall_posts,own,mark_top")[i].text.split("\n")[:4]
+                    res = ' '.join(mstr)
+                    if res!=ilast:
+                        cc=self.driver.find_elements(By.CLASS_NAME,iclass)
+                        ccc=cc[i].find_elements(By.CLASS_NAME,"PostBottomAction,PostBottomAction--withBg,PostButtonReactions,PostButtonReactions--post")[0].click()
+                        print ("INF ___ New post in " + link)
+                    break
+        except Exception as e:
+            printsend(" ERR. Проверить контейнер " + iclass + "  в строке " + link, ERRORSTR)
+            res = ""
+
+        return res
+
+
+
 
 
     def getcitywalls(self, link):
         self.golinkpause(link)
+
         march=self.driver.find_elements(By.CLASS_NAME,"value")[0].text
         myear = self.driver.find_elements(By.CLASS_NAME, "value")[1].text
         mstyle=self.driver.find_elements(By.CLASS_NAME, "value")[2].text
         return march, myear, mstyle
 
-
-
-
-
     def getcitywalls2(self, link):
-        link = "https://www.citywalls.ru/house9440.html"
-        self.golinkpause(link)
-        march = self.driver.find_elements(By.CLASS_NAME, "value")[0].text
-        myear = self.driver.find_elements(By.CLASS_NAME, "value")[1].text
-        mstyle = self.driver.find_elements(By.CLASS_NAME, "value")[2].text
 
-        # city
-        # name
-        year = self.driver.find_elements(By.CLASS_NAME, "value")[1].text
-        style = self.driver.find_elements(By.CLASS_NAME, "value")[2].text
-        # status
+        self.golinkpause(link)
+
+        md={}
+
+        md["name"]=self.driver.find_elements(By.XPATH, '//h1')[0].text
+
+
+        marchit = self.driver.find_elements(By.CLASS_NAME, "value")[0].text.split("\n")
+        md["arch1"]= marchit[0] if len(marchit)>0 else ""
+        md["arch2"] = marchit[1] if len(marchit) > 1 else ""
+        md["arch3"] = marchit[2] if len(marchit) > 2 else ""
+        md["arch4"] = marchit[3] if len(marchit) > 3 else ""
+
+        md["year"] = self.driver.find_elements(By.CLASS_NAME, "value")[1].text
+        md["style"] = self.driver.find_elements(By.CLASS_NAME, "value")[2].text
+
+        maddr=self.driver.find_elements(By.CLASS_NAME, "address")[0].text.split("\n")
+        if "," not in maddr[0]:
+            md["city"]=maddr[0]
+            istart=1
+        else:
+            md["city"] = "Санкт - Петербург"
+            istart = 0
+        md["maddr1"]= maddr[istart] if len(maddr)>0 else ""
+        md["maddr2"] = maddr[istart+1] if len(maddr) > istart+1 else ""
+        md["maddr3"] = maddr[istart+2] if len(maddr) > istart+2 else ""
+        md["maddr4"] = maddr[istart+3] if len(maddr) > istart+3 else ""
+        # addr1n # addr1h # addr1l
+
+        mstat="/n".join(self.driver.find_elements(By.CLASS_NAME, "mceContentBody")[0].text.split("\n")[:3]).lower()
+        if "пам" in mstat and "арх"  in mstat in mstat:
+            md["status"]="пам архитектуры"
+        if "пам" in mstat and "арх" in mstat and  "регион" in mstat:
+            md["status"] = "пам архитектуры (рег)"
+        if "утрачен" in mstat:
+            md["status"] = "утраченное"
+        else:
+            md["status"] = ""
+
+
+
+        print(md)
+        print("\n".join("{}\t{}".format(k, v) for k, v in md.items()))
+
+        self.driver.find_elements(By.CLASS_NAME, "photo")[0].click()
+
+        self.driver.find_elements(By.CLASS_NAME, "download")[0].click()
+
+
         # mainphoto
-        # arch1
-        # arch2
-        # arch3
-        # arch4
-        # addr1n
-        # addr1h
-        # addr1l
-        # addr2n
-        # addr2h
-        # addr2l
-        # addr3n
-        # addr3h
-        # addr3l
-        # addr4n
-        # addr4h
-        # addr4l

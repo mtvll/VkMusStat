@@ -138,6 +138,13 @@ def spbsql2table():
 # export_to_sqlite()
 
 web = cWebm()
-web.getcitywalls2("ee")
 
+web.getcitywalls2("https://www.citywalls.ru/house19439.html")
+web.getcitywalls2("https://www.citywalls.ru/house9440.html")
+web.getcitywalls2("https://www.citywalls.ru/house563.html")
+web.getcitywalls2("https://www.citywalls.ru/house28747.html")
+
+exit(0)
+
+# spbsql2table()
 spbsql2table()
