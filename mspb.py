@@ -1,12 +1,14 @@
 import os
 import sqlite3
-# import openpyxl
+import openpyxl
+
 from mzweb import *
 
 base_name = 'mus2024spb.db'
 
 def export_to_sqlite():
-    '''Экспорт данных из xlsx в sqlite'''
+    '''2402 Экспорт данных из xlsx в sqlite'''
+
 
     # 1. Создание и подключение к базе
 
@@ -54,7 +56,7 @@ def export_to_sqlite():
 
 
 def clear_base():
-    '''Очистка базы sqlite'''
+    '''2402 Очистка базы sqlite'''
 
     # Получаем текущую папку проекта
     prj_dir = os.path.abspath(os.path.curdir)
@@ -70,7 +72,8 @@ def clear_base():
     connect.commit()
     connect.close()
 
-def spbsql2table():
+def spbsmainql2table():
+    '''2403 Берем из sql link, получаем данные через web и обновляем в sql'''
 
     class spbb:
         def __init__(self,d1,d2,d3,d4,d5,d6,d7,d8,d9 ):
@@ -137,14 +140,70 @@ def spbsql2table():
 # Запуск функции
 # export_to_sqlite()
 
-web = cWebm()
 
-web.getcitywalls2("https://www.citywalls.ru/house19439.html")
-web.getcitywalls2("https://www.citywalls.ru/house9440.html")
-web.getcitywalls2("https://www.citywalls.ru/house563.html")
-web.getcitywalls2("https://www.citywalls.ru/house28747.html")
+def spbsql2jpg():
+    '''2406 Проверка. Несколько строк из базы в jpg файлы'''
 
-exit(0)
+    prj_dir = os.path.abspath(os.path.curdir)
+    a = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    connection = sqlite3.connect(prj_dir + '/' + base_name)
+    cursor = connection.cursor()
 
-# spbsql2table()
-spbsql2table()
+    ll=cursor.execute('SELECT mainphoto from  citytable')
+
+    for  i in range(3):
+        ablob = cursor.fetchone()[0]
+        filename = "spbsql2jpg"
+        with open(filename + str(i)+".jpg", 'wb') as output_file:
+            output_file.write(ablob)
+
+
+def spblink2sql(mlist, web,cursor):
+    '''2406 на входе link, на выходе - строка msql'''
+
+
+    for i in range(len(mlist)):
+        md = web.getcitywalls2gethouse(mlist[i])
+        cursor.execute(
+            'INSERT INTO citytable (city,name,year,style,status,mainphoto,'
+            'arch1,arch2,arch3,arch4,'
+            'addr1n,addr2n,addr3n,addr4n,'
+            'link,lastdate,lasttime,'
+            'pointX,pointY)'
+            ' VALUES (?, ?, ?, ?, ?, ?, ?,?,?,?, ?,?,?,?, ?, ?, ?, ?,?)',
+            (md["city"], md["name"], md["year"], md["style"], md["status"], md["mainphoto"],
+             md["arch1"], md["arch2"],md["arch3"], md["arch4"],
+             md["maddr1"], md["maddr2"], md["maddr3"], md["maddr4"],
+             mlist[i], getcdate(), getctime(),
+             md["pointX"],md["pointY"]))
+        cursor.connection.commit()
+
+
+
+
+
+
+def main():
+    mlist = []
+
+    web = cWebm()
+
+    mlist=mlist+web.getcitywalls2getstreet("https://www.citywalls.ru/search-street159.html")
+
+    mlist = mlist + web.getcitywalls2getstreet("https://www.citywalls.ru/search-street635.html")
+
+    mlist.append("https://www.citywalls.ru/house19439.html")
+    mlist.append("https://www.citywalls.ru/house9440.html")
+    mlist.append("https://www.citywalls.ru/house563.html")
+    mlist.append("https://www.citywalls.ru/house28747.html")
+
+    prj_dir = os.path.abspath(os.path.curdir)
+    a = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    connection = sqlite3.connect(prj_dir + '/' + base_name)
+    cursor = connection.cursor()
+
+    spblink2sql(mlist,web,cursor)
+
+
+if __name__ == "__main__":
+    main()

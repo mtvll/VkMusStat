@@ -14,6 +14,15 @@ def printsend(mstr, title, write2file=True) :
             write_file(title + mstr)
         send_mail(title, mstr)
 
+def print2file(mstr) :
+    if (mstr!=""):
+        try:            #20240414 ���� ���������� � ������� ��������
+            print(mstr)
+        except:
+            print ('TRACK: Coding problems. Only emailed')
+            pass
+        write_file(mstr)
+
 
 def getctime():
     mdate = datetime.datetime.now()

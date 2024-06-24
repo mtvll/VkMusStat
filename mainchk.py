@@ -10,9 +10,11 @@ MTITLE = "MUZCHEK"
 
 
 def main():
-    param1 = sys.argv[1] if (len(sys.argv) > 1) else False
+    param1 = sys.argv[1] if (len(sys.argv) > 1) else ""
 
-    status_prod = True if param1 == TXTPRODUCTIVE else False
+    status_prod = True if TXTPRODUCTIVE in param1 else False
+
+    myfreqhours= True  if "FREQHOURS" in param1 else False
 
     try:
         write_file(MTITLE + " Start " + MVERSION)
@@ -26,7 +28,7 @@ def main():
         # Ограничение по имени строки
         # db.dbchk2table("monVk")
 
-        db.dbchk2table()
+        db.dbchk2table("",myfreqhours)
 
 
         # добавлеение строки в таблицу
@@ -76,7 +78,8 @@ def main():
         db.closeconnection()
         write_file(MTITLE + " End")
 
-        maincompare.main()
+        if not myfreqhours:
+            maincompare.main()
 
     except Exception as ex:
         printsend(ex.msg, MTITLE + ERRORSTR)

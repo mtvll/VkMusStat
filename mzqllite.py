@@ -1,4 +1,3 @@
-import sqlite3
 import datetime
 from mfile import *
 
@@ -186,7 +185,7 @@ class cDb(object):
     arr=[]
 
 
-    def dbchk2table(self, mselect=""):
+    def dbchk2table(self, mselect="",myfreqhours=False):
 
         class ArtistChk:
             def __init__(self, mname, mlink, freq, mstr, mstrfield, ishere,  needproxy, lastdate="", lasttime="", lastval="", alwaysshow=""):
@@ -212,8 +211,11 @@ class cDb(object):
 
         for row in self.cursor.fetchall():
             # arr.append(row)
-            self.arr.append(ArtistChk(row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8],row[9],row[10]))
+            if (myfreqhours and row[2]<24) or ( not myfreqhours):
+                self.arr.append(ArtistChk(row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8],row[9],row[10]))
+
             # print(row)
+
 
     def update_dbchk_row(self,arr):
         self.cursor.execute(
