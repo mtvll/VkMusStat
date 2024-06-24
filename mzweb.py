@@ -1,16 +1,14 @@
-import base64
-
-from mconst import *
-from mfile import *
+import socket
+import time
 import urllib.request
-
-# import mzqllite
 
 from selenium import webdriver
 # from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-import time
-import socket
+
+from mfile import *
+
+# import mzqllite
 
 MPAUSE = 3
 
@@ -75,7 +73,8 @@ class cWebm(object):
     #     except Exception as ex:
     #         return MYNOTNUMBER
 
-    def checkisnumber(self, instr, mfrom=""):
+    @staticmethod
+    def checkisnumber(instr, mfrom=""):
         instr = instr.replace(' ', '')
         try:
             if (mfrom == "youtube") and (instr[-1] == "M"):
@@ -144,8 +143,11 @@ class cWebm(object):
         return self.checkisnumber(v, "youtube")
 
     def getspotifyday(self, link):
-        # document.getElementsByClassName("meta-item style-scope ytd-c4-tabbed-header-renderer")[3]
-        # < span class =​"meta-item style-scope ytd-c4-tabbed-header-renderer" > ​flex < yt-formatted-string id=​"subscriber-count" class =​"style-scope ytd-c4-tabbed-header-renderer" aria-label=​"929 subscribers" > ​929 subscribers​ < / yt-formatted-string > ​ < span aria-hidden=​"true" class =​"delimiter style-scope ytd-c4-tabbed-header-renderer" > ​‧​ < / span > ​ < / span > ​
+        # document.getElementsByClassName("meta-item style-scope ytd-c4-tabbed-header-renderer")[3] < span class
+        # =​"meta-item style-scope ytd-c4-tabbed-header-renderer" > ​flex < yt-formatted-string
+        # id=​"subscriber-count" class =​"style-scope ytd-c4-tabbed-header-renderer" aria-label=​"929 subscribers" >
+        # ​929 subscribers​ < / yt-formatted-string > ​ < span aria-hidden=​"true" class =​"delimiter style-scope
+        # ytd-c4-tabbed-header-renderer" > ​‧​ < / span > ​ < / span > ​
         self.golinkpause(link)
         v0 = self.driver.find_elements(By.CLASS_NAME, "Ydwa1P5GkCggtLlSvphs")
         # v0="RAYVAN\n@rayvan\n\n\ 929 subsribesrs"
@@ -166,8 +168,9 @@ class cWebm(object):
         self.golinkpause(link)
         vs0 = self.driver.find_elements(By.CLASS_NAME, "css-mgke3u-DivNumber,e1457k4r1")[1]
         vs = vs0.text.split()[0]
-        # document.getElementsByClassName("css-ntsum2-DivNumber e1457k4r1")[0]
-        # < div # class =​"css-ntsum2-DivNumber e1457k4r1" > ​flex < strong title=​"Likes" data-e2e=​"likes-count" > ​8982​ < / strong > ​ < span data-e2e=​"likes" class =​"css-1pchix1-SpanUnit e1457k4r2" > ​Likes​ < / span > ​ < / div > ​
+        # document.getElementsByClassName("css-ntsum2-DivNumber e1457k4r1")[0] < div # class =​"css-ntsum2-DivNumber
+        # e1457k4r1" > ​flex < strong title=​"Likes" data-e2e=​"likes-count" > ​8982​ < / strong > ​ < span
+        # data-e2e=​"likes" class =​"css-1pchix1-SpanUnit e1457k4r2" > ​Likes​ < / span > ​ < / div > ​
         vl0 = self.driver.find_elements(By.CLASS_NAME, "css-ntsum2-DivNumber,e1457k4r1")[0]
         vl = vl0.text.split()[0]
         return self.checkisnumber(vs), self.checkisnumber(vl)
@@ -195,8 +198,9 @@ class cWebm(object):
             0].click()
         time.sleep(MPAUSE)
 
-        # Клик на пункт Сутки
-        # document.getElementsByClassName("vkuiLink Link-module__link--V7bkY Select-module__link--ah62s vkuiTappable vkuiInternalTappable vkuiTappable--hasActive vkui-focus-visible")[0].click()
+        # Клик на пункт Сутки document.getElementsByClassName("vkuiLink Link-module__link--V7bkY
+        # Select-module__link--ah62s vkuiTappable vkuiInternalTappable vkuiTappable--hasActive vkui-focus-visible")[
+        # 0].click()
         self.driver.find_elements(By.CLASS_NAME,
                                   "vkuiActionSheetItem,vkuiActionSheetItem--sizeY-compact,vkuiActionSheetItem--menu,"
                                   "vkuiTappable,vkuiInternalTappable,vkuiTappable--hasHover,vkuiTappable--hasActive,"
@@ -217,7 +221,7 @@ class cWebm(object):
 
         return mtab
 
-    def findonpage(self, link, str, ishere, iclass=""):
+    def findonpage(self, link, mstr, ishere, iclass=""):
         # document.getElementsByClassName("meta-item style-scope ytd-c4-tabbed-header-renderer")[3] < span class
         # =​"meta-item style-scope ytd-c4-tabbed-header-renderer" > ​flex < yt-formatted-string
         # id=​"subscriber-count" class =​"style-scope ytd-c4-tabbed-header-renderer" aria-label=​"929 subscribers" >
@@ -239,7 +243,7 @@ class cWebm(object):
 
             msource = self.driver.page_source
 
-            if ((str in msource) and (ishere == True)) or ((str not in msource) and (ishere == False)):
+            if ((mstr in msource) and (ishere is True)) or ((mstr not in msource) and (ishere is False)):
                 res = True
             else:
                 res = False
@@ -259,13 +263,13 @@ class cWebm(object):
                         mstr = self.driver.find_elements(By.CLASS_NAME, "wall_posts,own,mark_top")[i].text.split("\n")[
                                :4]
                         cc = self.driver.find_elements(By.CLASS_NAME, iclass)
-                        ccc = cc[0].find_elements(By.CLASS_NAME,
-                                                  "PostBottomAction,PostBottomAction--withBg,PostButtonReactions,PostButtonReactions--post")
-                        # document.getElementsByClassName(
-                        #     "_post post page_block all own post--withPostBottomAction  post_with_ads_button post--with-likes deep_active Post--redesign")[
-                        #     0].getElementsByClassName(
-                        #     "PostBottomAction PostBottomAction--withBg PostButtonReactions PostButtonReactions--post")
-                        #     [0].click()
+                        cc[0].find_elements(By.CLASS_NAME,
+                                                  "PostBottomAction,PostBottomAction--withBg,PostButtonReactions,"
+                                                  "PostButtonReactions--post")
+                        # document.getElementsByClassName( "_post post page_block all own post--withPostBottomAction
+                        # post_with_ads_button post--with-likes deep_active Post--redesign")[
+                        # 0].getElementsByClassName( "PostBottomAction PostBottomAction--withBg PostButtonReactions
+                        # PostButtonReactions--post") [0].click()
 
                         res = ' '.join(mstr)
                         break
@@ -275,7 +279,7 @@ class cWebm(object):
 
         return res
 
-    def findonpageandClick(self, link, str, ishere, iclass, ilast):
+    def findonpageandclick(self, link, mstr, ishere, iclass, ilast):
 
         if ishere == "":
             ishere = False
@@ -290,8 +294,9 @@ class cWebm(object):
                     res = ' '.join(mstr)
                     if res != ilast:
                         cc = self.driver.find_elements(By.CLASS_NAME, iclass)
-                        ccc = cc[i].find_elements(By.CLASS_NAME,
-                                                  "PostBottomAction,PostBottomAction--withBg,PostButtonReactions,PostButtonReactions--post")[
+                        cc[i].find_elements(By.CLASS_NAME,
+                                                  "PostBottomAction,PostBottomAction--withBg,PostButtonReactions,"
+                                                  "PostButtonReactions--post")[
                             0].click()
                         print("INF ___ New post in " + link)
                     break
@@ -311,35 +316,41 @@ class cWebm(object):
 
     def getcitywalls2getstreet(self, link):
 
-        self.golinkpause(link)
+        try:
+            self.golinkpause(link)
 
-        # если звухзначное число то в строке присутствует ...
-        npages = self.driver.find_elements(By.CLASS_NAME, "cssPager")[0].text
-        maxstr = npages[-3:-1] if "···" in npages else npages[-2:-1]
+            # если звухзначное число то в строке присутствует ...
+            npages = self.driver.find_elements(By.CLASS_NAME, "cssPager")[0].text
+            maxstr = npages[-3:-1] if "···" in npages else npages[-2:-1]
 
-        mname = self.driver.find_elements(By.CLASS_NAME, "title")[0].text
-        mpages = maxstr
+            mname = self.driver.find_elements(By.CLASS_NAME, "title")[0].text
+            mpages = maxstr
 
-        mlist = []
+            mlist = []
 
-        for i in range(int(maxstr)):
+            for i in range(int(maxstr)):
 
-            if i > 0:
-                mlink = link.split(".html", 1)[0] + "-page" + str(i + 1) + ".html"
-                self.golinkpause(mlink)
+                if i > 0:
+                    mlink = link.split(".html", 1)[0] + "-page" + str(i + 1) + ".html"
+                    self.golinkpause(mlink)
 
-            houselist = self.driver.find_elements(By.CLASS_NAME, "photo")
+                houselist = self.driver.find_elements(By.CLASS_NAME, "photo")
 
-            # self.driver.find_elements(By.CLASS_NAME, "photo")[0].find_elements(By.TAG_NAME, "a")[0].get_attribute("href")
+                # self.driver.find_elements(By.CLASS_NAME, "photo")[0].find_elements(By.TAG_NAME, "a")[0].get_attribute(
+                # "href")
 
-            for i in range(len(houselist)):
-                mhouse = houselist[i].find_elements(By.TAG_NAME, "a")[0].get_attribute("href")
+                for ii in range(len(houselist)):
+                    mhouse = houselist[ii].find_elements(By.TAG_NAME, "a")[0].get_attribute("href")
 
-                mlist.append(mhouse)
+                    mlist.append(mhouse)
 
-        print2file(mname + "  Pages: " + mpages + "  Houses: " + str(len(mlist)))
+            print2file(mname + "  Pages: " + mpages + "  Houses: " + str(len(mlist)))
 
-        return mlist
+            return mlist
+
+        except Exception:
+            stack = traceback.extract_stack()
+            printsend('ERROR IN FUNC {}'.format(stack[-1][2]) + " | PREV {}".format(stack[-2][2]), ERRORSTR)
 
     def getcitywalls2gethouse(self, link):
 
@@ -373,7 +384,8 @@ class cWebm(object):
             md["maddr4"] = maddr[istart + 3] if len(maddr) > istart + 3 else ""
             # addr1n # addr1h # addr1l
 
-            mstat = "/n".join(self.driver.find_elements(By.CLASS_NAME, "mceContentBody")[0].text.split("\n")[:3]).lower()
+            mstat = "/n".join(
+                self.driver.find_elements(By.CLASS_NAME, "mceContentBody")[0].text.split("\n")[:3]).lower()
             if "пам" in mstat and "арх" in mstat in mstat:
                 md["status"] = "пам архитектуры"
             if "пам" in mstat and "арх" in mstat and "регион" in mstat:
@@ -390,50 +402,37 @@ class cWebm(object):
                 mpage = mpage + mnote[i].text + "\n" + "-----------------------" + "\n"
             md["note"] = mpage
 
-        except Exception as e:
-            printsend(" ERR. Проверить контейнер " + iclass + "  в строке " + link, ERRORSTR)
+        except Exception:
+            stack = traceback.extract_stack()
+            printsend('ERROR IN FUNC {}'.format(stack[-1][2]) + " | PREV {} |СITY".format(stack[-2][2]), ERRORSTR)
 
-        self.driver.find_elements(By.CLASS_NAME, "photo")[0].click()
-        time.sleep(MPAUSE)
+        try:
 
-        mpointlink = self.driver.find_elements(By.CLASS_NAME, "staticmap")[0].find_elements(By.TAG_NAME, "img")[
-            0].get_attribute("src")
-        md["pointX"] = mpointlink.split("ll=", 1)[1].split(",", 1)[0]
-        md["pointY"] = mpointlink.split("ll=", 1)[1].split(",", 1)[1].split("&", 1)[0]
+            self.driver.find_elements(By.CLASS_NAME, "photo")[0].click()
+            time.sleep(MPAUSE)
 
-        img = self.driver.find_elements(By.CLASS_NAME, "photowrap")[0].find_elements(By.TAG_NAME, "img")[
-            0].get_attribute(
-            "src")
+            mpointlink = self.driver.find_elements(By.CLASS_NAME, "staticmap")[0].find_elements(By.TAG_NAME, "img")[
+                0].get_attribute("src")
+            md["pointX"] = mpointlink.split("ll=", 1)[1].split(",", 1)[0]
+            md["pointY"] = mpointlink.split("ll=", 1)[1].split(",", 1)[1].split("&", 1)[0]
 
-        mfilename = "getcitywalls2_tmp.jpg"
-        mfile = urllib.request.urlretrieve(img, mfilename)
-        # with open(mfilename, 'rb') as file:
-        #     blobData = file.read()
-        # with  as file:
-        blobData = open(mfilename, 'rb').read()
+            img = self.driver.find_elements(By.CLASS_NAME, "photowrap")[0].find_elements(By.TAG_NAME, "img")[
+                0].get_attribute(
+                "src")
 
-        md["mainphoto"] = sqlite3.Binary(blobData)
+            mfilename = "getcitywalls2_tmp.jpg"
+            mfile = urllib.request.urlretrieve(img, mfilename)
+            # with open(mfilename, 'rb') as file:
+            #     blobData = file.read()
+            # with  as file:
+            blobdata = open(mfilename, 'rb').read()
 
-        md["link"] = link
+            md["mainphoto"] = sqlite3.Binary(blobdata)
 
-        # db.cursor.execute(
-        #     'INSERT INTO citytable (city,name,year,style,status,mainphoto,'
-        #     'arch1,arch2,arch3,arch4,'
-        #     'addr1n,addr2n,addr3n,addr4n)'
-        #     ' VALUES (?, ?, ?, ?, ?, ?, ?,?,?,?, ?,?,?,?,)',
-        #     (md["city"], md["name"], md["year"], md["style"], md["status"], md["mainphoto"],
-        #      md["arch1"], md["arch2"], md["arch3"],md["arch4"],
-        #      md["arddr1"], md["arddr2"], md["arddr3"], md["arddr4"]))
-        #
-        # c=10
-        # c1=11
+            md["link"] = link
 
-        # print(md)
-        # print("\n".join("{}\t{}".format(k, v) for k, v in md.items()))
+            return md
 
-        # self.driver.find_elements(By.CLASS_NAME, "photo")[0].click()
-        #
-        # self.driver.find_elements(By.CLASS_NAME, "download")[0].click()
-
-        return md
-        # mainphoto
+        except Exception:
+            stack = traceback.extract_stack()
+            printsend('ERROR IN FUNC {}'.format(stack[-1][2]) + " | PREV {} |СITY".format(stack[-2][2]), ERRORSTR)

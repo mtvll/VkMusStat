@@ -16,7 +16,7 @@ conn = st.connection('mus2024', type='sql')
 
 st.sidebar.title("About")
 
-sql = "SELECT  martist, mcurdate, hears_vk, adds_vk, eff_vk, hears_month_ynd, likes_month_ynd, likes_all_ynd, sub_sber, sub_youtube, hears_month_spot, sub_vk,sub_tiktok  FROM MuzStat WHERE ServiceOrTrack ='service' and martist ='RAYVAN' "
+sql = "SELECT  martist, mcurdate, hears_vk, adds_vk, eff_vk, hears_month_ynd, likes_month_ynd, likes_all_ynd, sub_sber, sub_youtube, hears_month_spot, sub_vk,sub_tiktok  FROM MuzStat WHERE ServiceOrTrack ='service'"
 
 
 # df0services_prev = pd.read_sql(sql, con=db.connection)
@@ -54,7 +54,6 @@ for i in range(len(mval)):
 created_time = df['mcurdate']
 
 fig = go.Figure()
-
 
 for i in range(len(mval)):
     if chk[i]==True:
@@ -151,7 +150,7 @@ created_time = df['mcurdate']
 fig2 = go.Figure()
 fig2.add_trace(go.Scatter(x=created_time, y=x_CrestFactor, mode='lines', name='Добавления'))
 fig2.add_trace(go.Scatter(x=created_time, y=y_CrestFactor, mode='lines', name='Прослушивания'))
-# fig2.add_trace(go.Scatter(x=created_time, y=z_CrestFactor, mode='lines+markers', name='Эффективность"'))
+fig2.add_trace(go.Scatter(x=created_time, y=z_CrestFactor, mode='lines+markers', name='Эффективность"'))
 
 fig2.update_layout(title_text="Статистика трека: " + martist + ":" + mtrack)
 
