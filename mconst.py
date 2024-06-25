@@ -10,7 +10,7 @@ import difflib
 # при работа mainchk проверять заглавные или строчные буквы прямо на странице!!!
 # при работа mainchk проверять яззык чтобы был нужный!!!
 
-MVERSION="240626  2Streamlit5server"
+MVERSION="2406252Streamlit (only RAYVAN and delete Eff)"
 # MVERSION="240622 Добавлен like вконтакте"
 # MVERSION="240621 Добавлены поля для инстаграм и тг2"
 # MVERSION="240614 Новый мейл в отдельном файле"

@@ -150,7 +150,7 @@ created_time = df['mcurdate']
 fig2 = go.Figure()
 fig2.add_trace(go.Scatter(x=created_time, y=x_CrestFactor, mode='lines', name='Добавления'))
 fig2.add_trace(go.Scatter(x=created_time, y=y_CrestFactor, mode='lines', name='Прослушивания'))
-fig2.add_trace(go.Scatter(x=created_time, y=z_CrestFactor, mode='lines+markers', name='Эффективность"'))
+# fig2.add_trace(go.Scatter(x=created_time, y=z_CrestFactor, mode='lines+markers', name='Эффективность"'))
 
 fig2.update_layout(title_text="Статистика трека: " + martist + ":" + mtrack)
 
