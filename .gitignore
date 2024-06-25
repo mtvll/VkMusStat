@@ -339,3 +339,4 @@ path.txt
 requirements.txt
 spb91.xlsx
 !/venv/Lib/site-packages/astor/
+/getcitywalls2_tmp.jpg
