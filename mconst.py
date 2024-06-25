@@ -1,4 +1,5 @@
 from tb_keys import *
+import sqlite3
 
 import pandas as pd
 import plotly.express as px
@@ -9,7 +10,7 @@ import difflib
 # при работа mainchk проверять заглавные или строчные буквы прямо на странице!!!
 # при работа mainchk проверять яззык чтобы был нужный!!!
 
-MVERSION="240624 Test Streamlit server2"
+MVERSION="240626  2Streamlit5 "
 # MVERSION="240622 Добавлен like вконтакте"
 # MVERSION="240621 Добавлены поля для инстаграм и тг2"
 # MVERSION="240614 Новый мейл в отдельном файле"

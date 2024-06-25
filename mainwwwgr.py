@@ -16,8 +16,8 @@ conn = st.connection('mus2024', type='sql')
 
 st.sidebar.title("About")
 
-sql = "SELECT  martist, mcurdate, hears_vk, adds_vk, eff_vk, hears_month_ynd, likes_month_ynd, likes_all_ynd, sub_sber, sub_youtube, hears_month_spot, sub_vk,sub_tiktok  FROM MuzStat WHERE ServiceOrTrack ='service'"
-
+# sql = "SELECT  martist, mcurdate, hears_vk, adds_vk, eff_vk, hears_month_ynd, likes_month_ynd, likes_all_ynd, sub_sber, sub_youtube, hears_month_spot, sub_vk,sub_tiktok  FROM MuzStat WHERE ServiceOrTrack ='service'"
+sql = "SELECT  martist, mcurdate, hears_vk, adds_vk, eff_vk, hears_month_ynd, likes_month_ynd, likes_all_ynd, sub_sber, sub_youtube, hears_month_spot, sub_vk,sub_tiktok  FROM MuzStat WHERE martist = 'RAYVAN' and ServiceOrTrack ='service'"
 
 # df0services_prev = pd.read_sql(sql, con=db.connection)
 

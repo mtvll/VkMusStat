@@ -3,7 +3,7 @@ from mfile import *
 
 from mconst import *
 
-
+import sqlite3
 
 
 class cDb(object):
