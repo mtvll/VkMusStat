@@ -1,6 +1,6 @@
 # from tb_keys import *
 
-from sqllite import *
+import sqlite3
 
 
 import pandas as pd
