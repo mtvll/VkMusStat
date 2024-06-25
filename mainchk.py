@@ -49,7 +49,7 @@ def main():
                         mres2tst=mres
                     # Проверка лайков и лайки
                     if i.ishere == '-2':
-                        res = web.findonpageandClick(i.mlink, i.mstr, i.ishere, i.mstrfield,i.lastval)
+                        res = web.findonpageandclick(i.mlink, i.mstr, i.ishere, i.mstrfield,i.lastval)
                         mres = res
                         mres2tst = res
                         i.lastval = res
