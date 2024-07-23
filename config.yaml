@@ -1,0 +1,56 @@
+cookie:
+  expiry_days: 30
+  key: some_signature_key
+  name: some_cookie_name
+credentials:
+  usernames:
+    test:
+      email: test12345@gmail.com
+      failed_login_attempts: 0
+      logged_in: false
+      name: TestUser
+      status: admin
+      password: $2b$12$dsnhikgNKZ/3TxiCk1Z/qeJOW3hh95.ha7H6HjAUMELrVy2anjinS
+    yulia:
+      email: yulia123@gmail.com
+      failed_login_attempts: 0
+      logged_in: false
+      name: Yulia
+      status: admin
+      password: $2b$12$93pyk53.5W7V2UftcMcvQuDSngpwi/SNnKOs86JVQO.Mocr01V8JK
+    K:
+      email: kossrsexmama8012@mail.com
+      failed_login_attempts: 0
+      logged_in: true
+      name: Konstantin K
+      status: admin
+      password: $2b$12$1hsxzhavvw5Z3wby5MBdWuuuGb021vP8OvtOvcgwS08O5nSxeM8Qe
+    yarik:
+      email: yarik123@mail.com
+      failed_login_attempts: 0
+      logged_in: true
+      name: Yaroslav
+      status: admin
+      password: $2b$12$A5icu8qHDXxkqVpLN36sjOrBOgLGbCl5Sq5fIa7ZS9mnKLimQdH2q
+    RAYVAN:
+      email: rayvan@123@gmail.com
+      failed_login_attempts: 0
+      logged_in: false
+      name: Yuriy
+      status: artist
+      password: $2b$12$skUaOgcRXGaP6Tcb6V.Sse.Kqb3KriT3lIGWK6Tp6seNUqukmgwke
+    rcouper:
+      email: rcouper@gmail.com
+      failed_login_attempts: 0
+      logged_in: false
+      name: Ross Couper
+      password: $2b$12$Tir/PbHVmmnt5kgNxgOwMuxNIb2fv2pJ.q71TW8ekevbugCqkye4yu
+    wdewe:
+      email: wedw@ew.com
+      failed_login_attempts: 0
+      logged_in: false
+      name: dwew
+      password: $2b$12$QJBPc7PxaTTBVJ.3cl4KlOPPqYCWVfaHqkk2IsoGDEeexXhihKZLDgy
+pre-authorized:
+  emails:
+  - melsby@gmail.com
