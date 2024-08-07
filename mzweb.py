@@ -136,8 +136,10 @@ class cWebm(object):
         v1 = self.driver.find_elements(By.CLASS_NAME,
                                        "description-item,style-scope,ytd-about-channel-renderer")[4]
         # v2 = v1.find_elements(By.CLASS_NAME,"style-scope,ytd-about-channel-renderer")[2].text
-        v3 = v1.find_elements(By.CLASS_NAME, "style-scope,ytd-about-channel-renderer")[3].text
-
+        # Заменил 240807 на
+        # v3 = v1.find_elements(By.CLASS_NAME, "style-scope,ytd-about-channel-renderer")[3].text
+        maxx = len(v1.find_elements(By.CLASS_NAME, "style-scope,ytd-about-channel-renderer"))
+        v3 = v1.find_elements(By.CLASS_NAME, "style-scope,ytd-about-channel-renderer")[maxx - 1].text
         # print("v2  " + v2)
         # print("v3  " + v3)
 
@@ -175,7 +177,10 @@ class cWebm(object):
         # document.getElementsByClassName("css-ntsum2-DivNumber e1457k4r1")[0] < div # class =​"css-ntsum2-DivNumber
         # e1457k4r1" > ​flex < strong title=​"Likes" data-e2e=​"likes-count" > ​8982​ < / strong > ​ < span
         # data-e2e=​"likes" class =​"css-1pchix1-SpanUnit e1457k4r2" > ​Likes​ < / span > ​ < / div > ​
-        vl0 = self.driver.find_elements(By.CLASS_NAME, "css-ntsum2-DivNumber,e1457k4r1")[0]
+
+        # Заменил  240807 на ниже
+        # vl0 = self.driver.find_elements(By.CLASS_NAME, "css-ntsum2-DivNumber,e1457k4r1")[0]
+        vl0 = self.driver.find_elements(By.CLASS_NAME, "css-mgke3u-DivNumber,e1457k4r1")[2]
         vl = vl0.text.split()[0]
         return self.checkisnumber(vs), self.checkisnumber(vl)
 
@@ -348,11 +353,15 @@ class cWebm(object):
                 # "href")
 
                 for ii in range(len(houselist)):
-                    mhouse = houselist[ii].find_elements(By.TAG_NAME, "a")[0].get_attribute("href")
+                    thouse = houselist[ii].find_elements(By.TAG_NAME, "a")[0].get_attribute("href")
+
+                    mhouse=(thouse[:thouse.find('html') + 4])
 
                     mlist.append(mhouse)
 
             print2file(mname + "  Pages: " + mpages + "  Houses: " + str(len(mlist)))
+
+
 
             return mlist
 
@@ -448,30 +457,23 @@ class cWebm(object):
 
             mpointlink = self.driver.find_elements(By.CLASS_NAME, "staticmap")[0].find_elements(By.TAG_NAME, "img")[
                 0].get_attribute("src")
-            md["pointX"] = mpointlink.split("ll=", 1)[1].split(",", 1)[0]
-            md["pointY"] = mpointlink.split("ll=", 1)[1].split(",", 1)[1].split("&", 1)[0]
+            md["longitude"] = mpointlink.split("ll=", 1)[1].split(",", 1)[0]
+            md["latitude"] = mpointlink.split("ll=", 1)[1].split(",", 1)[1].split("&", 1)[0]
 
-            img = self.driver.find_elements(By.CLASS_NAME, "photowrap")[0].find_elements(By.TAG_NAME, "img")[
-                0].get_attribute(
-                "src")
+            md["photo_link"]=""
 
-            md["photo_link"]=img
+            if "absent" not in  md["photo_small_link"]:
+                img = self.driver.find_elements(By.CLASS_NAME, "photowrap")[0].find_elements(By.TAG_NAME, "img")[
+                    0].get_attribute(
+                    "src")
+                md["photo_link"]=img
+                md["photocomment"] =self.driver.find_elements(By.CLASS_NAME, "info")[1].find_elements(By.CLASS_NAME, "title")[0].text
+            else:
+                md["photo_link"] = md["photocomment"] = ""
 
             # 240730 Убрал загрузку больших фото
-            md["photo"]= None
+            md["photo"] = None
             # md["photo"]=sqlite3.Binary(img2blob(img))
-
-
-            md["photocomment"] =self.driver.find_elements(By.CLASS_NAME, "info")[1].find_elements(By.CLASS_NAME, "title")[0].text
-
-            # mfilename = "getcitywalls2_tmp.jpg"
-            # mfile = urllib.request.urlretrieve(img, mfilename)
-            # # with open(mfilename, 'rb') as file:
-            # #     blobData = file.read()
-            # # with  as file:
-            # blobdata = open(mfilename, 'rb').read()
-            #
-            # md["mainphoto"] = sqlite3.Binary(blobdata)
 
             md["link"] = link
 
@@ -479,4 +481,6 @@ class cWebm(object):
 
         except Exception:
             stack = traceback.extract_stack()
-            printsend('ERROR IN FUNC {}'.format(stack[-1][2]) + " | PREV {} |СITY".format(stack[-2][2]), ERRORSTR)
+            # printsend('ERROR IN FUNC {}'.format(stack[-1][2]) + " | PREV {} |СITY".format(stack[-2][2]), ERRORSTR)
+            printsend('\nERROR IN FUNC with LINK: ' +link+"\n", ERRORSTR)
+            pass

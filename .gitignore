@@ -318,7 +318,7 @@ fabric.properties
 !/venv/Lib/site-packages/streamlit-1.34.0.dist-info/
 !/venv/Lib/site-packages/zipp/
 .gitignore
-.oldbases/
+_old bases/
 mainchk.py
 maincompare.py
 maingraph.py
@@ -342,4 +342,3 @@ spb91.xlsx
 /getcitywalls2_tmp.jpg
 
 !/.streamlit/secrets.toml
-!/.devcontainer/

@@ -10,10 +10,10 @@ from mzweb import *
 
 base_name = 'mus2024spb.db'
 
+
 def export_to_sqlite():
     '''Экспорт данных из xlsx в sqlite'''
     '''2402 Экспорт данных из xlsx в sqlite'''
-
 
     # 1. Создание и подключение к базе
 
@@ -28,8 +28,8 @@ def export_to_sqlite():
     cursor = connect.cursor()
 
     # создание таблицы если ее не существует
-    cursor.execute('CREATE TABLE IF NOT EXISTS spb91 (WKT text, mName text,googlelink text,description  text,style text,access text,citywallslink text,years text, architect text)')
-
+    cursor.execute(
+        'CREATE TABLE IF NOT EXISTS spb91 (WKT text, mName text,googlelink text,description  text,style text,access text,citywallslink text,years text, architect text)')
 
     # 2. Работа c xlsx файлом
 
@@ -49,10 +49,11 @@ def export_to_sqlite():
             # Список который мы потом будем добавлять
             data.append(value)
 
-    # 3. Запись в базу и закрытие соединения
+        # 3. Запись в базу и закрытие соединения
 
         # Вставка данных в поля таблицы
-        cursor.execute("INSERT INTO spb91 VALUES (?, ?, ?, ?,?, ?, ?, ?,?);", (data[0], data[1], data[2], data[3],data[4], data[5], data[6], data[7],data[8]))
+        cursor.execute("INSERT INTO spb91 VALUES (?, ?, ?, ?,?, ?, ?, ?,?);",
+                       (data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8]))
 
     # сохраняем изменения
     connect.commit()
@@ -78,22 +79,24 @@ def clear_base():
     connect.commit()
     connect.close()
 
+
 def spbsql2table():
     '''2403 Берем из sql link, получаем данные через web и обновляем в sql'''
 
     class spbb:
-        def __init__(self,d1,d2,d3,d4,d5,d6,d7,d8,d9 ):
-            self.d1=d1
-            self.d2=d2
-            self.d3=d3
-            self.d4=d4
-            self.d5=d5
-            self.d6=d6
-            self.d7=d7
-            self.d8=d8
-            self.d9=d9
+        def __init__(self, d1, d2, d3, d4, d5, d6, d7, d8, d9):
+            self.d1 = d1
+            self.d2 = d2
+            self.d3 = d3
+            self.d4 = d4
+            self.d5 = d5
+            self.d6 = d6
+            self.d7 = d7
+            self.d8 = d8
+            self.d9 = d9
 
         #
+
     prj_dir = os.path.abspath(os.path.curdir)
     a = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -106,17 +109,16 @@ def spbsql2table():
 
     web = cWebm()
 
-
     ar = []
 
     for row in cursor.fetchall():
-        ar.append(spbb(row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8]))
+        ar.append(spbb(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8]))
 
     import re
     mdesc = row[3]
 
     for ii in ar:
-        ss=str(ii.d7)
+        ss = str(ii.d7)
         if ss.find("citywalls") < 0:
             mdesc = ii.d4
 
@@ -124,14 +126,13 @@ def spbsql2table():
             # if match:
             #     print(match.group(0))  #  "Keywords: key, key, key"
             #
-            if match ==None:
+            if match == None:
                 print(ii.d2 + " " + "CHECK DESC")
                 continue
 
-            mcity=match.group(0)
+            mcity = match.group(0)
 
-
-            march,myaears,mstyle =web.getcitywalls(mcity)
+            march, myaears, mstyle = web.getcitywalls(mcity)
 
             cursor.execute(
                 'UPDATE spb91 SET years = ?, style =?, architect =?,citywallslink=?'
@@ -141,7 +142,8 @@ def spbsql2table():
             res = "DONE"
         else:
             res = "SKIP"
-        print (ii.d2+" "+ res)
+        print(ii.d2 + " " + res)
+
 
 # Запуск функции
 # export_to_sqlite()
@@ -156,16 +158,16 @@ def spbsql2jpg():
     connection = sqlite3.connect(prj_dir + '/' + base_name)
     cursor = connection.cursor()
 
-    ll=cursor.execute('SELECT mainphoto from  citytable')
+    ll = cursor.execute('SELECT mainphoto from  citytable')
 
-    for  i in range(3):
+    for i in range(3):
         ablob = cursor.fetchone()[0]
         filename = "spbsql2jpg"
-        with open(filename + str(i)+".jpg", 'wb') as output_file:
+        with open(filename + str(i) + ".jpg", 'wb') as output_file:
             output_file.write(ablob)
 
 
-def spblink2sql(mlist, web,cursor):
+def spblink2sql(mlist, web, cursor):
     '''2406 на входе link, на выходе - строка msql'''
 
     progress_bar = tqdm(mlist, desc='Processing cities', total=len(mlist))
@@ -177,17 +179,16 @@ def spblink2sql(mlist, web,cursor):
             'arch1,arch2,arch3,arch4,'
             'addr1n,addr2n,addr3n,addr4n,'
             'link,lastdate,lasttime,'
-            'pointX,pointY,note)'
+            'longitude,latitude,note)'
             ' VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
             (md["city"], md["name"], md["year"], md["style"], md["status"],
-             md["arch1"], md["arch2"],md["arch3"], md["arch4"],
+             md["arch1"], md["arch2"], md["arch3"], md["arch4"],
              md["maddr1"], md["maddr2"], md["maddr3"], md["maddr4"],
              mlist[i], getcdate(), getctime(),
-             md["pointX"],md["pointY"],md["note"]))
+             md["longitude"], md["latitude"], md["note"]))
         cursor.connection.commit()
 
-
-        ind=cursor.lastrowid
+        ind = cursor.lastrowid
         # print("IIIIIIII "+str(ind))
 
         cursor.execute(
@@ -207,7 +208,34 @@ def spblink2sql(mlist, web,cursor):
         progress_bar.update()
 
 
+def check_isHouseInDB(mlist, cursor):
+    msql = 'SELECT link FROM citytable'
 
+    cursor.execute(msql)
+
+    mlinks = []
+
+    for row in cursor.fetchall():
+        mlinks.append(row[0])
+
+    mres = []
+
+    for i in mlist:
+        if i not in mlinks:
+            mres.append(i)
+        # else:
+        #     print("INF: DUPLICATE link" + i)
+
+    print('Начальное значение:%d из них новые:%d' % (len(mlist), len(mres)))
+
+    return mres
+
+
+def getcitywalls2getstreetv2(cursor, web, link):
+    tlist = web.getcitywalls2getstreet(link)
+    mres = check_isHouseInDB(tlist, cursor)
+
+    return mres
 
 
 def main():
@@ -215,78 +243,87 @@ def main():
 
     web = cWebm()
 
-    # mlist.append("https://www.citywalls.ru/house19439.html")
-
-
-    # # 240720DONE Фонтанка
-    # mlist = mlist + web.getcitywalls2getstreet("https://www.citywalls.ru/search-street2.html")
-
-    # # 240720DONE Чайковского
-    # mlist = mlist + web.getcitywalls2getstreet("https://www.citywalls.ru/search-street1.html")
-
-    # # # 240720DONE 6 линия ВО
-    # mlist = mlist + web.getcitywalls2getstreet("https://www.citywalls.ru/search-street13.html")
-    #
-    # # # 240720DONE 7 линия ВО
-    # mlist = mlist + web.getcitywalls2getstreet("https://www.citywalls.ru/search-street37.html")
-    #
-    # # # 240720DONE 8 линия ВО
-    # mlist = mlist + web.getcitywalls2getstreet("https://www.citywalls.ru/search-street23.html")
-    #
-    # # # 240720DONE 09 линия ВО
-    # mlist = mlist + web.getcitywalls2getstreet("https://www.citywalls.ru/search-street36.html")
-    #
-    # # # 240720DONE 10 линия ВО
-    # mlist = mlist + web.getcitywalls2getstreet("https://www.citywalls.ru/search-street7.html")
-    #
-    # # # 240720DONE 11 линия ВО
-    # mlist = mlist + web.getcitywalls2getstreet("https://www.citywalls.ru/search-street8.html")
-    #
-    # # # 240720DONE 12 линия ВО
-    # mlist = mlist + web.getcitywalls2getstreet("https://www.citywalls.ru/search-street38.html")
-    #
-    # # # 240720DONE 13 линия ВО
-    # mlist = mlist + web.getcitywalls2getstreet("https://www.citywalls.ru/search-street53.html")
-
-    # Большой проспект ВО
-    # ГЛЮК НА https://www.citywalls.ru/house21967.html
-    # mlist = mlist + web.getcitywalls2getstreet("https://www.citywalls.ru/search-street32.html")
-
-    # Средний  проспект ВО
-    mlist = mlist + web.getcitywalls2getstreet("https://www.citywalls.ru/search-street14.html")
-
-    # Малый  проспект ВО
-    mlist = mlist + web.getcitywalls2getstreet("https://www.citywalls.ru/search-street35.html")
-
-    #  Репина
-    mlist = mlist + web.getcitywalls2getstreet("https://www.citywalls.ru/search-street159.html")
-
-    # 2407ERROR! Садовая
-    mlist = mlist + web.getcitywalls2getstreet("https://www.citywalls.ru/search-street101.html")
-
-
-    #Михайловская короткая
-    # mlist = mlist + web.getcitywalls2getstreet("https://www.citywalls.ru/search-street237.html")
-
-    # Энгельса
-    # mlist = mlist + web.getcitywalls2getstreet("https://www.citywalls.ru/search-street635.html")
-
-    # web.getcitywalls2gethouse("https://www.citywalls.ru/house19439.html")
-    # web.getcitywalls2gethouse("https://www.citywalls.ru/house9440.html")
-    # web.getcitywalls2gethouse("https://www.citywalls.ru/house563.html")
-    # web.getcitywalls2gethouse("https://www.citywalls.ru/house28747.html")
-
-    # mlist.append("https://www.citywalls.ru/house19439.html")
-    # mlist.append("https://www.citywalls.ru/house9440.html")
-    # mlist.append("https://www.citywalls.ru/house563.html")
-    # mlist.append("https://www.citywalls.ru/house28747.html")
-
     prj_dir = os.path.abspath(os.path.curdir)
     a = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     connection = sqlite3.connect(prj_dir + '/' + base_name)
     cursor = connection.cursor()
 
-    spblink2sql(mlist,web,cursor)
+    # # 240724 DONEALL Мойка мосты
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street1777.html")
+    # 240724 DONEALL Мойка набережная
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street99.html")
+    # # 240724 DONEALL  7 линия ВО
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street37.html")
+    # # 240724 DONEALL  8 линия ВО
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street23.html")
+    # # 240724 DONEALL  09 линия ВО
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street36.html")
+    # # 240724 DONEALL  10 линия ВО
+    # mlist = mlist +getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street7.html")
+    # # 240724 DONEALL  11 линия ВО
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street8.html")
+    # # 240724 DONEALL   12 линия ВО
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street38.html")
+    # # 240724 DONEALL   13 линия ВО
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street53.html")
+    # #  240724 DONEALL   Чайковского
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street1.html")
+
+    # mlist.append("https://www.citywalls.ru/house32411.html")
+    # mlist.append("https://www.citywalls.ru/house772.html")
+
+
+    # # # 240724 DONEALL Дворцовая набережная
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street69.html")
+    #
+    # # # 240724 DONEALL Кутузова набережная
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street210.html")
+
+    # # 240720DONE Воскресенская набережная
+    #mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street3455.html")
+
+
+    # # 240724 DONEALL Большой проспект ВО
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street32.html")
+    #
+    # # 240724 DONEALL Средний  проспект ВО
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street14.html")
+    #
+    # # 240724 DONEALL Малый  проспект ВО
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street35.html")
+    #
+    # # 240724 DONEALL  Репина
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street159.html")
+
+    # # 240724 DONEALL
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street13.html")
+
+    # # 240724 DONEALL
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street2.html")
+
+
+    # Садовая
+    # # Error в https://www.citywalls.ru/house32411.html
+    mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street101.html")
+
+    # # Михайловская короткая - ПРОВЕРИТ ПОЧЕМУ ГЛЮК
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street237.html")
+    #
+    # # Энгельса
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street635.html")
+
+
+    mres = check_isHouseInDB(mlist, cursor)
+
+    print(mres)
+
+    f = open('mreport__.txt', 'w', encoding="utf-8")
+    for line in mres:
+        f.write(f"{line}\n")
+    f.close()
+
+    spblink2sql(mres, web, cursor)
+
 
 # spbsql2table()
 
