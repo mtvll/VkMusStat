@@ -63,8 +63,8 @@ def main():
                 else:
                     db._dayhearsvk = db._dayaddsvk = db._dayeffvk = db._hears_best_n = db._eff_best_n =0
                     db._eff_best_song = db._hears_best_song = ""
-            except:
-                printsend("  " + i.name + ":VKSTUDIO : " + i.vkstudio, MTITLE + ERRORSTR)
+            except Exception as ex:
+                printsend("  " + i.name + ":VKSTUDIO : " + i.vkstudio + "___"+ str(ex), MTITLE + ERRORSTR)
                 continue
 
             db.initstring(i.name)
@@ -84,48 +84,48 @@ def main():
                     db.columns["hears_month_ynd"], db.columns["likes_month_ynd"], db.columns[
                         "likes_all_ynd"] = web.getyandexday(
                         mlink)
-            except:
-                printsend("  " + i.name + ":YANDEX : " + i.yandex, MTITLE + ERRORSTR)
+            except Exception as ex:
+                printsend("  " + i.name + ":YANDEX : " + i.yandex+ "___"+ str(ex), MTITLE + ERRORSTR)
                 pass
 
             try:
                 if i.sber != "" and not ("NOSBER"  in web.cmd_param):
                     mlink = "https://zvuk.com/artist/" + i.sber
                     db.columns["sub_sber"] = web.getsberday(mlink)
-            except:
-                printsend("  " + i.name + ":SBER : " + i.sber, MTITLE + ERRORSTR)
+            except Exception as ex:
+                printsend("  " + i.name + ":SBER : " + i.sber+ "___"+ str(ex), MTITLE + ERRORSTR)
                 pass
 
             try:
                 if i.vk != ""and not ("NOVKSUB"  in web.cmd_param):
                     mlink = "https://vk.com/" + i.vk
                     db.columns["sub_vk"] = web.getvkday(mlink)
-            except:
-                printsend("  " + i.name + ":VK : " + i.vk, MTITLE + ERRORSTR)
+            except Exception as ex:
+                printsend("  " + i.name + ":VK : " + i.vk+ "___"+ str(ex), MTITLE + ERRORSTR)
                 pass
 
             try:
                 if i.youtube != "" and not ("NOYOUTUBE"  in web.cmd_param):
                     mlink = "https://www.youtube.com/channel/" + i.youtube
                     db.columns["sub_youtube"] = web.getyoutubeday(mlink)
-            except:
-                printsend("  " + i.name + ":YOUTUBE : " + i.youtube, MTITLE + ERRORSTR)
+            except Exception as ex:
+                printsend("  " + i.name + ":YOUTUBE : " + i.youtube+ "___"+ str(ex), MTITLE + ERRORSTR)
                 pass
 
             try:
                 if i.tiktok != ""and not ("NOTIKTOK"  in web.cmd_param):
                     mlink = "https://www.tiktok.com/" + i.tiktok
                     db.columns["sub_tiktok"], db.columns["likes_tiktok"] = web.gettiktokday(mlink)
-            except:
-                printsend("  " + i.name + ":TIKTOK : " + i.tiktok, MTITLE + ERRORSTR)
+            except Exception as ex:
+                printsend("  " + i.name + ":TIKTOK : " + i.tiktok+ "___"+ str(ex), MTITLE + ERRORSTR)
                 pass
 
             try:
                 if i.tlg != "" and not ("NOTLG"  in web.cmd_param):
                     mlink = "https://t.me/" + i.tlg
                     db.columns["sub_tlg"] = web.gettlgday(mlink)
-            except:
-                printsend("  " + i.name + ":TIKTOK : " + i.tiktok, MTITLE + ERRORSTR)
+            except Exception as ex:
+                printsend("  " + i.name + ":TIKTOK : " + i.tiktok+ "___"+ str(ex), MTITLE + ERRORSTR)
                 pass
 
 

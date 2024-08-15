@@ -192,7 +192,7 @@ def spblink2sql(mlist, web, cursor):
         # print("IIIIIIII "+str(ind))
 
         cursor.execute(
-            'INSERT INTO cityphotos (home_id_2parent,'
+            'INSERT INTO cityphotos (building_fk,'
             'comment,'
             'photo,photo_link,'
             'photo_small,photo_small_link,'
@@ -294,6 +294,86 @@ def main():
     #
     # # 240724 DONEALL  Репина
     # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street159.html")
+    # 240811 DONEALL Английская
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street208.html")
+    # # 240811 DONEALL Шмидта
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street55.html")
+    # # 240811 DONEALL  Университетская
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street39.html")
+    # #  240811 DONEALL Галерная
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street217.html")
+    # #  240811 DONEALL 14
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street34.html")
+    # #  240811 DONEALL 15
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street54.html")
+    # #  240811 DONEALL 16
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street27.html")
+    # #  240811 DONEALL 17
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street56.html")
+    # #  240811 DONEALL 18
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street33.html")
+    # #  240811 DONEALL 19
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street57.html")
+    # #  240811 DONEALL 20
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street47.html")
+    # #  240811 DONEALL 21
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street43.html")
+    # #  240811 DONEALL 22
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street46.html")
+
+    #  240811 DONEALL Щербаков
+    mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street587.html")
+
+    #  Большой ПС
+    mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street97.html")
+
+
+    # #  240811 DONEALL Графский
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street491.html")
+    #  240811 DONEALL Владимирский
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street170.html")
+    # #  240811 DONEALL Загородный
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street491.html")
+    # #  240811 DONEALL Рубинщт
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street88.html")
+    # #  240811 DONEALL Ломо
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street478.html")
+    # # 240811 DONEALL Джамб
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street399.html")
+    # #  240811 DONEALL Бородинска
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street324.html")
+    # #  240811 DONEALL бол Каз
+    #  mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street478.html")
+    # #  240811 DONEALL Звниг
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street177.html")
+    # #  240811 DONEALL Правд
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street84.html")
+    # #  240811 DONEALL Соци
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street31.html")
+    # #  240811 DONEALL мара
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street75.html")
+    # #  240811 DONEALL Разь
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street76.html")
+
+    # !!!!!!!!!!!!!!!!!!!!#  мал Каз - 1 СТАРНИЦА
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street478.html")
+
+    # !!!!!!!!!!!!!!!!!!!!#  Горо - ГЛЮК
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street94.html")
+
+
+    # # ------------------------------------------------
+    # # 23
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street58.html")
+    # # 24
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street106.html")
+    # # 25
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street685.html")
+    # # 26
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street688.html")
+    # # 27
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street687.html")
+    # # ------------------------------------------------
 
     # # 240724 DONEALL
     # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street13.html")
@@ -304,7 +384,7 @@ def main():
 
     # Садовая
     # # Error в https://www.citywalls.ru/house32411.html
-    mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street101.html")
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street101.html")
 
     # # Михайловская короткая - ПРОВЕРИТ ПОЧЕМУ ГЛЮК
     # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street237.html")
