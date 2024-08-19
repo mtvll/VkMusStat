@@ -77,18 +77,18 @@ class cWebm(object):
     #     except Exception as ex:
     #         return MYNOTNUMBER
 
-    @staticmethod
-    def checkisnumber(instr, mfrom=""):
-        instr = instr.replace(' ', '')
-        try:
-            if (mfrom == "youtube") and (instr[-1] == "M"):
-                instr = float(instr[:-1]) * 1000000
-            if (mfrom == "youtube") and (instr[-1] == "K"):
-                instr = float(instr[:-1]) * 1000
-            c = int(instr)
-            return c
-        except Exception as ex:
-            return MYNOTNUMBER
+
+    # def checkisnumber(instr, mfrom=""):
+    #     instr = instr.replace(' ', '')
+    #     try:
+    #         if (mfrom == "youtube") and (instr[-1] == "M"):
+    #             instr = float(instr[:-1]) * 1000000
+    #         if (mfrom == "youtube") and (instr[-1] == "K"):
+    #             instr = float(instr[:-1]) * 1000
+    #         c = int(instr)
+    #         return c
+    #     except Exception as ex:
+    #         return -999
 
     # def findonpage(self, link, str):
     #     self.golinkpause(link)
@@ -119,7 +119,7 @@ class cWebm(object):
         ylikesmonth = self.driver.find_elements(By.CLASS_NAME, "artist-trends__total-count")[1].text
         ylikesall = self.driver.find_elements(By.CLASS_NAME, "d-button__label")[0].text
 
-        return self.checkisnumber(yhearsmonth), self.checkisnumber(ylikesmonth), self.checkisnumber(ylikesall)
+        return checkisnumberr(yhearsmonth), checkisnumberr(ylikesmonth), checkisnumberr(ylikesall)
 
     def getyoutubeday(self, link):
         # document.getElementsByClassName("description-item style-scope ytd-about-channel-renderer")[
@@ -146,7 +146,7 @@ class cWebm(object):
         # v0="RAYVAN\n@rayvan\n\n\ 929 subsribesrs"
         v = v3.split()[0]
 
-        return self.checkisnumber(v, "youtube")
+        return checkisnumberr(v, "youtube")
 
     def getspotifyday(self, link):
         # document.getElementsByClassName("meta-item style-scope ytd-c4-tabbed-header-renderer")[3] < span class
@@ -158,7 +158,7 @@ class cWebm(object):
         v0 = self.driver.find_elements(By.CLASS_NAME, "Ydwa1P5GkCggtLlSvphs")
         # v0="RAYVAN\n@rayvan\n\n\ 929 subsribesrs"
         v = v0[0].text.split()[0]
-        return self.checkisnumber(v)
+        return checkisnumberr(v)
 
     def gettlgday(self, link):
         # document.getElementsByClassName("tgme_page_extra")[0]
@@ -166,7 +166,7 @@ class cWebm(object):
         self.golinkpause(link)
         vs0 = self.driver.find_elements(By.CLASS_NAME, "tgme_page_extra")[0]
         vs = vs0.text.replace(" subscribers", "").replace(" ", "")
-        return self.checkisnumber(vs)
+        return checkisnumberr(vs)
 
     def gettiktokday(self, link):
         # document.getElementsByClassName("css-mgke3u-DivNumber e1457k4r1")[1]
@@ -184,12 +184,12 @@ class cWebm(object):
         # Заменил  2408018 на ниже
         vl0 = self.driver.find_elements(By.CLASS_NAME, "css-1ou6a1c-DivNumber,e1457k4r1")[0]
         vl = vl0.text.split()[0]
-        return self.checkisnumber(vs), self.checkisnumber(vl)
+        return checkisnumberr(vs), checkisnumberr(vl)
 
     def getvkday(self, link):
         self.golinkpause(link)
         v = self.driver.find_elements(By.CLASS_NAME, "header_count,fl_l")[0].text
-        return self.checkisnumber(v)
+        return checkisnumberr(v)
 
     def getsberday(self, link):
         self.golinkpause(link)
@@ -198,7 +198,7 @@ class cWebm(object):
                                       "Text__gutter-None---012f4,Text__color-Primary---d90db,"
                                       "styles_counterCount__LatF7")[
             6].text
-        return self.checkisnumber(v)
+        return checkisnumberr(v)
 
     def getvkstudio(self, link):
         self.golinkpause(link)

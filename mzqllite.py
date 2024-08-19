@@ -142,8 +142,8 @@ class cDb(object):
                 istr.pop(4)
 
             mtrack = istr[1]
-            hears_vk = int(istr[3])
-            adds_vk = int(istr[4])
+            hears_vk = int(checkisnumberr(istr[3]))
+            adds_vk = int(checkisnumberr(istr[4]))
             martist = name
 
             eff_vk = 0 if adds_vk == 0 else round(hears_vk / adds_vk, 1)

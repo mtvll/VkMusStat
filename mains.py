@@ -82,8 +82,7 @@ def main():
                 if i.yandex != "" and not ("NOYANDEX"  in web.cmd_param):
                     mlink = "https://music.yandex.ru/artist/" + i.yandex + "/info"
                     db.columns["hears_month_ynd"], db.columns["likes_month_ynd"], db.columns[
-                        "likes_all_ynd"] = web.getyandexday(
-                        mlink)
+                        "likes_all_ynd"] = web.getyandexday(mlink)
             except Exception as ex:
                 printsend("  " + i.name + ":YANDEX : " + i.yandex+ "___"+ str(ex), MTITLE + ERRORSTR)
                 pass

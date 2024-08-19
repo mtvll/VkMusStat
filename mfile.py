@@ -4,6 +4,22 @@ from mmail import *
 
 import urllib.request
 
+
+def checkisnumberr(instr, mfrom=""):
+    instr = instr.replace(' ', '')
+    try:
+        # Убрал проверку на youtube
+        # if (mfrom == "youtube") and (instr[-1] == "M"):
+        if  (instr[-1] == "M"):
+            instr = float(instr[:-1]) * 1000000
+        # if (mfrom == "youtube") and (instr[-1] == "K"):
+        if  (instr[-1] == "K"):
+            instr = float(instr[:-1]) * 1000
+        c = int(instr)
+        return c
+    except Exception as ex:
+        return -1
+
 def printsend(mstr, title, write2file=True) :
     if (mstr!=""):
         try:            #20240414 ���� ���������� � ������� ��������
