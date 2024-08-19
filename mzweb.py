@@ -180,7 +180,9 @@ class cWebm(object):
 
         # Заменил  240807 на ниже
         # vl0 = self.driver.find_elements(By.CLASS_NAME, "css-ntsum2-DivNumber,e1457k4r1")[0]
-        vl0 = self.driver.find_elements(By.CLASS_NAME, "css-mgke3u-DivNumber,e1457k4r1")[2]
+        # vl0 = self.driver.find_elements(By.CLASS_NAME, "css-mgke3u-DivNumber,e1457k4r1")[2]
+        # Заменил  2408018 на ниже
+        vl0 = self.driver.find_elements(By.CLASS_NAME, "css-1ou6a1c-DivNumber,e1457k4r1")[0]
         vl = vl0.text.split()[0]
         return self.checkisnumber(vs), self.checkisnumber(vl)
 

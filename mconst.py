@@ -11,7 +11,7 @@ import plotly.graph_objects as go
 import sys
 import difflib
 
-# проверка дублей в city "SELECT link, COUNT(*) FROM citytable GROUP BY link HAVING COUNT(*) > 1;"
+# проверка дублей в city "SELECT link, COUNT(*) FROM buildingdb GROUP BY link HAVING COUNT(*) > 1;"
 # если ошибка что не находит файл в подпапке, надо его просто отредактировать в github
 # при работа mainchk проверять заглавные или строчные буквы прямо на странице!!!
 # при работа mainchk проверять яззык чтобы был нужный!!!

@@ -158,7 +158,7 @@ def spbsql2jpg():
     connection = sqlite3.connect(prj_dir + '/' + base_name)
     cursor = connection.cursor()
 
-    ll = cursor.execute('SELECT mainphoto from  citytable')
+    ll = cursor.execute('SELECT mainphoto from  buildingdb')
 
     for i in range(3):
         ablob = cursor.fetchone()[0]
@@ -175,7 +175,7 @@ def spblink2sql(mlist, web, cursor):
     for i in range(len(mlist)):
         md = web.getcitywalls2gethouse(mlist[i])
         cursor.execute(
-            'INSERT INTO citytable (city,name,year,style,status,'
+            'INSERT INTO buildingdb (city,name,year,style,status,'
             'arch1,arch2,arch3,arch4,'
             'addr1n,addr2n,addr3n,addr4n,'
             'link,lastdate,lasttime,'
@@ -192,7 +192,7 @@ def spblink2sql(mlist, web, cursor):
         # print("IIIIIIII "+str(ind))
 
         cursor.execute(
-            'INSERT INTO cityphotos (building_fk,'
+            'INSERT INTO photodb (building_fk,'
             'comment,'
             'photo,photo_link,'
             'photo_small,photo_small_link,'
@@ -209,7 +209,7 @@ def spblink2sql(mlist, web, cursor):
 
 
 def check_isHouseInDB(mlist, cursor):
-    msql = 'SELECT link FROM citytable'
+    msql = 'SELECT link FROM buildingdb'
 
     cursor.execute(msql)
 
@@ -321,11 +321,15 @@ def main():
     # #  240811 DONEALL 22
     # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street46.html")
 
-    #  240811 DONEALL Щербаков
-    mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street587.html")
+    # #  240811 DONEALL Щербаков
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street587.html")
 
-    #  Большой ПС
-    mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street97.html")
+    # #  Большой ПС
+    #   mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street97.html")
+
+    #  Канонера
+    mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street799.html")
+
 
 
     # #  240811 DONEALL Графский
