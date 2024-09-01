@@ -192,12 +192,25 @@ class cWebm(object):
         return checkisnumberr(v)
 
     def getsberday(self, link):
+
         self.golinkpause(link)
+
+        # 240901
+        # v = self.driver.find_elements(By.CLASS_NAME,
+        #                               "Text__text---dbe71,Text__align-Left---18ad4,Text__variant-H4---d5b75,"
+        #                               "Text__gutter-None---012f4,Text__color-Primary---d90db,"
+        #                               "styles_counterCount__LatF7")[
+        #     6].text
+        # ss = self.driver.find_elements(By.CLASS_NAME,
+        #                           "Text_text__7_imM,Text_alignLeft__I9hpQ,Text_variantBodyS__2eN0i,Text_gutterNone__q_Sqi Text_colorWhite50__0U80B,Text_medium__TmC_D")
+        # for i in range(len(ss)):
+        #     print (str(i)+ss[i].text)
         v = self.driver.find_elements(By.CLASS_NAME,
-                                      "Text__text---dbe71,Text__align-Left---18ad4,Text__variant-H4---d5b75,"
-                                      "Text__gutter-None---012f4,Text__color-Primary---d90db,"
-                                      "styles_counterCount__LatF7")[
-            6].text
+                                      "Text_text__7_imM,Text_alignLeft__I9hpQ,Text_variantBodyS__2eN0i,Text_gutterNone__q_Sqi Text_colorWhite50__0U80B,Text_medium__TmC_D")[
+            14].text
+
+        v=v[:v.find(" ")]
+
         return checkisnumberr(v)
 
     def getvkstudio(self, link):
@@ -207,7 +220,7 @@ class cWebm(object):
                                   "vkuiLink,Link-module__link--V7bkY,Select-module__link--ah62s,vkuiTappable,"
                                   "vkuiInternalTappable,vkuiTappable--hasActive,vkui-focus-visible")[
             0].click()
-        time.sleep(MPAUSE)
+        time.sleep(MPAUSE*2)
 
         # Клик на пункт Сутки document.getElementsByClassName("vkuiLink Link-module__link--V7bkY
         # Select-module__link--ah62s vkuiTappable vkuiInternalTappable vkuiTappable--hasActive vkui-focus-visible")[
@@ -217,14 +230,14 @@ class cWebm(object):
                                   "vkuiTappable,vkuiInternalTappable,vkuiTappable--hasHover,vkuiTappable--hasActive,"
                                   "vkui-focus-visible")[
             0].click()
-        time.sleep(MPAUSE)
+        time.sleep(MPAUSE*2)
 
         # Клик дважды на сортировку по названию
         # document.getElementsByClassName("TracksTable-module__headerCellInnerSorting--WW4Tz")[0].click()
         self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__headerCellInnerSorting--WW4Tz")[0].click()
-        time.sleep(MPAUSE)
+        time.sleep(MPAUSE*2)
         self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__headerCellInnerSorting--WW4Tz")[0].click()
-        time.sleep(MPAUSE)
+        time.sleep(MPAUSE*2)
 
         # document.getElementsByClassName("TracksTable-module__row--nFfI0")
         mtab = self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__row--nFfI0")
