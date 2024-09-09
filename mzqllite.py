@@ -33,23 +33,23 @@ class cDb(object):
 
         self.connection.commit()
 
-
-        class Artist:
-            def __init__(self, name, vkstudio="", spot="", yandex="", sber="", youtube="", vk="", tiktok="",tlg="",instagram="",l3="",l4="",l5="",minhears=20):
-                self.name = name
-                self.vkstudio = vkstudio
-                self.spot = spot
-                self.yandex = yandex
-                self.sber = sber
-                self.youtube = youtube
-                self.vk = vk
-                self.tiktok = tiktok
-                self.tlg = tlg
-                self.instagram = instagram
-                self.l3 = l3
-                self.l4 = l4
-                self.l5 = l5
-                self.minhears = minhears
+        #
+        # class Artist:
+        #     def __init__(self, name, vkstudio="", spot="", yandex="", sber="", youtube="", vk="", tiktok="",tlg="",instagram="",l3="",l4="",l5="",minhears=20):
+        #         self.name = name
+        #         self.vkstudio = vkstudio
+        #         self.spot = spot
+        #         self.yandex = yandex
+        #         self.sber = sber
+        #         self.youtube = youtube
+        #         self.vk = vk
+        #         self.tiktok = tiktok
+        #         self.tlg = tlg
+        #         self.instagram = instagram
+        #         self.l3 = l3
+        #         self.l4 = l4
+        #         self.l5 = l5
+        #         self.minhears = minhears
 
 
         # Артист (Имя, vkstudio, spotify, yandex, sber,
@@ -61,7 +61,7 @@ class cDb(object):
             Artist('RAYVAN', "679765629422687778", "6MUpnjFA4zQu3s0t2Nzlfk", "8141812", "210105583",
                    "UCvtme_nmuo4NdcYniouDh2Q","rayvan.official","@rayvan.official",
                    "rayvanmusic", "rayvan.official"),
-            Artist('Кипиш Нот', "8847225405052948823", "4QlySbg8i1tMfj0QPe2BUB", "16928046", "211979258",
+            Artist('Кипиш Нот', "8847225405052948823", "4QlySbg8i1tMfj0QPe2BUB", "22628661", "211979258",
                    "", "kipish_not", "",
                    "kipish_not", "makaronnoe_bludo"),
             Artist('Interpol86', "", "", "", "",

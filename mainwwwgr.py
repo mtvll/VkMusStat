@@ -86,6 +86,8 @@ mval =[]
 mval.append ([CAPTIONADD,df['adds_vk'],"lines"])
 mval.append ([CAPTIONHEAR,df['hears_vk'],"lines"])
 mval.append ([CAPTIONEFF,(df['adds_vk']) * COEFFEFFECT / df['hears_vk'],"lines+markers"])
+# 240909 Убрал тк вбросы на кипише mval.append ([CAPTIONEFF,(df['adds_vk']) * COEFFEFFECT / df['hears_vk'],"lines+markers"])
+mval.append ([CAPTIONEFF,(df['eff_vk']),"lines+markers"])
 mval.append (["Yand.ПрослушиванияМесяц",df['hears_month_ynd'],"lines"])
 mval.append (["Yand.ЛайкиМесяц",df['likes_month_ynd'],"lines"])
 mval.append (["Yand.ЛайкиВсе",df['likes_all_ynd'],"lines+markers"])

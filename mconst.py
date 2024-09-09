@@ -16,7 +16,8 @@ import difflib
 # при работа mainchk проверять заглавные или строчные буквы прямо на странице!!!
 # при работа mainchk проверять яззык чтобы был нужный!!!
 
-MVERSION="240902 Поправил Sber"
+MVERSION="240909 Поправил Кипиш и вывод эффективности"
+# MVERSION="240902 Поправил Sber"
 # MVERSION="240820 Поправил TikTok+ Yandex"
 # MVERSION="240815 Поправил Вк перед переименованием таблиц"
 # MVERSION="240707 Скорректировал сервер и makbludo"
@@ -71,3 +72,22 @@ MPROF2 = r"--profile-directory=Profile 12"
 # Корректировка значений когда чтото пошло не  так
 # UPDATE MuzStat Set likes_month_ynd=-1 where likes_month_ynd=9999
 # UPDATE MuzStat Set likes_all_ynd=-1 where likes_all_ynd=9999
+
+class Artist:
+    def __init__(self, name, vkstudio="", spot="", yandex="", sber="", youtube="", vk="", tiktok="", tlg="",
+                 instagram="", l3="", l4="", l5="", minhears=20, run_after_error=False):
+        self.name = name
+        self.vkstudio = vkstudio
+        self.spot = spot
+        self.yandex = yandex
+        self.sber = sber
+        self.youtube = youtube
+        self.vk = vk
+        self.tiktok = tiktok
+        self.tlg = tlg
+        self.instagram = instagram
+        self.l3 = l3
+        self.l4 = l4
+        self.l5 = l5
+        self.minhears = minhears
+        self.run_after_error = run_after_error

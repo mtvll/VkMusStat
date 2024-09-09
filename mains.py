@@ -64,7 +64,11 @@ def main():
                     db._dayhearsvk = db._dayaddsvk = db._dayeffvk = db._hears_best_n = db._eff_best_n =0
                     db._eff_best_song = db._hears_best_song = ""
             except Exception as ex:
-                printsend("  " + i.name + ":VKSTUDIO : " + i.vkstudio + "___"+ str(ex), MTITLE + ERRORSTR)
+                if (i.run_after_error==False):
+                    db.art.append(Artist(i.name, i.vkstudio, "", "", "",
+                       "","","",
+                       "", "",minhears=i.minhears, run_after_error=True))
+                printsend("  " + i.name + ":VKSTUDIO : {iteration}".format(iteration="Second iteration " if i.run_after_error else "") + i.vkstudio + "___" + str(ex), MTITLE + ERRORSTR)
                 continue
 
             db.initstring(i.name)
