@@ -88,7 +88,14 @@ def main():
                     db.columns["hears_month_ynd"], db.columns["likes_month_ynd"], db.columns[
                         "likes_all_ynd"] = web.getyandexday(mlink)
             except Exception as ex:
-                printsend("  " + i.name + ":YANDEX : " + i.yandex+ "___"+ str(ex), MTITLE + ERRORSTR)
+                if (i.run_after_error == False):
+                    db.art.append(Artist(i.name, "", "", i.yandex, "",
+                                         "", "", "",
+                                         "", "", minhears=i.minhears, run_after_error=True))
+                printsend("  " + i.name + ":YANDExMuz : {iteration}".format(
+                    iteration="Second iteration " if i.run_after_error else "") + i.yandex + "___" + str(ex),
+                          MTITLE + ERRORSTR)
+                # printsend("  " + i.name + ":YANDEX : " + i.yandex+ "___"+ str(ex), MTITLE + ERRORSTR)
                 pass
 
             try:
@@ -96,7 +103,14 @@ def main():
                     mlink = "https://zvuk.com/artist/" + i.sber
                     db.columns["sub_sber"] = web.getsberday(mlink)
             except Exception as ex:
-                printsend("  " + i.name + ":SBER : " + i.sber+ "___"+ str(ex), MTITLE + ERRORSTR)
+                if (i.run_after_error == False):
+                    db.art.append(Artist(i.name, "", "", "", i.sber,
+                                         "", "", "",
+                                         "", "", minhears=i.minhears, run_after_error=True))
+                printsend("  " + i.name + ":Sber : {iteration}".format(
+                    iteration="Second iteration " if i.run_after_error else "") + i.sber + "___" + str(ex),
+                          MTITLE + ERRORSTR)
+                # printsend("  " + i.name + ":SBER : " + i.sber+ "___"+ str(ex), MTITLE + ERRORSTR)
                 pass
 
             try:
@@ -104,7 +118,14 @@ def main():
                     mlink = "https://vk.com/" + i.vk
                     db.columns["sub_vk"] = web.getvkday(mlink)
             except Exception as ex:
-                printsend("  " + i.name + ":VK : " + i.vk+ "___"+ str(ex), MTITLE + ERRORSTR)
+                if (i.run_after_error == False):
+                    db.art.append(Artist(i.name, "", "", "", "",
+                                         "", i.vk, "",
+                                         "", "", minhears=i.minhears, run_after_error=True))
+                printsend("  " + i.name + ":VkSub : {iteration}".format(
+                    iteration="Second iteration " if i.run_after_error else "") + i.vk + "___" + str(ex),
+                          MTITLE + ERRORSTR)
+                # printsend("  " + i.name + ":VK : " + i.vk+ "___"+ str(ex), MTITLE + ERRORSTR)
                 pass
 
             try:
@@ -112,7 +133,14 @@ def main():
                     mlink = "https://www.youtube.com/channel/" + i.youtube
                     db.columns["sub_youtube"] = web.getyoutubeday(mlink)
             except Exception as ex:
-                printsend("  " + i.name + ":YOUTUBE : " + i.youtube+ "___"+ str(ex), MTITLE + ERRORSTR)
+                if (i.run_after_error == False):
+                    db.art.append(Artist(i.name, "", "", "", "",
+                                         i.youtube, "", "",
+                                         "", "", minhears=i.minhears, run_after_error=True))
+                printsend("  " + i.name + ":Youtube : {iteration}".format(
+                    iteration="Second iteration " if i.run_after_error else "") + i.youtube + "___" + str(ex),
+                          MTITLE + ERRORSTR)
+                # printsend("  " + i.name + ":YOUTUBE : " + i.youtube+ "___"+ str(ex), MTITLE + ERRORSTR)
                 pass
 
             try:
@@ -120,7 +148,14 @@ def main():
                     mlink = "https://www.tiktok.com/" + i.tiktok
                     db.columns["sub_tiktok"], db.columns["likes_tiktok"] = web.gettiktokday(mlink)
             except Exception as ex:
-                printsend("  " + i.name + ":TIKTOK : " + i.tiktok+ "___"+ str(ex), MTITLE + ERRORSTR)
+                if (i.run_after_error == False):
+                    db.art.append(Artist(i.name, "", "", "", "",
+                                         "", "", i.tiktok,
+                                         "", "", minhears=i.minhears, run_after_error=True))
+                printsend("  " + i.name + ":TikTok  : {iteration}".format(
+                    iteration="Second iteration " if i.run_after_error else "") + i.tiktok + "___" + str(ex),
+                          MTITLE + ERRORSTR)
+                # printsend("  " + i.name + ":TIKTOK : " + i.tiktok+ "___"+ str(ex), MTITLE + ERRORSTR)
                 pass
 
             try:
@@ -128,7 +163,14 @@ def main():
                     mlink = "https://t.me/" + i.tlg
                     db.columns["sub_tlg"] = web.gettlgday(mlink)
             except Exception as ex:
-                printsend("  " + i.name + ":TIKTOK : " + i.tiktok+ "___"+ str(ex), MTITLE + ERRORSTR)
+                if (i.run_after_error == False):
+                    db.art.append(Artist(i.name, "", "", "", "",
+                                         "", "", "",
+                                         i.tlg, "", minhears=i.minhears, run_after_error=True))
+                printsend("  " + i.name + ":Teleg : {iteration}".format(
+                    iteration="Second iteration " if i.run_after_error else "") + i.tlg + "___" + str(ex),
+                          MTITLE + ERRORSTR)
+                # printsend("  " + i.name + ":TIKTOK : " + i.tiktok+ "___"+ str(ex), MTITLE + ERRORSTR)
                 pass
 
 

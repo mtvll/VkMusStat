@@ -58,6 +58,9 @@ class cDb(object):
         #           ,,,minhears):
 
         self.art = [
+            Artist('RAYVAN', "", "", "", "",
+                   "", "", "@rayvan.official",
+                   "", ""),
             Artist('RAYVAN', "679765629422687778", "6MUpnjFA4zQu3s0t2Nzlfk", "8141812", "210105583",
                    "UCvtme_nmuo4NdcYniouDh2Q","rayvan.official","@rayvan.official",
                    "rayvanmusic", "rayvan.official"),
@@ -71,7 +74,7 @@ class cDb(object):
                    "UC27Z5ZvYSt95UtjFeGJ0wGA", "milz.singer"),
             Artist('Алексир', "3377722344143542502", "7aPj4tatJiiVIImj1uYdpV", "18574196", "212326111",
                    "UC5CM0orwcf0e81U8818LNVg", "aleksirme", "",
-                   "","aleksir.me"),
+                   "aleksir_me","aleksir.me"),
             Artist('София Мосейчук', "", "4QiguGhNyTgHtELFp9KJDp", "15710563", "211630315", "",
                    "moseichuksofiia", "@krasotka.sofi","",
                    "krasotka_sofi", "krasotka_sofi",minhears=50),
@@ -86,7 +89,9 @@ class cDb(object):
                    "UCKxaCaipSkU6MgQwv2y-lkw", "slava_myasnikov", "@miasnikov.s",
                    "","miasnikov.s",minhears=500),
             Artist('Ирина Эмирова', "5595344415242300490", "0XRzVBeXMuAoyLiKt611n2", "3987540", "167840734", "",
-                   "irina_emirova","","","","","","",minhears=50),
+                   "irina_emirova","","",
+                   "irina_emirova","",
+                   "","",minhears=50),
             Artist('Хор Ирины Павленко', "2495875715565516380", "0sFrPGC1ewZMBmGrt8UmcM", "21014484", "212760210",
                    "","","",
                    "","irina_pavlenkovokaltomsk"),

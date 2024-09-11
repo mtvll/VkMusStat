@@ -117,7 +117,7 @@ class cWebm(object):
 
         yhearsmonth = self.driver.find_elements(By.CLASS_NAME, "artist-trends__total-count")[0].text
         ylikesmonth = self.driver.find_elements(By.CLASS_NAME, "artist-trends__total-count")[1].text
-        ylikesall = self.driver.find_elements(By.CLASS_NAME, "d-button__label")[0].text
+        ylikesall = self.driver.find_elements(By.CLASS_NAME, "d-button__label")[1].text
 
         return checkisnumberr(yhearsmonth), checkisnumberr(ylikesmonth), checkisnumberr(ylikesall)
 
@@ -172,18 +172,25 @@ class cWebm(object):
         # document.getElementsByClassName("css-mgke3u-DivNumber e1457k4r1")[1]
         # <div class=​"css-mgke3u-DivNumber e1457k4r1">​…​</div>​flex
         self.golinkpause(link)
-        vs0 = self.driver.find_elements(By.CLASS_NAME, "css-mgke3u-DivNumber,e1457k4r1")[1]
-        vs = vs0.text.split()[0]
-        # document.getElementsByClassName("css-ntsum2-DivNumber e1457k4r1")[0] < div # class =​"css-ntsum2-DivNumber
-        # e1457k4r1" > ​flex < strong title=​"Likes" data-e2e=​"likes-count" > ​8982​ < / strong > ​ < span
-        # data-e2e=​"likes" class =​"css-1pchix1-SpanUnit e1457k4r2" > ​Likes​ < / span > ​ < / div > ​
 
-        # Заменил  240807 на ниже
-        # vl0 = self.driver.find_elements(By.CLASS_NAME, "css-ntsum2-DivNumber,e1457k4r1")[0]
-        # vl0 = self.driver.find_elements(By.CLASS_NAME, "css-mgke3u-DivNumber,e1457k4r1")[2]
-        # Заменил  2408018 на ниже
-        vl0 = self.driver.find_elements(By.CLASS_NAME, "css-1ou6a1c-DivNumber,e1457k4r1")[0]
-        vl = vl0.text.split()[0]
+        s=self.driver.find_element(By.XPATH,"//meta[@name='description']").get_attribute("content")
+
+        vs=s[s.index("TikTok |") + len("TikTok |"):s.index("Likes.")]
+        vl = s[s.index("Likes.") + len("Likes."):s.index("Followers")]
+
+        # 240914 Раздел закомментил
+        # vs0 = self.driver.find_elements(By.CLASS_NAME, "css-mgke3u-DivNumber,e1457k4r1")[1]
+        # vs = vs0.text.split()[0]
+        # # document.getElementsByClassName("css-ntsum2-DivNumber e1457k4r1")[0] < div # class =​"css-ntsum2-DivNumber
+        # # e1457k4r1" > ​flex < strong title=​"Likes" data-e2e=​"likes-count" > ​8982​ < / strong > ​ < span
+        # # data-e2e=​"likes" class =​"css-1pchix1-SpanUnit e1457k4r2" > ​Likes​ < / span > ​ < / div > ​
+        #
+        # # Заменил  240807 на ниже
+        # # vl0 = self.driver.find_elements(By.CLASS_NAME, "css-ntsum2-DivNumber,e1457k4r1")[0]
+        # # vl0 = self.driver.find_elements(By.CLASS_NAME, "css-mgke3u-DivNumber,e1457k4r1")[2]
+        # # Заменил  2408018 на ниже
+        # vl0 = self.driver.find_elements(By.CLASS_NAME, "css-1ou6a1c-DivNumber,e1457k4r1")[0]
+        # vl = vl0.text.split()[0]
         return checkisnumberr(vs), checkisnumberr(vl)
 
     def getvkday(self, link):
