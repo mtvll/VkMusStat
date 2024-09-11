@@ -58,9 +58,6 @@ class cDb(object):
         #           ,,,minhears):
 
         self.art = [
-            Artist('RAYVAN', "", "", "", "",
-                   "", "", "@rayvan.official",
-                   "", ""),
             Artist('RAYVAN', "679765629422687778", "6MUpnjFA4zQu3s0t2Nzlfk", "8141812", "210105583",
                    "UCvtme_nmuo4NdcYniouDh2Q","rayvan.official","@rayvan.official",
                    "rayvanmusic", "rayvan.official"),

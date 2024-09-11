@@ -175,8 +175,8 @@ class cWebm(object):
 
         s=self.driver.find_element(By.XPATH,"//meta[@name='description']").get_attribute("content")
 
-        vs=s[s.index("TikTok |") + len("TikTok |"):s.index("Likes.")]
-        vl = s[s.index("Likes.") + len("Likes."):s.index("Followers")]
+        vl=s[s.index("TikTok |") + len("TikTok |"):s.index("Likes.")]
+        vs = s[s.index("Likes.") + len("Likes."):s.index("Followers")]
 
         # 240914 Раздел закомментил
         # vs0 = self.driver.find_elements(By.CLASS_NAME, "css-mgke3u-DivNumber,e1457k4r1")[1]
