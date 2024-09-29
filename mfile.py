@@ -29,7 +29,8 @@ def printsend(mstr, title, write2file=True) :
             pass
         if write2file:
             write_file(title + mstr)
-        send_mail(title, mstr)
+        if "Second iteration" in mstr or TITLE_CHK in mstr:
+            send_mail(title, mstr)
 
 def img2blob(img):
     mfilename = "getcitywalls2_tmp.jpg"

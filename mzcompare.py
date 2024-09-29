@@ -22,7 +22,7 @@ class cCompare(cDb):
         v2n = df[cnmb].values[1]
 
         if (v1 != v2) and (v1n != 0) and (v2n != 0):
-            res = "CHKSERVICE: " + martist + " [" + cname + "] Old Value:" + v1 + "(" + str(v1n) + ")" + " New:" + str(
+            res = TITLE_CHK + martist + " [" + cname + "] Old Value:" + v1 + "(" + str(v1n) + ")" + " New:" + str(
                 v2) + "(" + str(v2n) + ")" + "\n"
         else:
             res = ""
@@ -49,7 +49,7 @@ class cCompare(cDb):
             if i in ["hears_vk", "adds_vk", "eff_vk"]:
                 ds= ds if (v1hears > minArtistHearsVk) and (v2hears > minArtistHearsVk) else 0
             if ds > ALERT_PROC_IN_COMPARE:
-                ms = ms + "CHKSERVICE: " + martist + " [" + i + "] Old Value:" + str(v1) + " New:" + str(v2) + "\n"
+                ms = ms + TITLE_CHK + martist + " [" + i + "] Old Value:" + str(v1) + " New:" + str(v2) + "\n"
 
         ms = ms + self.comp_services_bestsongs(martist, df, "hears_best_song", "hears_best_n") if (v1hears > minArtistHearsVk) and (v2hears > minArtistHearsVk) else ms
         ms = ms  + self.comp_services_bestsongs(martist, df, "eff_best_song", "eff_best_n") if (v1hears > minArtistHearsVk) and (v2hears > minArtistHearsVk) else ms

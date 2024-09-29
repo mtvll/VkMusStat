@@ -69,7 +69,7 @@ def main():
                        "","","",
                        "", "",minhears=i.minhears, run_after_error=True))
                 printsend("  " + i.name + ":VKSTUDIO : {iteration}".format(iteration="Second iteration " if i.run_after_error else "") + i.vkstudio + "___" + str(ex), MTITLE + ERRORSTR)
-                continue
+                pass
 
             db.initstring(i.name)
 

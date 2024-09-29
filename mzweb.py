@@ -222,6 +222,7 @@ class cWebm(object):
 
     def getvkstudio(self, link):
         self.golinkpause(link)
+        time.sleep(MPAUSE * 3)
         # Клик на список где выводятся интервалы
         self.driver.find_elements(By.CLASS_NAME,
                                   "vkuiLink,Link-module__link--V7bkY,Select-module__link--ah62s,vkuiTappable,"

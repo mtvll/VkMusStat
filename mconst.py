@@ -16,7 +16,9 @@ import difflib
 # при работа mainchk проверять заглавные или строчные буквы прямо на странице!!!
 # при работа mainchk проверять яззык чтобы был нужный!!!
 
-MVERSION="240912 Переформатнул ТИкТок через Meta"
+MVERSION="240930 Скорректи письма тк не отправлялись"
+# MVERSION="240925 Добавил письма только на вторую итерацию"
+# MVERSION="240912 Переформатнул ТИкТок через Meta"
 # MVERSION="240902 Поправил Sber"
 # MVERSION="240820 Поправил TikTok+ Yandex"
 # MVERSION="240815 Поправил Вк перед переименованием таблиц"
@@ -43,6 +45,8 @@ MYNOTNUMBER=-1
 
 DBNAME = "mus2024.db"
 # DBNAME = "mus2024(4test).db"
+
+TITLE_CHK="CHKSERVICE: "
 
 TABLESTAT = "MuzStat"
 TABLECHK = "MuzChk"
