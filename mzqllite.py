@@ -227,6 +227,8 @@ class cDb(object):
 
 
     def update_dbchk_row(self,arr):
+        print ('UPDATE MuzChk SET lastdate = ?, lasttime=?, lastval =?'
+            'WHERE mname= ?',(getcdate(), getctime(), arr.lastval, arr.mname))
         self.cursor.execute(
             'UPDATE MuzChk SET lastdate = ?, lasttime=?, lastval =?'
             'WHERE mname= ?',

@@ -36,6 +36,13 @@ class cWebm(object):
         options.add_argument(mdir)
         options.add_argument(mprof)
 
+        # options.add_argument('--headless')
+        options.add_argument("--disable-extensions")
+        options.add_experimental_option('extensionLoadTimeout', 60000)
+        # options.add_argument('--remote-debugging-pipe')
+
+
+
         # options.add_argument('--remote-debugging-pipe')
         # options.add_argument('--no-sandbox')
         # options.add_argument('--headless')
