@@ -249,9 +249,11 @@ class cWebm(object):
 
         # Клик дважды на сортировку по названию
         # document.getElementsByClassName("TracksTable-module__headerCellInnerSorting--WW4Tz")[0].click()
-        self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__headerCellInnerSorting--WW4Tz")[0].click()
+        # заменил 241010 self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__headerCellInnerSorting--WW4Tz")[0].click()
+        self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__headerCellInnerSorting--S6PJq")[0].click()
         time.sleep(MPAUSE*2)
-        self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__headerCellInnerSorting--WW4Tz")[0].click()
+        # заменил 241010 self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__headerCellInnerSorting--WW4Tz")[0].click()
+        self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__headerCellInnerSorting--S6PJq")[0].click()
         time.sleep(MPAUSE*2)
 
         # document.getElementsByClassName("TracksTable-module__row--nFfI0")

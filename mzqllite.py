@@ -58,6 +58,9 @@ class cDb(object):
         #           ,,,minhears):
 
         self.art = [
+            # Artist('RAYVAN', "679765629422687778", "", "", "",
+            #        "", "", "",
+            #        "", ""),
             Artist('RAYVAN', "679765629422687778", "6MUpnjFA4zQu3s0t2Nzlfk", "8141812", "210105583",
                    "UCvtme_nmuo4NdcYniouDh2Q","rayvan.official","@rayvan.official",
                    "rayvanmusic", "rayvan.official"),
@@ -228,7 +231,7 @@ class cDb(object):
 
     def update_dbchk_row(self,arr):
         print ('UPDATE MuzChk SET lastdate = ?, lasttime=?, lastval =?'
-            'WHERE mname= ?',(getcdate(), getctime(), arr.lastval, arr.mname))
+            'WHERE mname= ?', (getcdate(), getctime(), encodeifUnicodeErr(arr.lastval), arr.mname))
         self.cursor.execute(
             'UPDATE MuzChk SET lastdate = ?, lasttime=?, lastval =?'
             'WHERE mname= ?',

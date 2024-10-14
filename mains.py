@@ -68,6 +68,8 @@ def main():
                     db.art.append(Artist(i.name, i.vkstudio, "", "", "",
                        "","","",
                        "", "",minhears=i.minhears, run_after_error=True))
+                db._dayhearsvk = db._dayaddsvk = db._dayeffvk = db._hears_best_n = db._eff_best_n = 0
+                db._eff_best_song = db._hears_best_song = ""
                 printsend("  " + i.name + ":VKSTUDIO : {iteration}".format(iteration="Second iteration " if i.run_after_error else "") + i.vkstudio + "___" + str(ex), MTITLE + ERRORSTR)
                 pass
 

@@ -4,6 +4,14 @@ from mmail import *
 
 import urllib.request
 
+def encodeifUnicodeErr(instr):
+    if isinstance(instr, list):
+        print(instr)
+        instr=""
+    mstr = instr.encode('cp1251', errors='replace').decode('cp1251')
+    return mstr
+
+
 
 def checkisnumberr(instr, mfrom=""):
     instr = instr.replace(' ', '')

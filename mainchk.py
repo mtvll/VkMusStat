@@ -50,6 +50,9 @@ def main():
                     # Проверка лайков и лайки
                     if i.ishere == '-2':
                         res = web.findonpageandclick(i.mlink, i.mstr, i.ishere, i.mstrfield,i.lastval)
+                        if isinstance(res, list) and len(res)>=1:
+                            res=res[0].text
+                            print("ПРОверка последнего поста дала list. Выделено значение:" + encodeifUnicodeErr(res))
                         mres = res
                         mres2tst = res
                         i.lastval = res
