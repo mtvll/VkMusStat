@@ -10,6 +10,9 @@ MTITLE = "MUZCHEK"
 
 
 def main():
+    """
+
+    """
     param1 = sys.argv[1] if (len(sys.argv) > 1) else ""
 
     status_prod = True if TXTPRODUCTIVE in param1 else False

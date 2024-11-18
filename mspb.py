@@ -1,10 +1,11 @@
+"""Работа с базой city."""
 import os
-import sqlite3
+# import sqlite3
 # import openpyxl
 import openpyxl
 from tqdm import tqdm
 
-from mconst import *
+# from mconst import *
 
 from mzweb import *
 
@@ -12,14 +13,14 @@ base_name = 'mus2024spb.db'
 
 
 def export_to_sqlite():
-    '''Экспорт данных из xlsx в sqlite'''
-    '''2402 Экспорт данных из xlsx в sqlite'''
+    """Запись в sql базу."""
+    # 2402 Экспорт данных из xlsx в sqlite'''
 
     # 1. Создание и подключение к базе
 
     # Получаем текущую папку проекта
     prj_dir = os.path.abspath(os.path.curdir)
-    a = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    # a = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     # Имя базы
 
     # метод sqlite3.connect автоматически создаст базу, если ее нет
@@ -29,7 +30,8 @@ def export_to_sqlite():
 
     # создание таблицы если ее не существует
     cursor.execute(
-        'CREATE TABLE IF NOT EXISTS spb91 (WKT text, mName text,googlelink text,description  text,style text,access text,citywallslink text,years text, architect text)')
+        "CREATE TABLE IF NOT EXISTS spb91 (WKT text, mName text,googlelink text,description  text,"
+        "style text,access text,citywallslink text,years text, architect text)")
 
     # 2. Работа c xlsx файлом
 
@@ -62,8 +64,8 @@ def export_to_sqlite():
 
 
 def clear_base():
-    '''Очистка базы sqlite'''
-    '''2402 Очистка базы sqlite'''
+    """ Очистка базы."""
+    # 2402 Очистка базы sqlite'''
 
     # Получаем текущую папку проекта
     prj_dir = os.path.abspath(os.path.curdir)
@@ -81,9 +83,10 @@ def clear_base():
 
 
 def spbsql2table():
-    '''2403 Берем из sql link, получаем данные через web и обновляем в sql'''
+    """2403 Берем из sql link, получаем данные через web и обновляем в sql"""
 
     class spbb:
+        """Класс лоя работы с бд"""
         def __init__(self, d1, d2, d3, d4, d5, d6, d7, d8, d9):
             self.d1 = d1
             self.d2 = d2
@@ -98,7 +101,7 @@ def spbsql2table():
         #
 
     prj_dir = os.path.abspath(os.path.curdir)
-    a = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    # a = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
     # метод sqlite3.connect автоматически создаст базу, если ее нет
     connection = sqlite3.connect(prj_dir + '/' + base_name)
@@ -122,11 +125,12 @@ def spbsql2table():
         if ss.find("citywalls") < 0:
             mdesc = ii.d4
 
+            # match = re.search('https://www.citywalls.ru(.+?)html', mdesc)
             match = re.search('https://www.citywalls.ru(.+?)html', mdesc)
             # if match:
             #     print(match.group(0))  #  "Keywords: key, key, key"
             #
-            if match == None:
+            if match is None:
                 print(ii.d2 + " " + "CHECK DESC")
                 continue
 
@@ -151,14 +155,12 @@ def spbsql2table():
 # web = cWebm()
 
 def spbsql2jpg():
-    '''2406 Проверка. Несколько строк из базы в jpg файлы'''
+    """ 2406 Проверка. Несколько строк из базы в jpg файлы"""
 
     prj_dir = os.path.abspath(os.path.curdir)
-    a = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    # a = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     connection = sqlite3.connect(prj_dir + '/' + base_name)
     cursor = connection.cursor()
-
-    ll = cursor.execute('SELECT mainphoto from  buildingdb')
 
     for i in range(3):
         ablob = cursor.fetchone()[0]
@@ -168,12 +170,18 @@ def spbsql2jpg():
 
 
 def spblink2sql(mlist, web, cursor):
-    '''2406 на входе link, на выходе - строка msql'''
+    """ 2406 на входе link, на выходе - строка msql"""
 
     progress_bar = tqdm(mlist, desc='Processing cities', total=len(mlist))
 
+    mres = True
+
     for i in range(len(mlist)):
+        randomdelay()
         md = web.getcitywalls2gethouse(mlist[i])
+        if md is None:  # 2410 Чтобы не вылетало? например при клике на дом https://www.citywalls.ru/house34766.html
+            mres = False
+            continue
         cursor.execute(
             'INSERT INTO buildingdb (city,name,year,style,status,'
             'arch1,arch2,arch3,arch4,'
@@ -206,9 +214,12 @@ def spblink2sql(mlist, web, cursor):
         cursor.connection.commit()
 
         progress_bar.update()
+    return mres
 
 
 def check_isHouseInDB(mlist, cursor):
+    """ Проверка есть дом в базе"""
+
     msql = 'SELECT link FROM buildingdb'
 
     cursor.execute(msql)
@@ -232,6 +243,7 @@ def check_isHouseInDB(mlist, cursor):
 
 
 def getcitywalls2getstreetv2(cursor, web, link):
+    """ Основная функция """
     tlist = web.getcitywalls2getstreet(link)
     mres = check_isHouseInDB(tlist, cursor)
 
@@ -239,12 +251,13 @@ def getcitywalls2getstreetv2(cursor, web, link):
 
 
 def main():
+    """ Остновная функция """
     mlist = []
 
     web = cWebm()
 
     prj_dir = os.path.abspath(os.path.curdir)
-    a = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    # a = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     connection = sqlite3.connect(prj_dir + '/' + base_name)
     cursor = connection.cursor()
 
@@ -272,7 +285,6 @@ def main():
     # mlist.append("https://www.citywalls.ru/house32411.html")
     # mlist.append("https://www.citywalls.ru/house772.html")
 
-
     # # # 240724 DONEALL Дворцовая набережная
     # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street69.html")
     #
@@ -280,8 +292,7 @@ def main():
     # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street210.html")
 
     # # 240720DONE Воскресенская набережная
-    #mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street3455.html")
-
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street3455.html")
 
     # # 240724 DONEALL Большой проспект ВО
     # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street32.html")
@@ -328,9 +339,7 @@ def main():
     #   mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street97.html")
 
     #  Канонера
-    mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street799.html")
-
-
+    # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street799.html")
 
     # #  240811 DONEALL Графский
     # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street491.html")
@@ -365,7 +374,6 @@ def main():
     # !!!!!!!!!!!!!!!!!!!!#  Горо - ГЛЮК
     # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street94.html")
 
-
     # # ------------------------------------------------
     # # 23
     # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street58.html")
@@ -385,7 +393,6 @@ def main():
     # # 240724 DONEALL
     # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street2.html")
 
-
     # Садовая
     # # Error в https://www.citywalls.ru/house32411.html
     # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street101.html")
@@ -396,20 +403,45 @@ def main():
     # # Энгельса
     # mlist = mlist + getcitywalls2getstreetv2(cursor, web, "https://www.citywalls.ru/search-street635.html")
 
+    my_file = open("stlist.txt", "r")
+    data = my_file.read()
+    linkslist = data.split("\n")
+    my_file.close()
 
-    mres = check_isHouseInDB(mlist, cursor)
+    mstr = []
 
-    print(mres)
+    for i in linkslist:
+        if len(i) > 0:
+            mstr = getcitywalls2getstreetv2(cursor, web, i)
+            mlist += mstr
+            write_file_byname('mstreets_rep.txt', "START: " + i)
+            mres = mstr
+            # mres = check_isHouseInDB(mlist, cursor)
+            # print(mres)
+            #
+            # f = open('mreport__.txt', 'w', encoding="utf-8")
+            # for line in mres:
+            #     f.write(f"{line}\n")
+            # f.close()
 
-    f = open('mreport__.txt', 'w', encoding="utf-8")
-    for line in mres:
-        f.write(f"{line}\n")
-    f.close()
+            mres = spblink2sql(mres, web, cursor)
 
-    spblink2sql(mres, web, cursor)
+            if mres:
+                write_file_byname('mstreets_rep.txt', "END: " + i)
+                del_str_fromfile('stlist.txt', i)
+            else:
+                write_file_byname('mstreets_rep.txt', "END_WITHERROR: " + i)
 
+            # mres = check_isHouseInDB(mlist, cursor)
+    # print(mres)
 
-# spbsql2table()
+    # f = open('mreport__.txt', 'w', encoding="utf-8")
+    # for line in mres:
+    #     f.write(f"{line}\n")
+    # f.close()
+    #
+    # spblink2sql(mres, web, cursor)
+
 
 if __name__ == "__main__":
     main()
