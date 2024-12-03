@@ -102,7 +102,7 @@ mval.append (["Tlg.Подписчики",df['sub_tlg'],"lines"])
 chk = []
 
 for i in range(len(mval)):
-    chk.append(st.sidebar.checkbox(mval[i][0],key = i))
+    chk.append(st.sidebar.checkbox(mval[i][0],key = i+1021))
 
 created_time = df['mcurdate']
 
