@@ -37,6 +37,7 @@ if (username==None):
 if authentication_status:
     authenticator.logout('Logout', 'main')
     st.write(f'Welcome *{name}*')
+    st.write(MVERSION)
     # 240705 Закоментил, занимает лишнее место
     # st.title('Some content')
 elif authentication_status == False:
@@ -101,7 +102,7 @@ mval.append (["Tlg.Подписчики",df['sub_tlg'],"lines"])
 chk = []
 
 for i in range(len(mval)):
-    chk.append(st.sidebar.checkbox(mval[i][0]))
+    chk.append(st.sidebar.checkbox(mval[i][0],key = i))
 
 created_time = df['mcurdate']
 
