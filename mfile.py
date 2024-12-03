@@ -1,14 +1,26 @@
 import datetime
+import re
 # from mconst import *
 from mmail import *
 
 import urllib.request
 
+import random
+import time
+
+
+def randomdelay():
+    time_delay=random.uniform(0.05634,2.35342)
+    time.sleep(time_delay)
+
 def encodeifUnicodeErr(instr):
     if isinstance(instr, list):
         print(instr)
         instr=""
-    mstr = instr.encode('cp1251', errors='replace').decode('cp1251')
+    if isinstance(instr, bool):
+        mstr="1" if instr else "0"
+    else:
+        mstr = instr.encode('cp1251', errors='replace').decode('cp1251')
     return mstr
 
 
@@ -77,5 +89,34 @@ def write_file(new_line):
     mwday = mdate.strftime("%A")
 
     f.write(mcurdate + mcurtime + "(" + mwday + ") " + new_line + '\n')
+
+    f.close()
+
+def write_file_byname(mfile, new_line):
+    f = open(mfile, 'a',encoding="utf-8")
+
+    mdate = datetime.datetime.now()
+
+    mcurdate = getcdate() + ": "
+    mcurtime = getctime() + " "
+    mwday = mdate.strftime("%A")
+
+    f.write(mcurdate + mcurtime + "(" + mwday + ") " + new_line + '\n')
+
+    f.close()
+
+
+def del_str_fromfile(mfile, str):
+
+
+    with open(mfile) as f:
+        lines = f.readlines()
+
+    pattern = re.compile(re.escape(str))
+    with open(mfile, 'w') as f:
+        for line in lines:
+            result = pattern.search(line)
+            if result is None:
+                f.write(line)
 
     f.close()

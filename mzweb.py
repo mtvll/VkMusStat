@@ -231,33 +231,47 @@ class cWebm(object):
         self.golinkpause(link)
         time.sleep(MPAUSE * 3)
         # Клик на список где выводятся интервалы
-        self.driver.find_elements(By.CLASS_NAME,
+        el_periods_list=self.driver.find_elements(By.CLASS_NAME,
                                   "vkuiLink,Link-module__link--V7bkY,Select-module__link--ah62s,vkuiTappable,"
-                                  "vkuiInternalTappable,vkuiTappable--hasActive,vkui-focus-visible")[
-            0].click()
+                                  "vkuiInternalTappable,vkuiTappable--hasActive,vkui-focus-visible")
+        if len(el_periods_list)==0:
+            printsend("ERROR in VK proc. el_periods_list.  Second iteration ", "VkWeb")
+        el_periods_list[0].click()
         time.sleep(MPAUSE*2)
 
         # Клик на пункт Сутки document.getElementsByClassName("vkuiLink Link-module__link--V7bkY
         # Select-module__link--ah62s vkuiTappable vkuiInternalTappable vkuiTappable--hasActive vkui-focus-visible")[
         # 0].click()
-        self.driver.find_elements(By.CLASS_NAME,
+        el_periods_24=self.driver.find_elements(By.CLASS_NAME,
                                   "vkuiActionSheetItem,vkuiActionSheetItem--sizeY-compact,vkuiActionSheetItem--menu,"
                                   "vkuiTappable,vkuiInternalTappable,vkuiTappable--hasHover,vkuiTappable--hasActive,"
-                                  "vkui-focus-visible")[
-            0].click()
+                                  "vkui-focus-visible")
+        if len(el_periods_24) == 0:
+            printsend("ERROR in VK proc. el_periods_24.  Second iteration ", "VkWeb")
+        el_periods_24[0].click()
         time.sleep(MPAUSE*2)
 
         # Клик дважды на сортировку по названию
         # document.getElementsByClassName("TracksTable-module__headerCellInnerSorting--WW4Tz")[0].click()
         # заменил 241010 self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__headerCellInnerSorting--WW4Tz")[0].click()
-        self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__headerCellInnerSorting--S6PJq")[0].click()
+        # заменил 241011 self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__headerCellInnerSorting--S6PJq")[0].click()
+        el_hearsnumbers=self.driver.find_elements(By.CLASS_NAME, "TracksTable__headerCellInnerSorting--GOKyi")
+        if len(el_hearsnumbers)==0:
+            printsend("ERROR in VK proc. el_hearsnumbers.  Second iteration ", "VkWeb")
+        el_hearsnumbers[0].click()
+
+
         time.sleep(MPAUSE*2)
-        # заменил 241010 self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__headerCellInnerSorting--WW4Tz")[0].click()
-        self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__headerCellInnerSorting--S6PJq")[0].click()
+        el_hearsnumbers[0].click()
         time.sleep(MPAUSE*2)
 
         # document.getElementsByClassName("TracksTable-module__row--nFfI0")
-        mtab = self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__row--nFfI0")
+        # заменил 241010 mtab = self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__row--nFfI0")
+        # заменил 241110 mtab = self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__row--e3vmp")
+        mtab = self.driver.find_elements(By.CLASS_NAME, "TracksTable__row--KhG2m,TracksTable__rowAlbum--kasmQ")
+        if len(mtab) == 0:
+            printsend("ERROR in VK proc. mtab.  Second iteration ", "VkWeb")
+
         time.sleep(MPAUSE)
 
         return mtab
@@ -365,8 +379,12 @@ class cWebm(object):
             self.golinkpause(link)
 
             # если звухзначное число то в строке присутствует ...
-            npages = self.driver.find_elements(By.CLASS_NAME, "cssPager")[0].text
-            maxstr = npages[-3:-1] if "···" in npages else npages[-2:-1]
+            mnpages=self.driver.find_elements(By.CLASS_NAME, "cssPager")
+            if len(mnpages)>0:
+                npages = self.driver.find_elements(By.CLASS_NAME, "cssPager")[0].text
+                maxstr = npages[-3:-1] if "···" in npages else npages[-2:-1]
+            else:
+                maxstr='1'
 
             mname = self.driver.find_elements(By.CLASS_NAME, "title")[0].text
             mpages = maxstr
@@ -433,8 +451,12 @@ class cWebm(object):
             md["maddr4"] = maddr[istart + 3] if len(maddr) > istart + 3 else ""
             # addr1n # addr1h # addr1l
 
-            mstat = "/n".join(
-                self.driver.find_elements(By.CLASS_NAME, "mceContentBody")[0].text.split("\n")[:3]).lower()
+            if (len(self.driver.find_elements(By.CLASS_NAME, "mceContentBody")))>0:
+                mstat = "/n".join(
+                    self.driver.find_elements(By.CLASS_NAME, "mceContentBody")[0].text.split("\n")[:3]).lower()
+            else:
+                print("INFOOOOOO:::: Пустой контент")
+                mstat=''
             if "пам" in mstat and "арх" in mstat in mstat:
                 md["status"] = "пам архитектуры"
             if "пам" in mstat and "арх" in mstat and "регион" in mstat:
@@ -485,6 +507,7 @@ class cWebm(object):
         try:
 
             self.driver.find_elements(By.CLASS_NAME, "photo")[0].click()
+            # 241116 ПАУЗА ЕСЛИ ОШИБКА В ОБРАБОТКЕ ВНУТРЕННИХ ФОТО
             time.sleep(MPAUSE)
 
             mpointlink = self.driver.find_elements(By.CLASS_NAME, "staticmap")[0].find_elements(By.TAG_NAME, "img")[
