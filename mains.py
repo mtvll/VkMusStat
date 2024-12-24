@@ -13,12 +13,14 @@ def main():
 
     param1=""
 
-    if (len(sys.argv) > 1):
+    if len(sys.argv) > 1:
         param1 = sys.argv[1]
 
     status_prod= True  if TXTPRODUCTIVE in param1 else False
 
     dontwrite2base = True if TXTDONTWRITE2BASE in param1  else False
+
+    TestMode1Progon = True if "TESTMODE" in param1 else False
 
     try:
 
@@ -67,7 +69,7 @@ def main():
                 if (i.run_after_error==False):
                     db.art.append(Artist(i.name, i.vkstudio, "", "", "",
                        "","","",
-                       "", "",minhears=i.minhears, run_after_error=True))
+                       "", "",minhears=abs(i.minhears), run_after_error=True))
                 db._dayhearsvk = db._dayaddsvk = db._dayeffvk = db._hears_best_n = db._eff_best_n = 0
                 db._eff_best_song = db._hears_best_song = ""
                 printsend("  " + i.name + ":VKSTUDIO : {iteration}".format(iteration="Second iteration " if i.run_after_error else "") + i.vkstudio + "___" + str(ex), MTITLE + ERRORSTR)
@@ -93,7 +95,7 @@ def main():
                 if (i.run_after_error == False):
                     db.art.append(Artist(i.name, "", "", i.yandex, "",
                                          "", "", "",
-                                         "", "", minhears=i.minhears, run_after_error=True))
+                                         "", "", minhears=abs(i.minhears), run_after_error=True))
                 printsend("  " + i.name + ":YANDExMuz : {iteration}".format(
                     iteration="Second iteration " if i.run_after_error else "") + i.yandex + "___" + str(ex),
                           MTITLE + ERRORSTR)
@@ -108,7 +110,7 @@ def main():
                 if (i.run_after_error == False):
                     db.art.append(Artist(i.name, "", "", "", i.sber,
                                          "", "", "",
-                                         "", "", minhears=i.minhears, run_after_error=True))
+                                         "", "", minhears=abs(i.minhears), run_after_error=True))
                 printsend("  " + i.name + ":Sber : {iteration}".format(
                     iteration="Second iteration " if i.run_after_error else "") + i.sber + "___" + str(ex),
                           MTITLE + ERRORSTR)
@@ -123,7 +125,7 @@ def main():
                 if (i.run_after_error == False):
                     db.art.append(Artist(i.name, "", "", "", "",
                                          "", i.vk, "",
-                                         "", "", minhears=i.minhears, run_after_error=True))
+                                         "", "", minhears=abs(i.minhears), run_after_error=True))
                 printsend("  " + i.name + ":VkSub : {iteration}".format(
                     iteration="Second iteration " if i.run_after_error else "") + i.vk + "___" + str(ex),
                           MTITLE + ERRORSTR)
@@ -138,7 +140,7 @@ def main():
                 if (i.run_after_error == False):
                     db.art.append(Artist(i.name, "", "", "", "",
                                          i.youtube, "", "",
-                                         "", "", minhears=i.minhears, run_after_error=True))
+                                         "", "", minhears=abs(i.minhears), run_after_error=True))
                 printsend("  " + i.name + ":Youtube : {iteration}".format(
                     iteration="Second iteration " if i.run_after_error else "") + i.youtube + "___" + str(ex),
                           MTITLE + ERRORSTR)
@@ -153,7 +155,7 @@ def main():
                 if (i.run_after_error == False):
                     db.art.append(Artist(i.name, "", "", "", "",
                                          "", "", i.tiktok,
-                                         "", "", minhears=i.minhears, run_after_error=True))
+                                         "", "", minhears=abs(i.minhears), run_after_error=True))
                 printsend("  " + i.name + ":TikTok  : {iteration}".format(
                     iteration="Second iteration " if i.run_after_error else "") + i.tiktok + "___" + str(ex),
                           MTITLE + ERRORSTR)
@@ -168,7 +170,7 @@ def main():
                 if (i.run_after_error == False):
                     db.art.append(Artist(i.name, "", "", "", "",
                                          "", "", "",
-                                         i.tlg, "", minhears=i.minhears, run_after_error=True))
+                                         i.tlg, "", minhears=abs(i.minhears), run_after_error=True))
                 printsend("  " + i.name + ":Teleg : {iteration}".format(
                     iteration="Second iteration " if i.run_after_error else "") + i.tlg + "___" + str(ex),
                           MTITLE + ERRORSTR)
@@ -183,6 +185,10 @@ def main():
                 db.day2db()
 
             write_file(MTITLE + " " + i.name + "  DONE")
+
+            if TestMode1Progon:
+                print("Тестовый прогон (1 итерация) окончен")
+                break
 
         db.closeconnection()
         write_file(MTITLE + " End")

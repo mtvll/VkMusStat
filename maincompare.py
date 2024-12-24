@@ -35,24 +35,38 @@ def main():
 
         cp = cCompare()
 
-        r=cp.getartistparamByName("Rayvan", "minhears")
+        # r=cp.getartistparamByName("Rayvan", "minhears")
 
 
-        mstr = ""
+        mstr_main = "\n"
+        mstr_sec = ""
+
         for i in cp.art:
             mname = i.name
             minhears = cp.getartistparamByName(mname, "minhears")
-            res = cp.comp_services(mname,minhears)
-            mstr = mstr + res
+            res = cp.comp_services(mname,abs(minhears))
+            if (minhears>0):
+                mstr_main = mstr_main + res
+            else:
+                mstr_sec = mstr_sec + res
 
         # db.closeconnection()
 
-        mstr = mstr + '\n' if mstr !="" else mstr
+        mstr_main = mstr_main + '\n' if mstr_main !="" else mstr_main
+        mstr_sec =mstr_sec + '\n' if mstr_sec != "" else mstr_sec
+
         for i in cp.art:
             mname = i.name
             minhears = cp.getartistparamByName(mname, "minhears")
-            res = cp.comp_tracks(mname,minhears)
-            mstr = mstr + res
+            res = cp.comp_tracks(mname,abs(minhears))
+            if (minhears > 0):
+                mstr_main = mstr_main + res
+            else:
+                mstr_sec = mstr_sec + res
+
+        mstr=""
+        if len(mstr_main)>0 or len(mstr_main)>0:
+            mstr=mstr_main+'\n'+'\n' + "--------------------------------------------" +'\n'+'\n'+mstr_sec
 
         # db.closeconnection()
         printsend(mstr, MTITLE, False)

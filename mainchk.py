@@ -19,6 +19,8 @@ def main():
 
     myfreqhours= True  if "FREQHOURS" in param1 else False
 
+    TestMode1Progon = True if "TESTMODE" in param1 else False
+
     try:
         write_file(MTITLE + " Start " + MVERSION)
 
@@ -41,6 +43,8 @@ def main():
         # Таблица3. нужен ли прокси- последняя проверка дата - послдн значение
 
         mstr = ""
+
+        # db.arr=db.arr[:3]
 
         for i in db.arr:
             try:
@@ -65,9 +69,16 @@ def main():
                         mres = res
                         t1=str(mres).splitlines(keepends=True)
                         t2=str(i.lastval).splitlines(keepends=True)
-                        mres2tst = ''.join(difflib.context_diff(t1, t2))
+                        if "band.link" in i.mlink:
+                            mres2tst=str(mres)
+                        else:
+                            mres2tst = ''.join(difflib.context_diff(t1, t2))
+                    if res==True:
+                        res=mres='1'
+                    if res==False:
+                        res=mres='0'
                     # Монитоерить всегда для важных плейлистов (а не только переходы да-нет_
-                    if res==True and i.alwaysshow>0:
+                    if res=='1' and i.alwaysshow>0:
                         mstr = mstr + "GOOD STATUS " + i.mname + " Status:" + str(
                             mres2tst) + " Link:" + i.mlink + "\n"
                     # Изменения для неважных (убрал лайки =-2)
@@ -75,6 +86,9 @@ def main():
                         mstr = mstr+ "CHANGE STATUS " + i.mname + " NewStatus:" + str(mres2tst) + " Link:" + i.mlink +"\n"
                         i.lastval = res
                     db.update_dbchk_row(i)
+                if TestMode1Progon:
+                    print("Тестовый прогон (1 итерация) окончен")
+                    break
             except Exception as e:
                 printsend(" CHK " + i.mname + "  Message" + e.msg, MTITLE + ERRORSTR)
                 continue

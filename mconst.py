@@ -16,7 +16,8 @@ import difflib
 # при работа mainchk проверять заглавные или строчные буквы прямо на странице!!!
 # при работа mainchk проверять яззык чтобы был нужный!!!
 
-MVERSION="241203 Поправлены graph "
+MVERSION="241223 Поправлены отчеты, мин % для отчетов и др "
+# MVERSION="241203 Поправлены graph "
 # MVERSION="241014 Скорректи ошибки во вк что вылетала запись в бд"
 # MVERSION="241116 Все улицы и пригороды"
 # MVERSION="240930 Скорректи письма тк не отправлялись"
@@ -41,7 +42,7 @@ TXTDONTWRITE2BASE  = "DONTWRITE2BASE"
 
 MIN_HEARS_FOR_EFFECTIVETY = 20
 MIN_VAL_FOR_COMPARE = 10
-ALERT_PROC_IN_COMPARE=30
+ALERT_PROC_IN_COMPARE=20
 
 MYNOTNUMBER=-1
 

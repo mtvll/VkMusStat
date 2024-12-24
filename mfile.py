@@ -49,7 +49,7 @@ def printsend(mstr, title, write2file=True) :
             pass
         if write2file:
             write_file(title + mstr)
-        if "Second iteration" in mstr or TITLE_CHK[0:3] in mstr:
+        if "Second iteration" in mstr or TITLE_CHK[0:3] in mstr or "STATUS" in mstr:
             send_mail(title, mstr)
 
 def img2blob(img):

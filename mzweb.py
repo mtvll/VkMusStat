@@ -180,10 +180,18 @@ class cWebm(object):
         # <div class=​"css-mgke3u-DivNumber e1457k4r1">​…​</div>​flex
         self.golinkpause(link)
 
-        s=self.driver.find_element(By.XPATH,"//meta[@name='description']").get_attribute("content")
+        # 241244 Раздел ниже vs0 раскомментил, тк старый глючил
+        vs0 = self.driver.find_elements(By.CLASS_NAME, "css-mgke3u-DivNumber,e1457k4r1")[1]
+        vs = vs0.text.split()[0]
 
-        vl=s[s.index("TikTok |") + len("TikTok |"):s.index("Likes.")]
-        vs = s[s.index("Likes.") + len("Likes."):s.index("Followers")]
+        vl0 = self.driver.find_elements(By.CLASS_NAME, "css-1ou6a1c-DivNumber,e1457k4r1")[0]
+        vl = vl0.text.split()[0]
+
+        # 241244 Раздел закоментил одновременно с верхним
+        # s=self.driver.find_element(By.XPATH,"//meta[@name='description']").get_attribute("content")
+        #
+        # vl=s[s.index("TikTok |") + len("TikTok |"):s.index("Likes.")]
+        # vs = s[s.index("Likes.") + len("Likes."):s.index("Followers")]
 
         # 240914 Раздел закомментил
         # vs0 = self.driver.find_elements(By.CLASS_NAME, "css-mgke3u-DivNumber,e1457k4r1")[1]
@@ -306,9 +314,14 @@ class cWebm(object):
         elif ishere == '-1':
             try:
                 res = self.driver.find_elements(By.CLASS_NAME, iclass)[0].text
+                if ("band.link" in link):
+                    res=False
             except Exception as e:
-                printsend(" ERR. Проверить контейнер " + iclass + "  в строке " + link, ERRORSTR)
-                res = ""
+                if ("band.link" in link):
+                    res=True
+                else:
+                    printsend(" ERR. Проверить контейнер " + iclass + "  в строке " + link, ERRORSTR)
+                    res = ""
 
         elif ishere == '-2':
             try:
@@ -360,7 +373,7 @@ class cWebm(object):
                     print2file("LOG: New post in {l} contain {s} and old contains {s2}".format(l=link,s=res,s2=ilast))
                     break
         except Exception as e:
-            printsend(" ERR. Проверить контейнер " + iclass + "  в строке " + link, ERRORSTR)
+            # printsend(" ERR. Проверить контейнер " + iclass + "  в строке " + link, ERRORSTR)
             res = ""
 
         return res

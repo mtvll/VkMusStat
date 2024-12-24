@@ -59,7 +59,7 @@ class cDb(object):
 
         self.art = [
             # Artist('RAYVAN', "679765629422687778", "", "", "",
-            #        "", "", "",
+            #        "", "", "@rayvan.official",
             #        "", ""),
             Artist('RAYVAN', "679765629422687778", "6MUpnjFA4zQu3s0t2Nzlfk", "8141812", "210105583",
                    "UCvtme_nmuo4NdcYniouDh2Q","rayvan.official","@rayvan.official",
@@ -75,9 +75,9 @@ class cDb(object):
             Artist('Алексир', "3377722344143542502", "7aPj4tatJiiVIImj1uYdpV", "18574196", "212326111",
                    "UC5CM0orwcf0e81U8818LNVg", "aleksirme", "",
                    "aleksir_me","aleksir.me"),
-            Artist('София Мосейчук', "", "4QiguGhNyTgHtELFp9KJDp", "15710563", "211630315", "",
-                   "moseichuksofiia", "@krasotka.sofi","",
-                   "krasotka_sofi", "krasotka_sofi",minhears=50),
+            Artist('София Мосейчук', "", "4QiguGhNyTgHtELFp9KJDp", "15710563", "211630315",
+                   "", "krasotka_sofi", "@krasotka.sofi","",
+                   "krasotka_sofi", "krasotka_sofi",minhears=-50),
             # Artist('Rustam Fahrtdinov', "6775914816193346218", "7g63TUNYZqiS3GbIEIbDdG", "3192939", "31876918",
             #        "UCyw22JexbXGNh3_wqaOkq2g", "rustamfahrtdinov", "@rustamfahrtdinov",
             #        "","rustam_fahrtdinov"),
@@ -86,23 +86,23 @@ class cDb(object):
                    "", "rustam_fahrtdinov"),
             Artist('KALUGIN', "1263271834263162561", "6CKpzSn0XsUadRH95LzdJp", "16539792", "211923181",
                    "UCxovuUXDDlOAIo1fY98vtyw", "kalugin_sergey_music", "@_kalugin___",
-                   "kaluginsergei", "kalugin_s",minhears=50),
-            Artist('Vigi', "160757614473898073", "", "17288582", "212086549", "", "vigisinger",minhears=30),
+                   "kaluginsergei", "kalugin_s",minhears=-50),
+            Artist('Vigi', "160757614473898073", "", "17288582", "212086549", "", "vigisinger"),
             Artist('Вячеслав Мясников', "2373197429746032417", "6rSChDc4zteS5rIH728wxA", "3118319", "1479802",
                    "UCKxaCaipSkU6MgQwv2y-lkw", "slava_myasnikov", "@miasnikov.s",
-                   "","miasnikov.s",minhears=500),
+                   "","miasnikov.s",minhears=-500),
             Artist('Ирина Эмирова', "5595344415242300490", "0XRzVBeXMuAoyLiKt611n2", "3987540", "167840734", "",
                    "irina_emirova","","",
                    "irina_emirova","",
-                   "","",minhears=50),
+                   "","",minhears=-50),
             Artist('Хор Ирины Павленко', "2495875715565516380", "0sFrPGC1ewZMBmGrt8UmcM", "21014484", "212760210",
                    "","","",
                    "","irina_pavlenkovokaltomsk"),
             Artist('Нонна', "730034513534917869", "6beQNGwlwrvrT01TDwMBcl", "8590484", "209798494",
                    "", "singer_nonna","",
-                   "", "nonna_official_",minhears=50),
+                   "", "nonna_official_",minhears=-50),
             Artist('RemoteRussia', "", "", "", "", "", "", "", "remote_russia"),
-            Artist('Анастасия Ларцева', "8539475736460412680", "", "", "", "", "", "")
+            Artist('Анастасия Ларцева', "8539475736460412680", "", "", "", "", "", "","","","","","",minhears=-50)
         ]
 
 
