@@ -16,11 +16,16 @@ def main():
     if len(sys.argv) > 1:
         param1 = sys.argv[1]
 
+    if "?"  in param1 or "help"  in param1 :
+        print (HELPTXT)
+        exit(0)
+
+
     status_prod= True  if TXTPRODUCTIVE in param1 else False
 
     dontwrite2base = True if TXTDONTWRITE2BASE in param1  else False
 
-    TestMode1Progon = True if "TESTMODE" in param1 else False
+    OnlyOneTestProgon = True if TXTONLYONETESTPROGON in param1 else False
 
     try:
 
@@ -87,7 +92,7 @@ def main():
             #     pass
 
             try:
-                if i.yandex != "" and not ("NOYANDEX"  in web.cmd_param):
+                if i.yandex != "" and not (TXTNOYANDEX  in web.cmd_param):
                     mlink = "https://music.yandex.ru/artist/" + i.yandex + "/info"
                     db.columns["hears_month_ynd"], db.columns["likes_month_ynd"], db.columns[
                         "likes_all_ynd"] = web.getyandexday(mlink)
@@ -103,7 +108,7 @@ def main():
                 pass
 
             try:
-                if i.sber != "" and not ("NOSBER"  in web.cmd_param):
+                if i.sber != "" and not (TXTNOSBER  in web.cmd_param):
                     mlink = "https://zvuk.com/artist/" + i.sber
                     db.columns["sub_sber"] = web.getsberday(mlink)
             except Exception as ex:
@@ -118,7 +123,7 @@ def main():
                 pass
 
             try:
-                if i.vk != ""and not ("NOVKSUB"  in web.cmd_param):
+                if i.vk != ""and not (TXTNOVKSUB  in web.cmd_param):
                     mlink = "https://vk.com/" + i.vk
                     db.columns["sub_vk"] = web.getvkday(mlink)
             except Exception as ex:
@@ -133,7 +138,7 @@ def main():
                 pass
 
             try:
-                if i.youtube != "" and not ("NOYOUTUBE"  in web.cmd_param):
+                if i.youtube != "" and not (TXTNOYOUTUBE  in web.cmd_param):
                     mlink = "https://www.youtube.com/channel/" + i.youtube
                     db.columns["sub_youtube"] = web.getyoutubeday(mlink)
             except Exception as ex:
@@ -148,7 +153,7 @@ def main():
                 pass
 
             try:
-                if i.tiktok != ""and not ("NOTIKTOK"  in web.cmd_param):
+                if i.tiktok != ""and not (TXTNOTIKTOK  in web.cmd_param):
                     mlink = "https://www.tiktok.com/" + i.tiktok
                     db.columns["sub_tiktok"], db.columns["likes_tiktok"] = web.gettiktokday(mlink)
             except Exception as ex:
@@ -163,7 +168,7 @@ def main():
                 pass
 
             try:
-                if i.tlg != "" and not ("NOTLG"  in web.cmd_param):
+                if i.tlg != "" and not (TXTNOTLG in web.cmd_param):
                     mlink = "https://t.me/" + i.tlg
                     db.columns["sub_tlg"] = web.gettlgday(mlink)
             except Exception as ex:
@@ -186,7 +191,7 @@ def main():
 
             write_file(MTITLE + " " + i.name + "  DONE")
 
-            if TestMode1Progon:
+            if OnlyOneTestProgon:
                 print("Тестовый прогон (1 итерация) окончен")
                 break
 

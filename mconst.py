@@ -11,11 +11,15 @@ import plotly.graph_objects as go
 import sys
 import difflib
 
+
+HELPTXT="Use one or more param: PRODUCTIVE, DONTWRITE2BASE, NOYOUTUBE, NOTIKTOK, NOVK и др"
+
 # проверка дублей в city "SELECT link, COUNT(*) FROM buildingdb GROUP BY link HAVING COUNT(*) > 1;"
 # если ошибка что не находит файл в подпапке, надо его просто отредактировать в github
 # при работа mainchk проверять заглавные или строчные буквы прямо на странице!!!
 # при работа mainchk проверять яззык чтобы был нужный!!!
 
+MVERSION="250211 Сделан readme и поправлены переменные "
 MVERSION="241223 Поправлены отчеты, мин % для отчетов и др "
 # MVERSION="241203 Поправлены graph "
 # MVERSION="241014 Скорректи ошибки во вк что вылетала запись в бд"
@@ -37,8 +41,17 @@ MVERSION="241223 Поправлены отчеты, мин % для отчето
 
 
 TXTPRODUCTIVE  = "PRODUCTIVE"
-
 TXTDONTWRITE2BASE  = "DONTWRITE2BASE"
+TXTONLYONETESTPROGON = "ONLYONETESTPROGON"
+
+TXTFREQHOURS="FREQHOURS"
+
+TXTNOYANDEX= "NOYANDEX"
+TXTNOSBER="NOSBER"
+TXTNOVKSUB="NOVKSUB"
+TXTNOYOUTUBE="NOYOUTUBE"
+TXTNOTIKTOK="NOTIKTOK"
+TXTNOTLG="NOTLG"
 
 MIN_HEARS_FOR_EFFECTIVETY = 20
 MIN_VAL_FOR_COMPARE = 10

@@ -41,13 +41,19 @@ class cWebm(object):
         options.add_experimental_option('extensionLoadTimeout', 60000)
         # options.add_argument('--remote-debugging-pipe')
 
+        # from selenium.webdriver.chrome.service import Service
+        # from selenium import webdriver
+        #
+        # service = Service(executable_path='./chromedriver.exe')
+        # driver = webdriver.Chrome(service=service, options=options)
+
 
 
         # options.add_argument('--remote-debugging-pipe')
         # options.add_argument('--no-sandbox')
         # options.add_argument('--headless')
         driver = webdriver.Chrome(options=options)
-
+        #
         self.driver = driver
 
     def init2(self):

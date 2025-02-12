@@ -15,11 +15,16 @@ def main():
     """
     param1 = sys.argv[1] if (len(sys.argv) > 1) else ""
 
+    if "?"  in param1 or "help"  in param1 :
+        print (HELPTXT)
+        exit(0)
+
     status_prod = True if TXTPRODUCTIVE in param1 else False
 
-    myfreqhours= True  if "FREQHOURS" in param1 else False
+    myfreqhours= True  if TXTFREQHOURS in param1 else False
 
-    TestMode1Progon = True if "TESTMODE" in param1 else False
+    
+    OnlyOneTestProgon = True if TXTONLYONETESTPROGON in param1 else False
 
     try:
         write_file(MTITLE + " Start " + MVERSION)
@@ -86,7 +91,7 @@ def main():
                         mstr = mstr+ "CHANGE STATUS " + i.mname + " NewStatus:" + str(mres2tst) + " Link:" + i.mlink +"\n"
                         i.lastval = res
                     db.update_dbchk_row(i)
-                if TestMode1Progon:
+                if OnlyOneTestProgon:
                     print("Тестовый прогон (1 итерация) окончен")
                     break
             except Exception as e:
