@@ -5,6 +5,7 @@ from mzqllite import *
 from mzweb import *
 from moss import *
 from mconst import *
+import shlex
 
 MTITLE = "MUZSTAT"
 
@@ -15,6 +16,10 @@ def main():
 
     if len(sys.argv) > 1:
         param1 = sys.argv[1]
+
+
+    param1 = " ".join(map(shlex.quote, sys.argv[1:]))
+
 
     if "?"  in param1 or "help"  in param1 :
         print (HELPTXT)
