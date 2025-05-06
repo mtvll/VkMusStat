@@ -128,10 +128,17 @@ class cWebm(object):
         # document.getElementsByClassName("d-button__label")[1]
         # <span class="d-button__label">88</span>
 
-        yhearsmonth = self.driver.find_elements(By.CLASS_NAME, "artist-trends__total-count")[0].text
-        ylikesmonth = self.driver.find_elements(By.CLASS_NAME, "artist-trends__total-count")[1].text
-        ylikesall = self.driver.find_elements(By.CLASS_NAME, "d-button__label")[1].text
+        yhearsmonth_txt = self.driver.find_elements(By.XPATH, "//span[contains(text(), 'в месяц')]")[0].text
+        yhearsmonth = re.search(r'\d+', yhearsmonth_txt).group()
+        ylikesmonth = "-1"
+        ylikesall = "-1"
 
+        # 250401 Закомментил
+        # yhearsmonth = self.driver.find_elements(By.CLASS_NAME, "artist-trends__total-count")[0].text
+        # ylikesmonth = self.driver.find_elements(By.CLASS_NAME, "artist-trends__total-count")[1].text
+        # ylikesall = self.driver.find_elements(By.CLASS_NAME, "d-button__label")[1].text
+
+        print (yhearsmonth)
         return checkisnumberr(yhearsmonth), checkisnumberr(ylikesmonth), checkisnumberr(ylikesall)
 
     def getyoutubeday(self, link):
@@ -245,9 +252,13 @@ class cWebm(object):
         self.golinkpause(link)
         time.sleep(MPAUSE * 3)
         # Клик на список где выводятся интервалы
+        # el_periods_list=self.driver.find_elements(By.CLASS_NAME,
+        #                           "vkuiLink,Link-module__link--V7bkY,Select-module__link--ah62s,vkuiTappable,"
+        #                           "vkuiInternalTappable,vkuiTappable--hasActive,vkui-focus-visible")
+
         el_periods_list=self.driver.find_elements(By.CLASS_NAME,
-                                  "vkuiLink,Link-module__link--V7bkY,Select-module__link--ah62s,vkuiTappable,"
-                                  "vkuiInternalTappable,vkuiTappable--hasActive,vkui-focus-visible")
+                                  "vkitLink__link--WXYoI,Select__link--UQ7MF,vkitLink__withIconInChildren--MOP1u,vkuiInternalTappable,vkuiLink__host,vkuiLink__withUnderline,vkuiTappable__host vkuiTappable__hasPointerNone,"
+                                  "vkuiClickable__host,vkuiClickable__realClickable,vkuistyles__-focus-visible,vkuiRootComponent__host")
         if len(el_periods_list)==0:
             printsend("ERROR in VK proc. el_periods_list.  Second iteration ", "VkWeb")
         el_periods_list[0].click()
@@ -256,10 +267,13 @@ class cWebm(object):
         # Клик на пункт Сутки document.getElementsByClassName("vkuiLink Link-module__link--V7bkY
         # Select-module__link--ah62s vkuiTappable vkuiInternalTappable vkuiTappable--hasActive vkui-focus-visible")[
         # 0].click()
-        el_periods_24=self.driver.find_elements(By.CLASS_NAME,
-                                  "vkuiActionSheetItem,vkuiActionSheetItem--sizeY-compact,vkuiActionSheetItem--menu,"
-                                  "vkuiTappable,vkuiInternalTappable,vkuiTappable--hasHover,vkuiTappable--hasActive,"
-                                  "vkui-focus-visible")
+        # el_periods_24=self.driver.find_elements(By.CLASS_NAME,
+        #                           "vkuiActionSheetItem,vkuiActionSheetItem--sizeY-compact,vkuiActionSheetItem--menu,"
+        #                           "vkuiTappable,vkuiInternalTappable,vkuiTappable--hasHover,vkuiTappable--hasActive,"
+        #                           "vkui-focus-visible")
+        el_periods_24=self.driver.find_elements(By.CLASS_NAME,"vkuiActionSheetItem__children,vkuiText__host,"
+                                                              "vkuiText__sizeYCompact,vkuiTypography__host,vkuiTypography__normalize,vkuiRootComponent__host")
+
         if len(el_periods_24) == 0:
             printsend("ERROR in VK proc. el_periods_24.  Second iteration ", "VkWeb")
         el_periods_24[0].click()
