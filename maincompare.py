@@ -64,9 +64,15 @@ def main():
             else:
                 mstr_sec = mstr_sec + res
 
+
+        # 250506 Не выводить старые  прослушки
+        mstr_sec=""
+
+
         mstr=""
         if len(mstr_main)>0 or len(mstr_main)>0:
             mstr=mstr_main+'\n'+'\n' + "--------------------------------------------" +'\n'+'\n'+mstr_sec
+
 
         # db.closeconnection()
         printsend(mstr, MTITLE, False)

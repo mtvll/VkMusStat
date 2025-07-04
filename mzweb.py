@@ -248,60 +248,169 @@ class cWebm(object):
 
         return checkisnumberr(v)
 
+    # def getvkstudio(self, link):
+    #     self.golinkpause(link)
+    #     time.sleep(MPAUSE * 3)
+    #     # Клик на список где выводятся интервалы
+    #     # el_periods_list=self.driver.find_elements(By.CLASS_NAME,
+    #     #                           "vkuiLink,Link-module__link--V7bkY,Select-module__link--ah62s,vkuiTappable,"
+    #     #                           "vkuiInternalTappable,vkuiTappable--hasActive,vkui-focus-visible")
+    #
+    #     el_periods_list=self.driver.find_elements(By.CLASS_NAME,
+    #                               "vkitLink__link--WXYoI,Select__link--UQ7MF,vkitLink__withIconInChildren--MOP1u,vkuiInternalTappable,vkuiLink__host,vkuiLink__withUnderline,vkuiTappable__host vkuiTappable__hasPointerNone,"
+    #                               "vkuiClickable__host,vkuiClickable__realClickable,vkuistyles__-focus-visible,vkuiRootComponent__host")
+    #     if len(el_periods_list)==0:
+    #         printsend("ERROR in VK proc. el_periods_list.  Second iteration ", "VkWeb")
+    #     el_periods_list[0].click()
+    #     time.sleep(MPAUSE*2)
+    #
+    #     # Клик на пункт Сутки document.getElementsByClassName("vkuiLink Link-module__link--V7bkY
+    #     # Select-module__link--ah62s vkuiTappable vkuiInternalTappable vkuiTappable--hasActive vkui-focus-visible")[
+    #     # 0].click()
+    #     # el_periods_24=self.driver.find_elements(By.CLASS_NAME,
+    #     #                           "vkuiActionSheetItem,vkuiActionSheetItem--sizeY-compact,vkuiActionSheetItem--menu,"
+    #     #                           "vkuiTappable,vkuiInternalTappable,vkuiTappable--hasHover,vkuiTappable--hasActive,"
+    #     #                           "vkui-focus-visible")
+    #     el_periods_24=self.driver.find_elements(By.CLASS_NAME,"vkuiActionSheetItem__children,vkuiText__host,"
+    #                                                           "vkuiText__sizeYCompact,vkuiTypography__host,vkuiTypography__normalize,vkuiRootComponent__host")
+    #
+    #     if len(el_periods_24) == 0:
+    #         printsend("ERROR in VK proc. el_periods_24.  Second iteration ", "VkWeb")
+    #     el_periods_24[0].click()
+    #     time.sleep(MPAUSE*2)
+    #
+    #     # Клик дважды на сортировку по названию
+    #     # document.getElementsByClassName("TracksTable-module__headerCellInnerSorting--WW4Tz")[0].click()
+    #     # заменил 241010 self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__headerCellInnerSorting--WW4Tz")[0].click()
+    #     # заменил 241011 self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__headerCellInnerSorting--S6PJq")[0].click()
+    #     el_hearsnumbers=self.driver.find_elements(By.CLASS_NAME, "TracksTable__headerCellInnerSorting--GOKyi")
+    #     if len(el_hearsnumbers)==0:
+    #         printsend("ERROR in VK proc. el_hearsnumbers.  Second iteration ", "VkWeb")
+    #     el_hearsnumbers[0].click()
+    #
+    #
+    #     time.sleep(MPAUSE*2)
+    #     el_hearsnumbers[0].click()
+    #     time.sleep(MPAUSE*2)
+    #
+    #     # document.getElementsByClassName("TracksTable-module__row--nFfI0")
+    #     # заменил 241010 mtab = self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__row--nFfI0")
+    #     # заменил 241110 mtab = self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__row--e3vmp")
+    #     mtab = self.driver.find_elements(By.CLASS_NAME, "TracksTable__row--KhG2m,TracksTable__rowAlbum--kasmQ")
+    #     if len(mtab) == 0:
+    #         printsend("ERROR in VK proc. mtab.  Second iteration ", "VkWeb")
+    #
+    #     time.sleep(MPAUSE)
+    #
+    #     return mtab
     def getvkstudio(self, link):
         self.golinkpause(link)
         time.sleep(MPAUSE * 3)
-        # Клик на список где выводятся интервалы
-        # el_periods_list=self.driver.find_elements(By.CLASS_NAME,
-        #                           "vkuiLink,Link-module__link--V7bkY,Select-module__link--ah62s,vkuiTappable,"
-        #                           "vkuiInternalTappable,vkuiTappable--hasActive,vkui-focus-visible")
 
-        el_periods_list=self.driver.find_elements(By.CLASS_NAME,
-                                  "vkitLink__link--WXYoI,Select__link--UQ7MF,vkitLink__withIconInChildren--MOP1u,vkuiInternalTappable,vkuiLink__host,vkuiLink__withUnderline,vkuiTappable__host vkuiTappable__hasPointerNone,"
-                                  "vkuiClickable__host,vkuiClickable__realClickable,vkuistyles__-focus-visible,vkuiRootComponent__host")
-        if len(el_periods_list)==0:
-            printsend("ERROR in VK proc. el_periods_list.  Second iteration ", "VkWeb")
+        # Поиск и клик по списку интервалов
+        # el_periods_list = self.driver.find_elements(By.CLASS_NAME, "vkitLink__link--WXYoI")
+        # el_periods_list = self.driver.find_elements(By.CLASS_NAME, "Select__root--oZRjh")
+
+        # 1. Клик на выпадающий список периодов (исправленный селектор)
+        el_periods_list = self.driver.find_elements(
+            By.CSS_SELECTOR,
+            "div[class*='Select__link']"  # Более надежный селектор
+        )
+
+        if not el_periods_list:
+            printsend("ERROR: Period dropdown not found. Trying fallback selector...", "VkWeb")
+            # Попытка альтернативного селектора
+            el_periods_list = self.driver.find_elements(
+                By.CSS_SELECTOR,
+                "div.vkuiLink.vkuiLink--withUnderline"
+            )
+            if not el_periods_list:
+                printsend("ERROR: Fallback selector also failed", "VkWeb")
+                return []
+
         el_periods_list[0].click()
-        time.sleep(MPAUSE*2)
+        time.sleep(MPAUSE * 2)
 
-        # Клик на пункт Сутки document.getElementsByClassName("vkuiLink Link-module__link--V7bkY
-        # Select-module__link--ah62s vkuiTappable vkuiInternalTappable vkuiTappable--hasActive vkui-focus-visible")[
-        # 0].click()
-        # el_periods_24=self.driver.find_elements(By.CLASS_NAME,
-        #                           "vkuiActionSheetItem,vkuiActionSheetItem--sizeY-compact,vkuiActionSheetItem--menu,"
-        #                           "vkuiTappable,vkuiInternalTappable,vkuiTappable--hasHover,vkuiTappable--hasActive,"
-        #                           "vkui-focus-visible")
-        el_periods_24=self.driver.find_elements(By.CLASS_NAME,"vkuiActionSheetItem__children,vkuiText__host,"
-                                                              "vkuiText__sizeYCompact,vkuiTypography__host,vkuiTypography__normalize,vkuiRootComponent__host")
+        # 2. Клик на пункт "7 дней" (улучшенный селектор)
+        el_periods_7days = self.driver.find_elements(
+            By.CSS_SELECTOR,
+            "div.vkuiActionSheetItem > div.vkuiActionSheetItem__children"
+        )
 
-        if len(el_periods_24) == 0:
-            printsend("ERROR in VK proc. el_periods_24.  Second iteration ", "VkWeb")
-        el_periods_24[0].click()
-        time.sleep(MPAUSE*2)
+        if not el_periods_7days:
+            printsend("ERROR: 7 days option not found", "VkWeb")
+            return []
 
-        # Клик дважды на сортировку по названию
-        # document.getElementsByClassName("TracksTable-module__headerCellInnerSorting--WW4Tz")[0].click()
-        # заменил 241010 self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__headerCellInnerSorting--WW4Tz")[0].click()
-        # заменил 241011 self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__headerCellInnerSorting--S6PJq")[0].click()
-        el_hearsnumbers=self.driver.find_elements(By.CLASS_NAME, "TracksTable__headerCellInnerSorting--GOKyi")
-        if len(el_hearsnumbers)==0:
-            printsend("ERROR in VK proc. el_hearsnumbers.  Second iteration ", "VkWeb")
-        el_hearsnumbers[0].click()
+        el_periods_7days[0].click()
+        time.sleep(MPAUSE * 2)
 
+        # 3. Сортировка по прослушиваниям (надежный селектор)
+        el_listeners_sort = self.driver.find_elements(
+            By.CSS_SELECTOR,
+            "div.TracksTable__headerCellSorting--PUF58"
+        )
 
-        time.sleep(MPAUSE*2)
-        el_hearsnumbers[0].click()
-        time.sleep(MPAUSE*2)
+        if not el_listeners_sort:
+            printsend("ERROR: Sort header not found", "VkWeb")
+            return []
 
-        # document.getElementsByClassName("TracksTable-module__row--nFfI0")
-        # заменил 241010 mtab = self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__row--nFfI0")
-        # заменил 241110 mtab = self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__row--e3vmp")
-        mtab = self.driver.find_elements(By.CLASS_NAME, "TracksTable__row--KhG2m,TracksTable__rowAlbum--kasmQ")
-        if len(mtab) == 0:
-            printsend("ERROR in VK proc. mtab.  Second iteration ", "VkWeb")
+        el_listeners_sort[0].click()
+        time.sleep(MPAUSE * 2)
+        el_listeners_sort[0].click()
+        time.sleep(MPAUSE * 2)
+
+        # 4. Получение списка треков (универсальный селектор)
+        mtab = self.driver.find_elements(
+            By.CSS_SELECTOR,
+            "a[class*='TracksTable__row']"
+        )
+
+        if not mtab:
+            printsend("ERROR: No tracks found", "VkWeb")
+            return []
 
         time.sleep(MPAUSE)
 
+
+        el_periods_list = self.driver.find_elements(
+            By.CLASS_NAME,
+            "vkitLink__link--WXYoI,Select__link--UQ7MF,vkitLink__withIconInChildren--MOP1u,"
+            "vkuiInternalTappable,vkuiLink__host,vkuiLink__withUnderline,vkuiTappable__host,"
+            "vkuiTappable__hasPointerNone,vkuiClickable__host,vkuiClickable__realClickable,"
+            "vkuistyles__-focus-visible,vkuiRootComponent__host"
+        )
+
+        if len(el_periods_list) == 0:
+            printsend("ERROR in VK proc. el_periods_list. Second iteration", "VkWeb")
+            return None
+        el_periods_list[0].click()
+        time.sleep(MPAUSE * 2)
+
+        # Поиск и клик по пункту 'Сутки'
+        el_periods_24 = self.driver.find_elements(By.CLASS_NAME, "vkuiActionSheetItem__children")
+        if len(el_periods_24) == 0:
+            printsend("ERROR in VK proc. el_periods_24. Second iteration", "VkWeb")
+            return None
+        el_periods_24[0].click()
+        time.sleep(MPAUSE * 2)
+
+        # Двойной клик по сортировке по названию
+        el_hearsnumbers = self.driver.find_elements(By.CLASS_NAME, "TracksTable__headerCellInnerSorting--GOKyi")
+        if len(el_hearsnumbers) == 0:
+            printsend("ERROR in VK proc. el_hearsnumbers. Second iteration", "VkWeb")
+            return None
+        el_hearsnumbers[0].click()
+        time.sleep(MPAUSE * 2)
+        el_hearsnumbers[0].click()
+        time.sleep(MPAUSE * 2)
+
+        # Поиск строк таблицы
+        mtab = self.driver.find_elements(By.CLASS_NAME, "TracksTable__row--KhG2m")
+        if len(mtab) == 0:
+            printsend("ERROR in VK proc. mtab. Second iteration", "VkWeb")
+            return None
+
+        time.sleep(MPAUSE)
         return mtab
 
     def findonpage(self, link, mstr, ishere, iclass=""):
