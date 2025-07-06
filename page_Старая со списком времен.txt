@@ -1,0 +1,55 @@
+def getvkstudio(self, link):
+    self.golinkpause(link)
+    time.sleep(MPAUSE * 3)
+    # Клик на список где выводятся интервалы
+    # el_periods_list=self.driver.find_elements(By.CLASS_NAME,
+    #                           "vkuiLink,Link-module__link--V7bkY,Select-module__link--ah62s,vkuiTappable,"
+    #                           "vkuiInternalTappable,vkuiTappable--hasActive,vkui-focus-visible")
+
+    el_periods_list=self.driver.find_elements(By.CLASS_NAME,
+                              "vkitLink__link--WXYoI,Select__link--UQ7MF,vkitLink__withIconInChildren--MOP1u,vkuiInternalTappable,vkuiLink__host,vkuiLink__withUnderline,vkuiTappable__host vkuiTappable__hasPointerNone,"
+                              "vkuiClickable__host,vkuiClickable__realClickable,vkuistyles__-focus-visible,vkuiRootComponent__host")
+    if len(el_periods_list)==0:
+        printsend("ERROR in VK proc. el_periods_list.  Second iteration ", "VkWeb")
+    el_periods_list[0].click()
+    time.sleep(MPAUSE*2)
+
+    # Клик на пункт Сутки document.getElementsByClassName("vkuiLink Link-module__link--V7bkY
+    # Select-module__link--ah62s vkuiTappable vkuiInternalTappable vkuiTappable--hasActive vkui-focus-visible")[
+    # 0].click()
+    # el_periods_24=self.driver.find_elements(By.CLASS_NAME,
+    #                           "vkuiActionSheetItem,vkuiActionSheetItem--sizeY-compact,vkuiActionSheetItem--menu,"
+    #                           "vkuiTappable,vkuiInternalTappable,vkuiTappable--hasHover,vkuiTappable--hasActive,"
+    #                           "vkui-focus-visible")
+    el_periods_24=self.driver.find_elements(By.CLASS_NAME,"vkuiActionSheetItem__children,vkuiText__host,"
+                                                          "vkuiText__sizeYCompact,vkuiTypography__host,vkuiTypography__normalize,vkuiRootComponent__host")
+
+    if len(el_periods_24) == 0:
+        printsend("ERROR in VK proc. el_periods_24.  Second iteration ", "VkWeb")
+    el_periods_24[0].click()
+    time.sleep(MPAUSE*2)
+
+    # Клик дважды на сортировку по названию
+    # document.getElementsByClassName("TracksTable-module__headerCellInnerSorting--WW4Tz")[0].click()
+    # заменил 241010 self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__headerCellInnerSorting--WW4Tz")[0].click()
+    # заменил 241011 self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__headerCellInnerSorting--S6PJq")[0].click()
+    el_hearsnumbers=self.driver.find_elements(By.CLASS_NAME, "TracksTable__headerCellInnerSorting--GOKyi")
+    if len(el_hearsnumbers)==0:
+        printsend("ERROR in VK proc. el_hearsnumbers.  Second iteration ", "VkWeb")
+    el_hearsnumbers[0].click()
+
+
+    time.sleep(MPAUSE*2)
+    el_hearsnumbers[0].click()
+    time.sleep(MPAUSE*2)
+
+    # document.getElementsByClassName("TracksTable-module__row--nFfI0")
+    # заменил 241010 mtab = self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__row--nFfI0")
+    # заменил 241110 mtab = self.driver.find_elements(By.CLASS_NAME, "TracksTable-module__row--e3vmp")
+    mtab = self.driver.find_elements(By.CLASS_NAME, "TracksTable__row--KhG2m,TracksTable__rowAlbum--kasmQ")
+    if len(mtab) == 0:
+        printsend("ERROR in VK proc. mtab.  Second iteration ", "VkWeb")
+
+    time.sleep(MPAUSE)
+
+    return mtab

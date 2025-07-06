@@ -3,6 +3,13 @@ import time
 import urllib.request
 import traceback
 
+
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+
+
 from selenium import webdriver
 # from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -303,114 +310,67 @@ class cWebm(object):
     #     time.sleep(MPAUSE)
     #
     #     return mtab
+
+
     def getvkstudio(self, link):
         self.golinkpause(link)
-        time.sleep(MPAUSE * 3)
+        time.sleep(MPAUSE * 2)
 
-        # Поиск и клик по списку интервалов
-        # el_periods_list = self.driver.find_elements(By.CLASS_NAME, "vkitLink__link--WXYoI")
-        # el_periods_list = self.driver.find_elements(By.CLASS_NAME, "Select__root--oZRjh")
+        wait = WebDriverWait(self.driver, 10)
 
-        # 1. Клик на выпадающий список периодов (исправленный селектор)
-        el_periods_list = self.driver.find_elements(
-            By.CSS_SELECTOR,
-            "div[class*='Select__link']"  # Более надежный селектор
-        )
-
-        if not el_periods_list:
-            printsend("ERROR: Period dropdown not found. Trying fallback selector...", "VkWeb")
-            # Попытка альтернативного селектора
-            el_periods_list = self.driver.find_elements(
-                By.CSS_SELECTOR,
-                "div.vkuiLink.vkuiLink--withUnderline"
+        # Клик по выпадающему списку периода
+        try:
+            el_7days = wait.until(
+                EC.element_to_be_clickable((By.XPATH, "//*[contains(text(),'7 дней')]"))
             )
-            if not el_periods_list:
-                printsend("ERROR: Fallback selector also failed", "VkWeb")
-                return []
-
-        el_periods_list[0].click()
-        time.sleep(MPAUSE * 2)
-
-        # 2. Клик на пункт "7 дней" (улучшенный селектор)
-        el_periods_7days = self.driver.find_elements(
-            By.CSS_SELECTOR,
-            "div.vkuiActionSheetItem > div.vkuiActionSheetItem__children"
-        )
-
-        if not el_periods_7days:
-            printsend("ERROR: 7 days option not found", "VkWeb")
-            return []
-
-        el_periods_7days[0].click()
-        time.sleep(MPAUSE * 2)
-
-        # 3. Сортировка по прослушиваниям (надежный селектор)
-        el_listeners_sort = self.driver.find_elements(
-            By.CSS_SELECTOR,
-            "div.TracksTable__headerCellSorting--PUF58"
-        )
-
-        if not el_listeners_sort:
-            printsend("ERROR: Sort header not found", "VkWeb")
-            return []
-
-        el_listeners_sort[0].click()
-        time.sleep(MPAUSE * 2)
-        el_listeners_sort[0].click()
-        time.sleep(MPAUSE * 2)
-
-        # 4. Получение списка треков (универсальный селектор)
-        mtab = self.driver.find_elements(
-            By.CSS_SELECTOR,
-            "a[class*='TracksTable__row']"
-        )
-
-        if not mtab:
-            printsend("ERROR: No tracks found", "VkWeb")
+            zz=el_7days.click()
+            z1=1
+            # el_period_button = wait.until(
+            #     EC.element_to_be_clickable(
+            #         (By.XPATH, "//div[contains(@class, 'Select')]//div[contains(@role,'button')]"))
+            # )
+            # el_period_button.click()
+        except Exception as e:
+            printsend(f"ERROR: Не удалось найти или нажать на кнопку выбора периода: {e}", "VkWeb")
             return []
 
         time.sleep(MPAUSE)
 
-
-        el_periods_list = self.driver.find_elements(
-            By.CLASS_NAME,
-            "vkitLink__link--WXYoI,Select__link--UQ7MF,vkitLink__withIconInChildren--MOP1u,"
-            "vkuiInternalTappable,vkuiLink__host,vkuiLink__withUnderline,vkuiTappable__host,"
-            "vkuiTappable__hasPointerNone,vkuiClickable__host,vkuiClickable__realClickable,"
-            "vkuistyles__-focus-visible,vkuiRootComponent__host"
-        )
-
-        if len(el_periods_list) == 0:
-            printsend("ERROR in VK proc. el_periods_list. Second iteration", "VkWeb")
-            return None
+        el_periods_list=self.driver.find_elements(By.XPATH,
+                                  "//div[contains(@class, 'vkuiActionSheetItem__host')]//span[text()='24 часа']/..")
         el_periods_list[0].click()
-        time.sleep(MPAUSE * 2)
+        time.sleep(MPAUSE*2)
+        #
 
-        # Поиск и клик по пункту 'Сутки'
-        el_periods_24 = self.driver.find_elements(By.CLASS_NAME, "vkuiActionSheetItem__children")
-        if len(el_periods_24) == 0:
-            printsend("ERROR in VK proc. el_periods_24. Second iteration", "VkWeb")
-            return None
-        el_periods_24[0].click()
-        time.sleep(MPAUSE * 2)
 
-        # Двойной клик по сортировке по названию
-        el_hearsnumbers = self.driver.find_elements(By.CLASS_NAME, "TracksTable__headerCellInnerSorting--GOKyi")
-        if len(el_hearsnumbers) == 0:
-            printsend("ERROR in VK proc. el_hearsnumbers. Second iteration", "VkWeb")
-            return None
-        el_hearsnumbers[0].click()
-        time.sleep(MPAUSE * 2)
-        el_hearsnumbers[0].click()
-        time.sleep(MPAUSE * 2)
 
-        # Поиск строк таблицы
-        mtab = self.driver.find_elements(By.CLASS_NAME, "TracksTable__row--KhG2m")
-        if len(mtab) == 0:
-            printsend("ERROR in VK proc. mtab. Second iteration", "VkWeb")
-            return None
+        # Двойной клик по сортировке
+        try:
+            sort_btn = wait.until(
+                EC.element_to_be_clickable((By.XPATH,
+                                            "//div[contains(@class, 'TracksTable')]//div[contains(@class, 'headerCellInnerSorting')]"))
+            )
+            sort_btn.click()
+            time.sleep(MPAUSE)
+            sort_btn.click()
+        except Exception as e:
+            printsend(f"ERROR: Не удалось кликнуть по сортировке: {e}", "VkWeb")
+            return []
 
         time.sleep(MPAUSE)
+
+        # Получение списка треков (строки таблицы)
+        try:
+            mtab = self.driver.find_elements(By.CLASS_NAME, "TracksTable__row--rqYwz,TracksTable__rowAlbum--fV6am")
+
+            # mtab = wait.until(
+            #     EC.presence_of_all_elements_located(
+            #         (By.XPATH, "//div[contains(@class, 'TracksTable')]//div[contains(@class, 'row')]"))
+            # )
+        except Exception as e:
+            printsend(f"ERROR: Не удалось получить строки треков: {e}", "VkWeb")
+            return []
+
         return mtab
 
     def findonpage(self, link, mstr, ishere, iclass=""):

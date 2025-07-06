@@ -19,6 +19,7 @@ HELPTXT="Use one or more param: PRODUCTIVE, DONTWRITE2BASE, NOYOUTUBE, NOTIKTOK,
 # при работа mainchk проверять заглавные или строчные буквы прямо на странице!!!
 # при работа mainchk проверять яззык чтобы был нужный!!!
 
+MVERSION="250706 Поправил переменные с помощью ИИ "
 MVERSION="250211 Сделан readme и поправлены переменные "
 MVERSION="241223 Поправлены отчеты, мин % для отчетов и др "
 # MVERSION="241203 Поправлены graph "
@@ -84,8 +85,12 @@ MDIR1 = r"--user-data-dir=C:\Users\K\AppData\Local\Google\Chrome\User Data"
 MPROF1 = r"--profile-directory=Profile 4"
 MPC1 = "WIN-OR93J55JCVR"
 
-MDIR2 = r"--user-data-dir=C:\Users\User\AppData\Local\Google\Chrome\User Data"
-MPROF2 = r"--profile-directory=Profile 12"
+
+# Для ASUS 250706
+MDIR2 = r"--user-data-dir=C:\Users\Konstantin\AppData\Local\Google\Chrome\User Data"
+MPROF2 = r"--profile-directory=Default"
+# MDIR2 = r"--user-data-dir=C:\Users\User\AppData\Local\Google\Chrome\User Data"
+# MPROF2 = r"--profile-directory=Profile 12"
 
 
 # Полезные скрипты
