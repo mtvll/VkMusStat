@@ -81,9 +81,13 @@ CAPTIONHEAR='VK.Прослушивания'
 CAPTIONADD='VK.Добавления'
 
 
-MDIR1 = r"--user-data-dir=C:\Users\K\AppData\Local\Google\Chrome\User Data"
-MPROF1 = r"--profile-directory=Profile 4"
-MPC1 = "WIN-OR93J55JCVR"
+# MDIR1 = r"--user-data-dir=C:\Users\K\AppData\Local\Google\Chrome\User Data"
+# MPROF1 = r"--profile-directory=Profile 4"
+# MPC1 = "WIN-OR93J55JCVR"
+
+MDIR1 = r"--user-data-dir=C:\Users\User\AppData\Local\Google\Chrome\User Data"
+MPROF1 = r"--profile-directory=Profile 12"
+MPC1 = "MLENOVO"
 
 
 # Для ASUS 250706

@@ -66,6 +66,14 @@ def main():
 
         # mdriver = chromeinitilize()
 
+        if "artist=" in param1:
+            param1 = param1.replace("artist=", "")
+            # c1 = [artist for artist in db.art if artist.name == param1]
+
+            for i in reversed(range(len(db.art))):
+                if db.art[i].name != param1:
+                    del db.art[i]
+
         for i in db.art:
             try:
                 if (i.vkstudio != "" and not ("NOVKSTUDIO"  in web.cmd_param)):
@@ -102,15 +110,19 @@ def main():
                     db.columns["hears_month_ynd"], db.columns["likes_month_ynd"], db.columns[
                         "likes_all_ynd"] = web.getyandexday(mlink)
             except Exception as ex:
-                if (i.run_after_error == False):
-                    db.art.append(Artist(i.name, "", "", i.yandex, "",
-                                         "", "", "",
-                                         "", "", minhears=abs(i.minhears), run_after_error=True))
-                printsend("  " + i.name + ":YANDExMuz : {iteration}".format(
-                    iteration="Second iteration " if i.run_after_error else "") + i.yandex + "___" + str(ex),
-                          MTITLE + ERRORSTR)
+                if (i.name=="MILZ"):
+                    db.columns["hears_month_ynd"]= db.columns["likes_month_ynd"]= db.columns[
+                        "likes_all_ynd"] =0
+                else:
+                    if (i.run_after_error == False):
+                        db.art.append(Artist(i.name, "", "", i.yandex, "",
+                                             "", "", "",
+                                             "", "", minhears=abs(i.minhears), run_after_error=True))
+                    printsend("  " + i.name + ":YANDExMuz : {iteration}".format(
+                        iteration="Second iteration " if i.run_after_error else "") + i.yandex + "___" + str(ex),
+                              MTITLE + ERRORSTR)
                 # printsend("  " + i.name + ":YANDEX : " + i.yandex+ "___"+ str(ex), MTITLE + ERRORSTR)
-                pass
+                    pass
 
             try:
                 if i.sber != "" and not (TXTNOSBER  in web.cmd_param):
